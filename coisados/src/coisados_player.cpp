@@ -28,7 +28,7 @@
 #include <config.h>
 #endif
 
-#include "sample_player.h"
+#include "coisados_player.h"
 
 #include "strategy.h"
 #include "field_analyzer.h"

@@ -1,5 +1,5 @@
-sample_player-sample_player.o: sample_player.cpp \
- /usr/include/stdc-predef.h ../config.h sample_player.h \
+coisados_player-coisados_player.o: coisados_player.cpp \
+ /usr/include/stdc-predef.h ../config.h coisados_player.h \
  ../src/chain_action/action_generator.h /usr/include/boost/shared_ptr.hpp \
  /usr/include/boost/smart_ptr/shared_ptr.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -921,7 +921,7 @@ sample_player-sample_player.o: sample_player.cpp \
 
 ../config.h:
 
-sample_player.h:
+coisados_player.h:
 
 ../src/chain_action/action_generator.h:
 
