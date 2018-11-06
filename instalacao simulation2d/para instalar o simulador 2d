@@ -1,0 +1,25 @@
+#!/bin/bash
+# Instalar dependências
+sudo apt-get install automake libtool libboost-all-dev libqtcore4 libqt4-dev libfontconfig1-dev libglib2.0-dev libaudio-dev libxt-dev libxi-dev libxrender-dev libpng-dev
+
+# Instalando o servidor
+git clone https://github.com/rcsoccersim/rcssserver
+cd rcssserver
+autoreconf --install
+autoconf configure.ac
+./configure
+make
+make install
+
+# Instalando o monitor
+cd ~
+git clone https://github.com/rcsoccersim/rcssmonitor
+cd rcssmonitor/
+autoreconf --install
+autoconf configure.ac
+./configure
+make
+make install
+
+# Rodando o servidor + o monitor
+rcsoccersim
