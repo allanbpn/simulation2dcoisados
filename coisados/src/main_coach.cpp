@@ -28,7 +28,7 @@
 #include <config.h>
 #endif
 
-#include "sample_coach.h"
+#include "coisados_coach.h"
 
 #include <rcsc/common/basic_client.h>
 

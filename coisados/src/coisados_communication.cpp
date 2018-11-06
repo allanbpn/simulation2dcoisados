@@ -33,7 +33,7 @@
 #include <config.h>
 #endif
 
-#include "sample_communication.h"
+#include "coisados_communication.h"
 
 #include "strategy.h"
 

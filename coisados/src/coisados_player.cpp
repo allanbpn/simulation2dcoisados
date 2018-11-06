@@ -34,11 +34,11 @@
 #include "field_analyzer.h"
 
 #include "action_chain_holder.h"
-#include "sample_field_evaluator.h"
+#include "coisados_field_evaluator.h"
 
 #include "soccer_role.h"
 
-#include "sample_communication.h"
+#include "coisados_communication.h"
 #include "keepaway_communication.h"
 
 #include "bhv_penalty_kick.h"

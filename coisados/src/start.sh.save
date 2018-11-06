@@ -1,7 +1,8 @@
 #!/bin/sh
 
 echo "******************************************************************"
-echo " HELIOS base"
+echo " Coisados TEA
+"
 echo " Created by Hidehisa Akiyama and Hiroki Shimora"
 echo " Copyright 2000-2007.  Hidehisa Akiyama"
 echo " Copyright 2007-2012.  Hidehisa Akiyama and Hiroki Shimora"
@@ -23,7 +24,7 @@ DIR=`dirname $0`
 
 player="${DIR}/coisados_player"
 coach="${DIR}/coisados_coach"
-teamname="COISADOS_team"
+teamname="HELIOS_base"
 host="localhost"
 port=6000
 coach_port=""

@@ -28,7 +28,7 @@
 #include "config.h"
 #endif
 
-#include "sample_coach.h"
+#include "coisados_coach.h"
 
 #include <rcsc/coach/coach_command.h>
 #include <rcsc/coach/coach_config.h>

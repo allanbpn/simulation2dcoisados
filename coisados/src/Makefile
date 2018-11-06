@@ -34,8 +34,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-noinst_PROGRAMS = sample_player$(EXEEXT) sample_coach$(EXEEXT) \
-	sample_trainer$(EXEEXT)
+noinst_PROGRAMS = coisados_player$(EXEEXT) coisados_coach$(EXEEXT) \
+	coisados_trainer$(EXEEXT)
 subdir = src
 DIST_COMMON = $(noinst_HEADERS) $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in $(srcdir)/keepaway.sh.in \
@@ -50,97 +50,97 @@ CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES = start.sh keepaway.sh train.sh
 CONFIG_CLEAN_VPATH_FILES =
 PROGRAMS = $(noinst_PROGRAMS)
-am__objects_1 = sample_coach-sample_coach.$(OBJEXT) \
-	sample_coach-main_coach.$(OBJEXT)
-am_sample_coach_OBJECTS = $(am__objects_1)
-sample_coach_OBJECTS = $(am_sample_coach_OBJECTS)
-sample_coach_DEPENDENCIES =
-sample_coach_LINK = $(CXXLD) $(sample_coach_CXXFLAGS) $(CXXFLAGS) \
-	$(sample_coach_LDFLAGS) $(LDFLAGS) -o $@
-am__objects_2 = sample_player-actgen_cross.$(OBJEXT) \
-	sample_player-actgen_direct_pass.$(OBJEXT) \
-	sample_player-actgen_self_pass.$(OBJEXT) \
-	sample_player-actgen_shoot.$(OBJEXT) \
-	sample_player-actgen_short_dribble.$(OBJEXT) \
-	sample_player-actgen_simple_dribble.$(OBJEXT) \
-	sample_player-actgen_strict_check_pass.$(OBJEXT) \
-	sample_player-action_chain_graph.$(OBJEXT) \
-	sample_player-action_chain_holder.$(OBJEXT) \
-	sample_player-bhv_chain_action.$(OBJEXT) \
-	sample_player-bhv_normal_dribble.$(OBJEXT) \
-	sample_player-bhv_pass_kick_find_receiver.$(OBJEXT) \
-	sample_player-bhv_strict_check_shoot.$(OBJEXT) \
-	sample_player-body_force_shoot.$(OBJEXT) \
-	sample_player-clear_ball.$(OBJEXT) \
-	sample_player-clear_generator.$(OBJEXT) \
-	sample_player-cooperative_action.$(OBJEXT) \
-	sample_player-cross_generator.$(OBJEXT) \
-	sample_player-dribble.$(OBJEXT) \
-	sample_player-field_analyzer.$(OBJEXT) \
-	sample_player-hold_ball.$(OBJEXT) \
-	sample_player-neck_turn_to_receiver.$(OBJEXT) \
-	sample_player-pass.$(OBJEXT) \
-	sample_player-predict_state.$(OBJEXT) \
-	sample_player-self_pass_generator.$(OBJEXT) \
-	sample_player-shoot.$(OBJEXT) \
-	sample_player-shoot_generator.$(OBJEXT) \
-	sample_player-short_dribble_generator.$(OBJEXT) \
-	sample_player-simple_pass_checker.$(OBJEXT) \
-	sample_player-strict_check_pass_generator.$(OBJEXT) \
-	sample_player-tackle_generator.$(OBJEXT)
-am__objects_3 = sample_player-bhv_basic_move.$(OBJEXT) \
-	sample_player-bhv_basic_offensive_kick.$(OBJEXT) \
-	sample_player-bhv_basic_tackle.$(OBJEXT) \
-	sample_player-bhv_custom_before_kick_off.$(OBJEXT) \
-	sample_player-bhv_go_to_static_ball.$(OBJEXT) \
-	sample_player-bhv_goalie_basic_move.$(OBJEXT) \
-	sample_player-bhv_goalie_chase_ball.$(OBJEXT) \
-	sample_player-bhv_goalie_free_kick.$(OBJEXT) \
-	sample_player-bhv_prepare_set_play_kick.$(OBJEXT) \
-	sample_player-bhv_set_play.$(OBJEXT) \
-	sample_player-bhv_set_play_free_kick.$(OBJEXT) \
-	sample_player-bhv_set_play_goal_kick.$(OBJEXT) \
-	sample_player-bhv_set_play_indirect_free_kick.$(OBJEXT) \
-	sample_player-bhv_set_play_kick_in.$(OBJEXT) \
-	sample_player-bhv_set_play_kick_off.$(OBJEXT) \
-	sample_player-bhv_their_goal_kick_move.$(OBJEXT) \
-	sample_player-bhv_penalty_kick.$(OBJEXT) \
-	sample_player-neck_default_intercept_neck.$(OBJEXT) \
-	sample_player-neck_goalie_turn_neck.$(OBJEXT) \
-	sample_player-neck_offensive_intercept_neck.$(OBJEXT) \
-	sample_player-view_tactical.$(OBJEXT) \
-	sample_player-intention_receive.$(OBJEXT) \
-	sample_player-intention_wait_after_set_play_kick.$(OBJEXT) \
-	sample_player-soccer_role.$(OBJEXT) \
-	sample_player-role_center_back.$(OBJEXT) \
-	sample_player-role_center_forward.$(OBJEXT) \
-	sample_player-role_defensive_half.$(OBJEXT) \
-	sample_player-role_goalie.$(OBJEXT) \
-	sample_player-role_offensive_half.$(OBJEXT) \
-	sample_player-role_sample.$(OBJEXT) \
-	sample_player-role_side_back.$(OBJEXT) \
-	sample_player-role_side_forward.$(OBJEXT) \
-	sample_player-role_side_half.$(OBJEXT) \
-	sample_player-role_keepaway_keeper.$(OBJEXT) \
-	sample_player-role_keepaway_taker.$(OBJEXT) \
-	sample_player-sample_communication.$(OBJEXT) \
-	sample_player-keepaway_communication.$(OBJEXT) \
-	sample_player-sample_field_evaluator.$(OBJEXT) \
-	sample_player-sample_player.$(OBJEXT) \
-	sample_player-strategy.$(OBJEXT) \
-	sample_player-main_player.$(OBJEXT)
-am_sample_player_OBJECTS = $(am__objects_2) $(am__objects_3)
-sample_player_OBJECTS = $(am_sample_player_OBJECTS)
-sample_player_DEPENDENCIES =
-sample_player_LINK = $(CXXLD) $(sample_player_CXXFLAGS) $(CXXFLAGS) \
-	$(sample_player_LDFLAGS) $(LDFLAGS) -o $@
-am__objects_4 = sample_trainer-sample_trainer.$(OBJEXT) \
-	sample_trainer-main_trainer.$(OBJEXT)
-am_sample_trainer_OBJECTS = $(am__objects_4)
-sample_trainer_OBJECTS = $(am_sample_trainer_OBJECTS)
-sample_trainer_DEPENDENCIES =
-sample_trainer_LINK = $(CXXLD) $(sample_trainer_CXXFLAGS) $(CXXFLAGS) \
-	$(sample_trainer_LDFLAGS) $(LDFLAGS) -o $@
+am__objects_1 = coisados_coach-coisados_coach.$(OBJEXT) \
+	coisados_coach-main_coach.$(OBJEXT)
+am_coisados_coach_OBJECTS = $(am__objects_1)
+coisados_coach_OBJECTS = $(am_coisados_coach_OBJECTS)
+coisados_coach_DEPENDENCIES =
+coisados_coach_LINK = $(CXXLD) $(coisados_coach_CXXFLAGS) $(CXXFLAGS) \
+	$(coisados_coach_LDFLAGS) $(LDFLAGS) -o $@
+am__objects_2 = coisados_player-actgen_cross.$(OBJEXT) \
+	coisados_player-actgen_direct_pass.$(OBJEXT) \
+	coisados_player-actgen_self_pass.$(OBJEXT) \
+	coisados_player-actgen_shoot.$(OBJEXT) \
+	coisados_player-actgen_short_dribble.$(OBJEXT) \
+	coisados_player-actgen_simple_dribble.$(OBJEXT) \
+	coisados_player-actgen_strict_check_pass.$(OBJEXT) \
+	coisados_player-action_chain_graph.$(OBJEXT) \
+	coisados_player-action_chain_holder.$(OBJEXT) \
+	coisados_player-bhv_chain_action.$(OBJEXT) \
+	coisados_player-bhv_normal_dribble.$(OBJEXT) \
+	coisados_player-bhv_pass_kick_find_receiver.$(OBJEXT) \
+	coisados_player-bhv_strict_check_shoot.$(OBJEXT) \
+	coisados_player-body_force_shoot.$(OBJEXT) \
+	coisados_player-clear_ball.$(OBJEXT) \
+	coisados_player-clear_generator.$(OBJEXT) \
+	coisados_player-cooperative_action.$(OBJEXT) \
+	coisados_player-cross_generator.$(OBJEXT) \
+	coisados_player-dribble.$(OBJEXT) \
+	coisados_player-field_analyzer.$(OBJEXT) \
+	coisados_player-hold_ball.$(OBJEXT) \
+	coisados_player-neck_turn_to_receiver.$(OBJEXT) \
+	coisados_player-pass.$(OBJEXT) \
+	coisados_player-predict_state.$(OBJEXT) \
+	coisados_player-self_pass_generator.$(OBJEXT) \
+	coisados_player-shoot.$(OBJEXT) \
+	coisados_player-shoot_generator.$(OBJEXT) \
+	coisados_player-short_dribble_generator.$(OBJEXT) \
+	coisados_player-simple_pass_checker.$(OBJEXT) \
+	coisados_player-strict_check_pass_generator.$(OBJEXT) \
+	coisados_player-tackle_generator.$(OBJEXT)
+am__objects_3 = coisados_player-bhv_basic_move.$(OBJEXT) \
+	coisados_player-bhv_basic_offensive_kick.$(OBJEXT) \
+	coisados_player-bhv_basic_tackle.$(OBJEXT) \
+	coisados_player-bhv_custom_before_kick_off.$(OBJEXT) \
+	coisados_player-bhv_go_to_static_ball.$(OBJEXT) \
+	coisados_player-bhv_goalie_basic_move.$(OBJEXT) \
+	coisados_player-bhv_goalie_chase_ball.$(OBJEXT) \
+	coisados_player-bhv_goalie_free_kick.$(OBJEXT) \
+	coisados_player-bhv_prepare_set_play_kick.$(OBJEXT) \
+	coisados_player-bhv_set_play.$(OBJEXT) \
+	coisados_player-bhv_set_play_free_kick.$(OBJEXT) \
+	coisados_player-bhv_set_play_goal_kick.$(OBJEXT) \
+	coisados_player-bhv_set_play_indirect_free_kick.$(OBJEXT) \
+	coisados_player-bhv_set_play_kick_in.$(OBJEXT) \
+	coisados_player-bhv_set_play_kick_off.$(OBJEXT) \
+	coisados_player-bhv_their_goal_kick_move.$(OBJEXT) \
+	coisados_player-bhv_penalty_kick.$(OBJEXT) \
+	coisados_player-neck_default_intercept_neck.$(OBJEXT) \
+	coisados_player-neck_goalie_turn_neck.$(OBJEXT) \
+	coisados_player-neck_offensive_intercept_neck.$(OBJEXT) \
+	coisados_player-view_tactical.$(OBJEXT) \
+	coisados_player-intention_receive.$(OBJEXT) \
+	coisados_player-intention_wait_after_set_play_kick.$(OBJEXT) \
+	coisados_player-soccer_role.$(OBJEXT) \
+	coisados_player-role_center_back.$(OBJEXT) \
+	coisados_player-role_center_forward.$(OBJEXT) \
+	coisados_player-role_defensive_half.$(OBJEXT) \
+	coisados_player-role_goalie.$(OBJEXT) \
+	coisados_player-role_offensive_half.$(OBJEXT) \
+	coisados_player-role_coisados.$(OBJEXT) \
+	coisados_player-role_side_back.$(OBJEXT) \
+	coisados_player-role_side_forward.$(OBJEXT) \
+	coisados_player-role_side_half.$(OBJEXT) \
+	coisados_player-role_keepaway_keeper.$(OBJEXT) \
+	coisados_player-role_keepaway_taker.$(OBJEXT) \
+	coisados_player-coisados_communication.$(OBJEXT) \
+	coisados_player-keepaway_communication.$(OBJEXT) \
+	coisados_player-coisados_field_evaluator.$(OBJEXT) \
+	coisados_player-coisados_player.$(OBJEXT) \
+	coisados_player-strategy.$(OBJEXT) \
+	coisados_player-main_player.$(OBJEXT)
+am_coisados_player_OBJECTS = $(am__objects_2) $(am__objects_3)
+coisados_player_OBJECTS = $(am_coisados_player_OBJECTS)
+coisados_player_DEPENDENCIES =
+coisados_player_LINK = $(CXXLD) $(coisados_player_CXXFLAGS) $(CXXFLAGS) \
+	$(coisados_player_LDFLAGS) $(LDFLAGS) -o $@
+am__objects_4 = coisados_trainer-coisados_trainer.$(OBJEXT) \
+	coisados_trainer-main_trainer.$(OBJEXT)
+am_coisados_trainer_OBJECTS = $(am__objects_4)
+coisados_trainer_OBJECTS = $(am_coisados_trainer_OBJECTS)
+coisados_trainer_DEPENDENCIES =
+coisados_trainer_LINK = $(CXXLD) $(coisados_trainer_CXXFLAGS) $(CXXFLAGS) \
+	$(coisados_trainer_LDFLAGS) $(LDFLAGS) -o $@
 DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/config/depcomp
 am__depfiles_maybe = depfiles
@@ -154,10 +154,10 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
 CCLD = $(CC)
 LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-SOURCES = $(sample_coach_SOURCES) $(sample_player_SOURCES) \
-	$(sample_trainer_SOURCES)
-DIST_SOURCES = $(sample_coach_SOURCES) $(sample_player_SOURCES) \
-	$(sample_trainer_SOURCES)
+SOURCES = $(coisados_coach_SOURCES) $(coisados_player_SOURCES) \
+	$(coisados_trainer_SOURCES)
+DIST_SOURCES = $(coisados_coach_SOURCES) $(coisados_player_SOURCES) \
+	$(coisados_trainer_SOURCES)
 DATA = $(noinst_DATA)
 HEADERS = $(noinst_HEADERS)
 ETAGS = etags
@@ -288,16 +288,16 @@ PLAYERSOURCES = \
 	role_defensive_half.cpp \
 	role_goalie.cpp \
 	role_offensive_half.cpp \
-	role_sample.cpp \
+	role_coisados.cpp \
 	role_side_back.cpp \
 	role_side_forward.cpp \
 	role_side_half.cpp \
 	role_keepaway_keeper.cpp \
 	role_keepaway_taker.cpp \
-	sample_communication.cpp \
+	coisados_communication.cpp \
 	keepaway_communication.cpp \
-	sample_field_evaluator.cpp \
-	sample_player.cpp \
+	coisados_field_evaluator.cpp \
+	coisados_player.cpp \
 	strategy.cpp \
 	main_player.cpp
 
@@ -331,17 +331,17 @@ PLAYERHEADERS = \
 	role_defensive_half.h \
 	role_goalie.h \
 	role_offensive_half.h \
-	role_sample.h \
+	role_coisados.h \
 	role_side_back.h \
 	role_side_forward.h \
 	role_side_half.h \
 	role_keepaway_keeper.h \
 	role_keepaway_taker.h \
 	communication.h \
-	sample_communication.h \
+	coisados_communication.h \
 	keepaway_communication.h \
-	sample_field_evaluator.h \
-	sample_player.h \
+	coisados_field_evaluator.h \
+	coisados_player.h \
 	strategy.h
 
 CHAINACTIONSOURCES = \
@@ -416,18 +416,18 @@ CHAINACTIONSOURCES = \
 	chain_action/tackle_generator.h
 
 COACHSOURCES = \
-	sample_coach.cpp \
+	coisados_coach.cpp \
 	main_coach.cpp
 
 COACHHEADERS = \
-	sample_coach.h
+	coisados_coach.h
 
 TRAINERSOURCES = \
-	sample_trainer.cpp \
+	coisados_trainer.cpp \
 	main_trainer.cpp
 
 TRAINERHEADERS = \
-	sample_trainer.h
+	coisados_trainer.h
 
 noinst_DATA = \
 	start.sh.in \
@@ -479,25 +479,25 @@ noinst_DATA = \
 	formations-taker/setplay-opp-formation.conf \
 	formations-taker/setplay-our-formation.conf
 
-sample_player_SOURCES = \
+coisados_player_SOURCES = \
 	$(CHAINACTIONSOURCES) \
 	$(PLAYERSOURCES)
 
-sample_player_CXXFLAGS = -W -Wall
-sample_player_LDFLAGS = 
-sample_player_LDADD = 
-sample_coach_SOURCES = \
+coisados_player_CXXFLAGS = -W -Wall
+coisados_player_LDFLAGS = 
+coisados_player_LDADD = 
+coisados_coach_SOURCES = \
 	$(COACHSOURCES)
 
-sample_coach_CXXFLAGS = -W -Wall
-sample_coach_LDFLAGS = 
-sample_coach_LDADD = 
-sample_trainer_SOURCES = \
+coisados_coach_CXXFLAGS = -W -Wall
+coisados_coach_LDFLAGS =
+coisados_coach_LDADD =
+coisados_trainer_SOURCES = \
 	$(TRAINERSOURCES)
 
-sample_trainer_CXXFLAGS = -W -Wall
-sample_trainer_LDFLAGS = 
-sample_trainer_LDADD = 
+coisados_trainer_CXXFLAGS = -W -Wall
+coisados_trainer_LDFLAGS =
+coisados_trainer_LDADD =
 noinst_HEADERS = \
 	$(PLAYERHEADERS) \
 	$(COACHHEADERS) \
@@ -556,15 +556,15 @@ train.sh: $(top_builddir)/config.status $(srcdir)/train.sh.in
 
 clean-noinstPROGRAMS:
 	-test -z "$(noinst_PROGRAMS)" || rm -f $(noinst_PROGRAMS)
-sample_coach$(EXEEXT): $(sample_coach_OBJECTS) $(sample_coach_DEPENDENCIES) 
-	@rm -f sample_coach$(EXEEXT)
-	$(sample_coach_LINK) $(sample_coach_OBJECTS) $(sample_coach_LDADD) $(LIBS)
-sample_player$(EXEEXT): $(sample_player_OBJECTS) $(sample_player_DEPENDENCIES) 
-	@rm -f sample_player$(EXEEXT)
-	$(sample_player_LINK) $(sample_player_OBJECTS) $(sample_player_LDADD) $(LIBS)
-sample_trainer$(EXEEXT): $(sample_trainer_OBJECTS) $(sample_trainer_DEPENDENCIES) 
-	@rm -f sample_trainer$(EXEEXT)
-	$(sample_trainer_LINK) $(sample_trainer_OBJECTS) $(sample_trainer_LDADD) $(LIBS)
+coisados_coach$(EXEEXT): $(coisados_coach_OBJECTS) $(coisados_coach_DEPENDENCIES)
+	@rm -f coisados_coach$(EXEEXT)
+	$(coisados_coach_LINK) $(coisados_coach_OBJECTS) $(coisados_coach_LDADD) $(LIBS)
+coisados_player$(EXEEXT): $(coisados_player_OBJECTS) $(coisados_player_DEPENDENCIES) 
+	@rm -f coisados_player$(EXEEXT)
+	$(coisados_player_LINK) $(coisados_player_OBJECTS) $(coisados_player_LDADD) $(LIBS)
+coisados_trainer$(EXEEXT): $(coisados_trainer_OBJECTS) $(coisados_trainer_DEPENDENCIES)
+	@rm -f coisados_trainer$(EXEEXT)
+	$(coisados_trainer_LINK) $(coisados_trainer_OBJECTS) $(coisados_trainer_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -572,82 +572,82 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/sample_coach-main_coach.Po
-include ./$(DEPDIR)/sample_coach-sample_coach.Po
-include ./$(DEPDIR)/sample_player-actgen_cross.Po
-include ./$(DEPDIR)/sample_player-actgen_direct_pass.Po
-include ./$(DEPDIR)/sample_player-actgen_self_pass.Po
-include ./$(DEPDIR)/sample_player-actgen_shoot.Po
-include ./$(DEPDIR)/sample_player-actgen_short_dribble.Po
-include ./$(DEPDIR)/sample_player-actgen_simple_dribble.Po
-include ./$(DEPDIR)/sample_player-actgen_strict_check_pass.Po
-include ./$(DEPDIR)/sample_player-action_chain_graph.Po
-include ./$(DEPDIR)/sample_player-action_chain_holder.Po
-include ./$(DEPDIR)/sample_player-bhv_basic_move.Po
-include ./$(DEPDIR)/sample_player-bhv_basic_offensive_kick.Po
-include ./$(DEPDIR)/sample_player-bhv_basic_tackle.Po
-include ./$(DEPDIR)/sample_player-bhv_chain_action.Po
-include ./$(DEPDIR)/sample_player-bhv_custom_before_kick_off.Po
-include ./$(DEPDIR)/sample_player-bhv_go_to_static_ball.Po
-include ./$(DEPDIR)/sample_player-bhv_goalie_basic_move.Po
-include ./$(DEPDIR)/sample_player-bhv_goalie_chase_ball.Po
-include ./$(DEPDIR)/sample_player-bhv_goalie_free_kick.Po
-include ./$(DEPDIR)/sample_player-bhv_normal_dribble.Po
-include ./$(DEPDIR)/sample_player-bhv_pass_kick_find_receiver.Po
-include ./$(DEPDIR)/sample_player-bhv_penalty_kick.Po
-include ./$(DEPDIR)/sample_player-bhv_prepare_set_play_kick.Po
-include ./$(DEPDIR)/sample_player-bhv_set_play.Po
-include ./$(DEPDIR)/sample_player-bhv_set_play_free_kick.Po
-include ./$(DEPDIR)/sample_player-bhv_set_play_goal_kick.Po
-include ./$(DEPDIR)/sample_player-bhv_set_play_indirect_free_kick.Po
-include ./$(DEPDIR)/sample_player-bhv_set_play_kick_in.Po
-include ./$(DEPDIR)/sample_player-bhv_set_play_kick_off.Po
-include ./$(DEPDIR)/sample_player-bhv_strict_check_shoot.Po
-include ./$(DEPDIR)/sample_player-bhv_their_goal_kick_move.Po
-include ./$(DEPDIR)/sample_player-body_force_shoot.Po
-include ./$(DEPDIR)/sample_player-clear_ball.Po
-include ./$(DEPDIR)/sample_player-clear_generator.Po
-include ./$(DEPDIR)/sample_player-cooperative_action.Po
-include ./$(DEPDIR)/sample_player-cross_generator.Po
-include ./$(DEPDIR)/sample_player-dribble.Po
-include ./$(DEPDIR)/sample_player-field_analyzer.Po
-include ./$(DEPDIR)/sample_player-hold_ball.Po
-include ./$(DEPDIR)/sample_player-intention_receive.Po
-include ./$(DEPDIR)/sample_player-intention_wait_after_set_play_kick.Po
-include ./$(DEPDIR)/sample_player-keepaway_communication.Po
-include ./$(DEPDIR)/sample_player-main_player.Po
-include ./$(DEPDIR)/sample_player-neck_default_intercept_neck.Po
-include ./$(DEPDIR)/sample_player-neck_goalie_turn_neck.Po
-include ./$(DEPDIR)/sample_player-neck_offensive_intercept_neck.Po
-include ./$(DEPDIR)/sample_player-neck_turn_to_receiver.Po
-include ./$(DEPDIR)/sample_player-pass.Po
-include ./$(DEPDIR)/sample_player-predict_state.Po
-include ./$(DEPDIR)/sample_player-role_center_back.Po
-include ./$(DEPDIR)/sample_player-role_center_forward.Po
-include ./$(DEPDIR)/sample_player-role_defensive_half.Po
-include ./$(DEPDIR)/sample_player-role_goalie.Po
-include ./$(DEPDIR)/sample_player-role_keepaway_keeper.Po
-include ./$(DEPDIR)/sample_player-role_keepaway_taker.Po
-include ./$(DEPDIR)/sample_player-role_offensive_half.Po
-include ./$(DEPDIR)/sample_player-role_sample.Po
-include ./$(DEPDIR)/sample_player-role_side_back.Po
-include ./$(DEPDIR)/sample_player-role_side_forward.Po
-include ./$(DEPDIR)/sample_player-role_side_half.Po
-include ./$(DEPDIR)/sample_player-sample_communication.Po
-include ./$(DEPDIR)/sample_player-sample_field_evaluator.Po
-include ./$(DEPDIR)/sample_player-sample_player.Po
-include ./$(DEPDIR)/sample_player-self_pass_generator.Po
-include ./$(DEPDIR)/sample_player-shoot.Po
-include ./$(DEPDIR)/sample_player-shoot_generator.Po
-include ./$(DEPDIR)/sample_player-short_dribble_generator.Po
-include ./$(DEPDIR)/sample_player-simple_pass_checker.Po
-include ./$(DEPDIR)/sample_player-soccer_role.Po
-include ./$(DEPDIR)/sample_player-strategy.Po
-include ./$(DEPDIR)/sample_player-strict_check_pass_generator.Po
-include ./$(DEPDIR)/sample_player-tackle_generator.Po
-include ./$(DEPDIR)/sample_player-view_tactical.Po
-include ./$(DEPDIR)/sample_trainer-main_trainer.Po
-include ./$(DEPDIR)/sample_trainer-sample_trainer.Po
+include ./$(DEPDIR)/coisados_coach-main_coach.Po
+include ./$(DEPDIR)/coisados_coach-coisados_coach.Po
+include ./$(DEPDIR)/coisados_player-actgen_cross.Po
+include ./$(DEPDIR)/coisados_player-actgen_direct_pass.Po
+include ./$(DEPDIR)/coisados_player-actgen_self_pass.Po
+include ./$(DEPDIR)/coisados_player-actgen_shoot.Po
+include ./$(DEPDIR)/coisados_player-actgen_short_dribble.Po
+include ./$(DEPDIR)/coisados_player-actgen_simple_dribble.Po
+include ./$(DEPDIR)/coisados_player-actgen_strict_check_pass.Po
+include ./$(DEPDIR)/coisados_player-action_chain_graph.Po
+include ./$(DEPDIR)/coisados_player-action_chain_holder.Po
+include ./$(DEPDIR)/coisados_player-bhv_basic_move.Po
+include ./$(DEPDIR)/coisados_player-bhv_basic_offensive_kick.Po
+include ./$(DEPDIR)/coisados_player-bhv_basic_tackle.Po
+include ./$(DEPDIR)/coisados_player-bhv_chain_action.Po
+include ./$(DEPDIR)/coisados_player-bhv_custom_before_kick_off.Po
+include ./$(DEPDIR)/coisados_player-bhv_go_to_static_ball.Po
+include ./$(DEPDIR)/coisados_player-bhv_goalie_basic_move.Po
+include ./$(DEPDIR)/coisados_player-bhv_goalie_chase_ball.Po
+include ./$(DEPDIR)/coisados_player-bhv_goalie_free_kick.Po
+include ./$(DEPDIR)/coisados_player-bhv_normal_dribble.Po
+include ./$(DEPDIR)/coisados_player-bhv_pass_kick_find_receiver.Po
+include ./$(DEPDIR)/coisados_player-bhv_penalty_kick.Po
+include ./$(DEPDIR)/coisados_player-bhv_prepare_set_play_kick.Po
+include ./$(DEPDIR)/coisados_player-bhv_set_play.Po
+include ./$(DEPDIR)/coisados_player-bhv_set_play_free_kick.Po
+include ./$(DEPDIR)/coisados_player-bhv_set_play_goal_kick.Po
+include ./$(DEPDIR)/coisados_player-bhv_set_play_indirect_free_kick.Po
+include ./$(DEPDIR)/coisados_player-bhv_set_play_kick_in.Po
+include ./$(DEPDIR)/coisados_player-bhv_set_play_kick_off.Po
+include ./$(DEPDIR)/coisados_player-bhv_strict_check_shoot.Po
+include ./$(DEPDIR)/coisados_player-bhv_their_goal_kick_move.Po
+include ./$(DEPDIR)/coisados_player-body_force_shoot.Po
+include ./$(DEPDIR)/coisados_player-clear_ball.Po
+include ./$(DEPDIR)/coisados_player-clear_generator.Po
+include ./$(DEPDIR)/coisados_player-cooperative_action.Po
+include ./$(DEPDIR)/coisados_player-cross_generator.Po
+include ./$(DEPDIR)/coisados_player-dribble.Po
+include ./$(DEPDIR)/coisados_player-field_analyzer.Po
+include ./$(DEPDIR)/coisados_player-hold_ball.Po
+include ./$(DEPDIR)/coisados_player-intention_receive.Po
+include ./$(DEPDIR)/coisados_player-intention_wait_after_set_play_kick.Po
+include ./$(DEPDIR)/coisados_player-keepaway_communication.Po
+include ./$(DEPDIR)/coisados_player-main_player.Po
+include ./$(DEPDIR)/coisados_player-neck_default_intercept_neck.Po
+include ./$(DEPDIR)/coisados_player-neck_goalie_turn_neck.Po
+include ./$(DEPDIR)/coisados_player-neck_offensive_intercept_neck.Po
+include ./$(DEPDIR)/coisados_player-neck_turn_to_receiver.Po
+include ./$(DEPDIR)/coisados_player-pass.Po
+include ./$(DEPDIR)/coisados_player-predict_state.Po
+include ./$(DEPDIR)/coisados_player-role_center_back.Po
+include ./$(DEPDIR)/coisados_player-role_center_forward.Po
+include ./$(DEPDIR)/coisados_player-role_defensive_half.Po
+include ./$(DEPDIR)/coisados_player-role_goalie.Po
+include ./$(DEPDIR)/coisados_player-role_keepaway_keeper.Po
+include ./$(DEPDIR)/coisados_player-role_keepaway_taker.Po
+include ./$(DEPDIR)/coisados_player-role_offensive_half.Po
+include ./$(DEPDIR)/coisados_player-role_coisados.Po
+include ./$(DEPDIR)/coisados_player-role_side_back.Po
+include ./$(DEPDIR)/coisados_player-role_side_forward.Po
+include ./$(DEPDIR)/coisados_player-role_side_half.Po
+include ./$(DEPDIR)/coisados_player-coisados_communication.Po
+include ./$(DEPDIR)/coisados_player-coisados_field_evaluator.Po
+include ./$(DEPDIR)/coisados_player-coisados_player.Po
+include ./$(DEPDIR)/coisados_player-self_pass_generator.Po
+include ./$(DEPDIR)/coisados_player-shoot.Po
+include ./$(DEPDIR)/coisados_player-shoot_generator.Po
+include ./$(DEPDIR)/coisados_player-short_dribble_generator.Po
+include ./$(DEPDIR)/coisados_player-simple_pass_checker.Po
+include ./$(DEPDIR)/coisados_player-soccer_role.Po
+include ./$(DEPDIR)/coisados_player-strategy.Po
+include ./$(DEPDIR)/coisados_player-strict_check_pass_generator.Po
+include ./$(DEPDIR)/coisados_player-tackle_generator.Po
+include ./$(DEPDIR)/coisados_player-view_tactical.Po
+include ./$(DEPDIR)/coisados_trainer-main_trainer.Po
+include ./$(DEPDIR)/coisados_trainer-coisados_trainer.Po
 
 .cpp.o:
 	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -663,1069 +663,1069 @@ include ./$(DEPDIR)/sample_trainer-sample_trainer.Po
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
 
-sample_coach-sample_coach.o: sample_coach.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_coach_CXXFLAGS) $(CXXFLAGS) -MT sample_coach-sample_coach.o -MD -MP -MF $(DEPDIR)/sample_coach-sample_coach.Tpo -c -o sample_coach-sample_coach.o `test -f 'sample_coach.cpp' || echo '$(srcdir)/'`sample_coach.cpp
-	$(am__mv) $(DEPDIR)/sample_coach-sample_coach.Tpo $(DEPDIR)/sample_coach-sample_coach.Po
-#	source='sample_coach.cpp' object='sample_coach-sample_coach.o' libtool=no \
+coisados_coach-coisados_coach.o: coisados_coach.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_coach_CXXFLAGS) $(CXXFLAGS) -MT coisados_coach-coisados_coach.o -MD -MP -MF $(DEPDIR)/coisados_coach-coisados_coach.Tpo -c -o coisados_coach-coisados_coach.o `test -f 'coisados_coach.cpp' || echo '$(srcdir)/'`coisados_coach.cpp
+	$(am__mv) $(DEPDIR)/coisados_coach-coisados_coach.Tpo $(DEPDIR)/coisados_coach-coisados_coach.Po
+#	source='coisados_coach.cpp' object='coisados_coach-coisados_coach.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_coach_CXXFLAGS) $(CXXFLAGS) -c -o sample_coach-sample_coach.o `test -f 'sample_coach.cpp' || echo '$(srcdir)/'`sample_coach.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_coach_CXXFLAGS) $(CXXFLAGS) -c -o coisados_coach-coisados_coach.o `test -f 'coisados_coach.cpp' || echo '$(srcdir)/'`coisados_coach.cpp
 
-sample_coach-sample_coach.obj: sample_coach.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_coach_CXXFLAGS) $(CXXFLAGS) -MT sample_coach-sample_coach.obj -MD -MP -MF $(DEPDIR)/sample_coach-sample_coach.Tpo -c -o sample_coach-sample_coach.obj `if test -f 'sample_coach.cpp'; then $(CYGPATH_W) 'sample_coach.cpp'; else $(CYGPATH_W) '$(srcdir)/sample_coach.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_coach-sample_coach.Tpo $(DEPDIR)/sample_coach-sample_coach.Po
-#	source='sample_coach.cpp' object='sample_coach-sample_coach.obj' libtool=no \
+coisados_coach-coisados_coach.obj: coisados_coach.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_coach_CXXFLAGS) $(CXXFLAGS) -MT coisados_coach-coisados_coach.obj -MD -MP -MF $(DEPDIR)/coisados_coach-coisados_coach.Tpo -c -o coisados_coach-coisados_coach.obj `if test -f 'coisados_coach.cpp'; then $(CYGPATH_W) 'coisados_coach.cpp'; else $(CYGPATH_W) '$(srcdir)/coisados_coach.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_coach-coisados_coach.Tpo $(DEPDIR)/coisados_coach-coisados_coach.Po
+#	source='coisados_coach.cpp' object='coisados_coach-coisados_coach.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_coach_CXXFLAGS) $(CXXFLAGS) -c -o sample_coach-sample_coach.obj `if test -f 'sample_coach.cpp'; then $(CYGPATH_W) 'sample_coach.cpp'; else $(CYGPATH_W) '$(srcdir)/sample_coach.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_coach_CXXFLAGS) $(CXXFLAGS) -c -o coisados_coach-coisados_coach.obj `if test -f 'coisados_coach.cpp'; then $(CYGPATH_W) 'coisados_coach.cpp'; else $(CYGPATH_W) '$(srcdir)/coisados_coach.cpp'; fi`
 
-sample_coach-main_coach.o: main_coach.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_coach_CXXFLAGS) $(CXXFLAGS) -MT sample_coach-main_coach.o -MD -MP -MF $(DEPDIR)/sample_coach-main_coach.Tpo -c -o sample_coach-main_coach.o `test -f 'main_coach.cpp' || echo '$(srcdir)/'`main_coach.cpp
-	$(am__mv) $(DEPDIR)/sample_coach-main_coach.Tpo $(DEPDIR)/sample_coach-main_coach.Po
-#	source='main_coach.cpp' object='sample_coach-main_coach.o' libtool=no \
+coisados_coach-main_coach.o: main_coach.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_coach_CXXFLAGS) $(CXXFLAGS) -MT coisados_coach-main_coach.o -MD -MP -MF $(DEPDIR)/coisados_coach-main_coach.Tpo -c -o coisados_coach-main_coach.o `test -f 'main_coach.cpp' || echo '$(srcdir)/'`main_coach.cpp
+	$(am__mv) $(DEPDIR)/coisados_coach-main_coach.Tpo $(DEPDIR)/coisados_coach-main_coach.Po
+#	source='main_coach.cpp' object='coisados_coach-main_coach.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_coach_CXXFLAGS) $(CXXFLAGS) -c -o sample_coach-main_coach.o `test -f 'main_coach.cpp' || echo '$(srcdir)/'`main_coach.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_coach_CXXFLAGS) $(CXXFLAGS) -c -o coisados_coach-main_coach.o `test -f 'main_coach.cpp' || echo '$(srcdir)/'`main_coach.cpp
 
-sample_coach-main_coach.obj: main_coach.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_coach_CXXFLAGS) $(CXXFLAGS) -MT sample_coach-main_coach.obj -MD -MP -MF $(DEPDIR)/sample_coach-main_coach.Tpo -c -o sample_coach-main_coach.obj `if test -f 'main_coach.cpp'; then $(CYGPATH_W) 'main_coach.cpp'; else $(CYGPATH_W) '$(srcdir)/main_coach.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_coach-main_coach.Tpo $(DEPDIR)/sample_coach-main_coach.Po
-#	source='main_coach.cpp' object='sample_coach-main_coach.obj' libtool=no \
+coisados_coach-main_coach.obj: main_coach.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_coach_CXXFLAGS) $(CXXFLAGS) -MT coisados_coach-main_coach.obj -MD -MP -MF $(DEPDIR)/coisados_coach-main_coach.Tpo -c -o coisados_coach-main_coach.obj `if test -f 'main_coach.cpp'; then $(CYGPATH_W) 'main_coach.cpp'; else $(CYGPATH_W) '$(srcdir)/main_coach.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_coach-main_coach.Tpo $(DEPDIR)/coisados_coach-main_coach.Po
+#	source='main_coach.cpp' object='coisados_coach-main_coach.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_coach_CXXFLAGS) $(CXXFLAGS) -c -o sample_coach-main_coach.obj `if test -f 'main_coach.cpp'; then $(CYGPATH_W) 'main_coach.cpp'; else $(CYGPATH_W) '$(srcdir)/main_coach.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_coach_CXXFLAGS) $(CXXFLAGS) -c -o coisados_coach-main_coach.obj `if test -f 'main_coach.cpp'; then $(CYGPATH_W) 'main_coach.cpp'; else $(CYGPATH_W) '$(srcdir)/main_coach.cpp'; fi`
 
-sample_player-actgen_cross.o: chain_action/actgen_cross.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_cross.o -MD -MP -MF $(DEPDIR)/sample_player-actgen_cross.Tpo -c -o sample_player-actgen_cross.o `test -f 'chain_action/actgen_cross.cpp' || echo '$(srcdir)/'`chain_action/actgen_cross.cpp
-	$(am__mv) $(DEPDIR)/sample_player-actgen_cross.Tpo $(DEPDIR)/sample_player-actgen_cross.Po
-#	source='chain_action/actgen_cross.cpp' object='sample_player-actgen_cross.o' libtool=no \
+coisados_player-actgen_cross.o: chain_action/actgen_cross.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_cross.o -MD -MP -MF $(DEPDIR)/coisados_player-actgen_cross.Tpo -c -o coisados_player-actgen_cross.o `test -f 'chain_action/actgen_cross.cpp' || echo '$(srcdir)/'`chain_action/actgen_cross.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_cross.Tpo $(DEPDIR)/coisados_player-actgen_cross.Po
+#	source='chain_action/actgen_cross.cpp' object='coisados_player-actgen_cross.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_cross.o `test -f 'chain_action/actgen_cross.cpp' || echo '$(srcdir)/'`chain_action/actgen_cross.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_cross.o `test -f 'chain_action/actgen_cross.cpp' || echo '$(srcdir)/'`chain_action/actgen_cross.cpp
 
-sample_player-actgen_cross.obj: chain_action/actgen_cross.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_cross.obj -MD -MP -MF $(DEPDIR)/sample_player-actgen_cross.Tpo -c -o sample_player-actgen_cross.obj `if test -f 'chain_action/actgen_cross.cpp'; then $(CYGPATH_W) 'chain_action/actgen_cross.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_cross.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-actgen_cross.Tpo $(DEPDIR)/sample_player-actgen_cross.Po
-#	source='chain_action/actgen_cross.cpp' object='sample_player-actgen_cross.obj' libtool=no \
+coisados_player-actgen_cross.obj: chain_action/actgen_cross.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_cross.obj -MD -MP -MF $(DEPDIR)/coisados_player-actgen_cross.Tpo -c -o coisados_player-actgen_cross.obj `if test -f 'chain_action/actgen_cross.cpp'; then $(CYGPATH_W) 'chain_action/actgen_cross.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_cross.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_cross.Tpo $(DEPDIR)/coisados_player-actgen_cross.Po
+#	source='chain_action/actgen_cross.cpp' object='coisados_player-actgen_cross.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_cross.obj `if test -f 'chain_action/actgen_cross.cpp'; then $(CYGPATH_W) 'chain_action/actgen_cross.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_cross.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_cross.obj `if test -f 'chain_action/actgen_cross.cpp'; then $(CYGPATH_W) 'chain_action/actgen_cross.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_cross.cpp'; fi`
 
-sample_player-actgen_direct_pass.o: chain_action/actgen_direct_pass.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_direct_pass.o -MD -MP -MF $(DEPDIR)/sample_player-actgen_direct_pass.Tpo -c -o sample_player-actgen_direct_pass.o `test -f 'chain_action/actgen_direct_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_direct_pass.cpp
-	$(am__mv) $(DEPDIR)/sample_player-actgen_direct_pass.Tpo $(DEPDIR)/sample_player-actgen_direct_pass.Po
-#	source='chain_action/actgen_direct_pass.cpp' object='sample_player-actgen_direct_pass.o' libtool=no \
+coisados_player-actgen_direct_pass.o: chain_action/actgen_direct_pass.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_direct_pass.o -MD -MP -MF $(DEPDIR)/coisados_player-actgen_direct_pass.Tpo -c -o coisados_player-actgen_direct_pass.o `test -f 'chain_action/actgen_direct_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_direct_pass.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_direct_pass.Tpo $(DEPDIR)/coisados_player-actgen_direct_pass.Po
+#	source='chain_action/actgen_direct_pass.cpp' object='coisados_player-actgen_direct_pass.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_direct_pass.o `test -f 'chain_action/actgen_direct_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_direct_pass.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_direct_pass.o `test -f 'chain_action/actgen_direct_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_direct_pass.cpp
 
-sample_player-actgen_direct_pass.obj: chain_action/actgen_direct_pass.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_direct_pass.obj -MD -MP -MF $(DEPDIR)/sample_player-actgen_direct_pass.Tpo -c -o sample_player-actgen_direct_pass.obj `if test -f 'chain_action/actgen_direct_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_direct_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_direct_pass.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-actgen_direct_pass.Tpo $(DEPDIR)/sample_player-actgen_direct_pass.Po
-#	source='chain_action/actgen_direct_pass.cpp' object='sample_player-actgen_direct_pass.obj' libtool=no \
+coisados_player-actgen_direct_pass.obj: chain_action/actgen_direct_pass.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_direct_pass.obj -MD -MP -MF $(DEPDIR)/coisados_player-actgen_direct_pass.Tpo -c -o coisados_player-actgen_direct_pass.obj `if test -f 'chain_action/actgen_direct_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_direct_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_direct_pass.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_direct_pass.Tpo $(DEPDIR)/coisados_player-actgen_direct_pass.Po
+#	source='chain_action/actgen_direct_pass.cpp' object='coisados_player-actgen_direct_pass.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_direct_pass.obj `if test -f 'chain_action/actgen_direct_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_direct_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_direct_pass.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_direct_pass.obj `if test -f 'chain_action/actgen_direct_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_direct_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_direct_pass.cpp'; fi`
 
-sample_player-actgen_self_pass.o: chain_action/actgen_self_pass.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_self_pass.o -MD -MP -MF $(DEPDIR)/sample_player-actgen_self_pass.Tpo -c -o sample_player-actgen_self_pass.o `test -f 'chain_action/actgen_self_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_self_pass.cpp
-	$(am__mv) $(DEPDIR)/sample_player-actgen_self_pass.Tpo $(DEPDIR)/sample_player-actgen_self_pass.Po
-#	source='chain_action/actgen_self_pass.cpp' object='sample_player-actgen_self_pass.o' libtool=no \
+coisados_player-actgen_self_pass.o: chain_action/actgen_self_pass.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_self_pass.o -MD -MP -MF $(DEPDIR)/coisados_player-actgen_self_pass.Tpo -c -o coisados_player-actgen_self_pass.o `test -f 'chain_action/actgen_self_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_self_pass.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_self_pass.Tpo $(DEPDIR)/coisados_player-actgen_self_pass.Po
+#	source='chain_action/actgen_self_pass.cpp' object='coisados_player-actgen_self_pass.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_self_pass.o `test -f 'chain_action/actgen_self_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_self_pass.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_self_pass.o `test -f 'chain_action/actgen_self_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_self_pass.cpp
 
-sample_player-actgen_self_pass.obj: chain_action/actgen_self_pass.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_self_pass.obj -MD -MP -MF $(DEPDIR)/sample_player-actgen_self_pass.Tpo -c -o sample_player-actgen_self_pass.obj `if test -f 'chain_action/actgen_self_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_self_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_self_pass.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-actgen_self_pass.Tpo $(DEPDIR)/sample_player-actgen_self_pass.Po
-#	source='chain_action/actgen_self_pass.cpp' object='sample_player-actgen_self_pass.obj' libtool=no \
+coisados_player-actgen_self_pass.obj: chain_action/actgen_self_pass.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_self_pass.obj -MD -MP -MF $(DEPDIR)/coisados_player-actgen_self_pass.Tpo -c -o coisados_player-actgen_self_pass.obj `if test -f 'chain_action/actgen_self_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_self_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_self_pass.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_self_pass.Tpo $(DEPDIR)/coisados_player-actgen_self_pass.Po
+#	source='chain_action/actgen_self_pass.cpp' object='coisados_player-actgen_self_pass.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_self_pass.obj `if test -f 'chain_action/actgen_self_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_self_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_self_pass.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_self_pass.obj `if test -f 'chain_action/actgen_self_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_self_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_self_pass.cpp'; fi`
 
-sample_player-actgen_shoot.o: chain_action/actgen_shoot.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_shoot.o -MD -MP -MF $(DEPDIR)/sample_player-actgen_shoot.Tpo -c -o sample_player-actgen_shoot.o `test -f 'chain_action/actgen_shoot.cpp' || echo '$(srcdir)/'`chain_action/actgen_shoot.cpp
-	$(am__mv) $(DEPDIR)/sample_player-actgen_shoot.Tpo $(DEPDIR)/sample_player-actgen_shoot.Po
-#	source='chain_action/actgen_shoot.cpp' object='sample_player-actgen_shoot.o' libtool=no \
+coisados_player-actgen_shoot.o: chain_action/actgen_shoot.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_shoot.o -MD -MP -MF $(DEPDIR)/coisados_player-actgen_shoot.Tpo -c -o coisados_player-actgen_shoot.o `test -f 'chain_action/actgen_shoot.cpp' || echo '$(srcdir)/'`chain_action/actgen_shoot.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_shoot.Tpo $(DEPDIR)/coisados_player-actgen_shoot.Po
+#	source='chain_action/actgen_shoot.cpp' object='coisados_player-actgen_shoot.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_shoot.o `test -f 'chain_action/actgen_shoot.cpp' || echo '$(srcdir)/'`chain_action/actgen_shoot.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_shoot.o `test -f 'chain_action/actgen_shoot.cpp' || echo '$(srcdir)/'`chain_action/actgen_shoot.cpp
 
-sample_player-actgen_shoot.obj: chain_action/actgen_shoot.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_shoot.obj -MD -MP -MF $(DEPDIR)/sample_player-actgen_shoot.Tpo -c -o sample_player-actgen_shoot.obj `if test -f 'chain_action/actgen_shoot.cpp'; then $(CYGPATH_W) 'chain_action/actgen_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_shoot.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-actgen_shoot.Tpo $(DEPDIR)/sample_player-actgen_shoot.Po
-#	source='chain_action/actgen_shoot.cpp' object='sample_player-actgen_shoot.obj' libtool=no \
+coisados_player-actgen_shoot.obj: chain_action/actgen_shoot.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_shoot.obj -MD -MP -MF $(DEPDIR)/coisados_player-actgen_shoot.Tpo -c -o coisados_player-actgen_shoot.obj `if test -f 'chain_action/actgen_shoot.cpp'; then $(CYGPATH_W) 'chain_action/actgen_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_shoot.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_shoot.Tpo $(DEPDIR)/coisados_player-actgen_shoot.Po
+#	source='chain_action/actgen_shoot.cpp' object='coisados_player-actgen_shoot.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_shoot.obj `if test -f 'chain_action/actgen_shoot.cpp'; then $(CYGPATH_W) 'chain_action/actgen_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_shoot.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_shoot.obj `if test -f 'chain_action/actgen_shoot.cpp'; then $(CYGPATH_W) 'chain_action/actgen_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_shoot.cpp'; fi`
 
-sample_player-actgen_short_dribble.o: chain_action/actgen_short_dribble.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_short_dribble.o -MD -MP -MF $(DEPDIR)/sample_player-actgen_short_dribble.Tpo -c -o sample_player-actgen_short_dribble.o `test -f 'chain_action/actgen_short_dribble.cpp' || echo '$(srcdir)/'`chain_action/actgen_short_dribble.cpp
-	$(am__mv) $(DEPDIR)/sample_player-actgen_short_dribble.Tpo $(DEPDIR)/sample_player-actgen_short_dribble.Po
-#	source='chain_action/actgen_short_dribble.cpp' object='sample_player-actgen_short_dribble.o' libtool=no \
+coisados_player-actgen_short_dribble.o: chain_action/actgen_short_dribble.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_short_dribble.o -MD -MP -MF $(DEPDIR)/coisados_player-actgen_short_dribble.Tpo -c -o coisados_player-actgen_short_dribble.o `test -f 'chain_action/actgen_short_dribble.cpp' || echo '$(srcdir)/'`chain_action/actgen_short_dribble.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_short_dribble.Tpo $(DEPDIR)/coisados_player-actgen_short_dribble.Po
+#	source='chain_action/actgen_short_dribble.cpp' object='coisados_player-actgen_short_dribble.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_short_dribble.o `test -f 'chain_action/actgen_short_dribble.cpp' || echo '$(srcdir)/'`chain_action/actgen_short_dribble.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_short_dribble.o `test -f 'chain_action/actgen_short_dribble.cpp' || echo '$(srcdir)/'`chain_action/actgen_short_dribble.cpp
 
-sample_player-actgen_short_dribble.obj: chain_action/actgen_short_dribble.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_short_dribble.obj -MD -MP -MF $(DEPDIR)/sample_player-actgen_short_dribble.Tpo -c -o sample_player-actgen_short_dribble.obj `if test -f 'chain_action/actgen_short_dribble.cpp'; then $(CYGPATH_W) 'chain_action/actgen_short_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_short_dribble.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-actgen_short_dribble.Tpo $(DEPDIR)/sample_player-actgen_short_dribble.Po
-#	source='chain_action/actgen_short_dribble.cpp' object='sample_player-actgen_short_dribble.obj' libtool=no \
+coisados_player-actgen_short_dribble.obj: chain_action/actgen_short_dribble.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_short_dribble.obj -MD -MP -MF $(DEPDIR)/coisados_player-actgen_short_dribble.Tpo -c -o coisados_player-actgen_short_dribble.obj `if test -f 'chain_action/actgen_short_dribble.cpp'; then $(CYGPATH_W) 'chain_action/actgen_short_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_short_dribble.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_short_dribble.Tpo $(DEPDIR)/coisados_player-actgen_short_dribble.Po
+#	source='chain_action/actgen_short_dribble.cpp' object='coisados_player-actgen_short_dribble.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_short_dribble.obj `if test -f 'chain_action/actgen_short_dribble.cpp'; then $(CYGPATH_W) 'chain_action/actgen_short_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_short_dribble.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_short_dribble.obj `if test -f 'chain_action/actgen_short_dribble.cpp'; then $(CYGPATH_W) 'chain_action/actgen_short_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_short_dribble.cpp'; fi`
 
-sample_player-actgen_simple_dribble.o: chain_action/actgen_simple_dribble.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_simple_dribble.o -MD -MP -MF $(DEPDIR)/sample_player-actgen_simple_dribble.Tpo -c -o sample_player-actgen_simple_dribble.o `test -f 'chain_action/actgen_simple_dribble.cpp' || echo '$(srcdir)/'`chain_action/actgen_simple_dribble.cpp
-	$(am__mv) $(DEPDIR)/sample_player-actgen_simple_dribble.Tpo $(DEPDIR)/sample_player-actgen_simple_dribble.Po
-#	source='chain_action/actgen_simple_dribble.cpp' object='sample_player-actgen_simple_dribble.o' libtool=no \
+coisados_player-actgen_simple_dribble.o: chain_action/actgen_simple_dribble.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_simple_dribble.o -MD -MP -MF $(DEPDIR)/coisados_player-actgen_simple_dribble.Tpo -c -o coisados_player-actgen_simple_dribble.o `test -f 'chain_action/actgen_simple_dribble.cpp' || echo '$(srcdir)/'`chain_action/actgen_simple_dribble.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_simple_dribble.Tpo $(DEPDIR)/coisados_player-actgen_simple_dribble.Po
+#	source='chain_action/actgen_simple_dribble.cpp' object='coisados_player-actgen_simple_dribble.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_simple_dribble.o `test -f 'chain_action/actgen_simple_dribble.cpp' || echo '$(srcdir)/'`chain_action/actgen_simple_dribble.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_simple_dribble.o `test -f 'chain_action/actgen_simple_dribble.cpp' || echo '$(srcdir)/'`chain_action/actgen_simple_dribble.cpp
 
-sample_player-actgen_simple_dribble.obj: chain_action/actgen_simple_dribble.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_simple_dribble.obj -MD -MP -MF $(DEPDIR)/sample_player-actgen_simple_dribble.Tpo -c -o sample_player-actgen_simple_dribble.obj `if test -f 'chain_action/actgen_simple_dribble.cpp'; then $(CYGPATH_W) 'chain_action/actgen_simple_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_simple_dribble.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-actgen_simple_dribble.Tpo $(DEPDIR)/sample_player-actgen_simple_dribble.Po
-#	source='chain_action/actgen_simple_dribble.cpp' object='sample_player-actgen_simple_dribble.obj' libtool=no \
+coisados_player-actgen_simple_dribble.obj: chain_action/actgen_simple_dribble.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_simple_dribble.obj -MD -MP -MF $(DEPDIR)/coisados_player-actgen_simple_dribble.Tpo -c -o coisados_player-actgen_simple_dribble.obj `if test -f 'chain_action/actgen_simple_dribble.cpp'; then $(CYGPATH_W) 'chain_action/actgen_simple_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_simple_dribble.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_simple_dribble.Tpo $(DEPDIR)/coisados_player-actgen_simple_dribble.Po
+#	source='chain_action/actgen_simple_dribble.cpp' object='coisados_player-actgen_simple_dribble.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_simple_dribble.obj `if test -f 'chain_action/actgen_simple_dribble.cpp'; then $(CYGPATH_W) 'chain_action/actgen_simple_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_simple_dribble.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_simple_dribble.obj `if test -f 'chain_action/actgen_simple_dribble.cpp'; then $(CYGPATH_W) 'chain_action/actgen_simple_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_simple_dribble.cpp'; fi`
 
-sample_player-actgen_strict_check_pass.o: chain_action/actgen_strict_check_pass.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_strict_check_pass.o -MD -MP -MF $(DEPDIR)/sample_player-actgen_strict_check_pass.Tpo -c -o sample_player-actgen_strict_check_pass.o `test -f 'chain_action/actgen_strict_check_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_strict_check_pass.cpp
-	$(am__mv) $(DEPDIR)/sample_player-actgen_strict_check_pass.Tpo $(DEPDIR)/sample_player-actgen_strict_check_pass.Po
-#	source='chain_action/actgen_strict_check_pass.cpp' object='sample_player-actgen_strict_check_pass.o' libtool=no \
+coisados_player-actgen_strict_check_pass.o: chain_action/actgen_strict_check_pass.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_strict_check_pass.o -MD -MP -MF $(DEPDIR)/coisados_player-actgen_strict_check_pass.Tpo -c -o coisados_player-actgen_strict_check_pass.o `test -f 'chain_action/actgen_strict_check_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_strict_check_pass.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_strict_check_pass.Tpo $(DEPDIR)/coisados_player-actgen_strict_check_pass.Po
+#	source='chain_action/actgen_strict_check_pass.cpp' object='coisados_player-actgen_strict_check_pass.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_strict_check_pass.o `test -f 'chain_action/actgen_strict_check_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_strict_check_pass.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_strict_check_pass.o `test -f 'chain_action/actgen_strict_check_pass.cpp' || echo '$(srcdir)/'`chain_action/actgen_strict_check_pass.cpp
 
-sample_player-actgen_strict_check_pass.obj: chain_action/actgen_strict_check_pass.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-actgen_strict_check_pass.obj -MD -MP -MF $(DEPDIR)/sample_player-actgen_strict_check_pass.Tpo -c -o sample_player-actgen_strict_check_pass.obj `if test -f 'chain_action/actgen_strict_check_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_strict_check_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_strict_check_pass.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-actgen_strict_check_pass.Tpo $(DEPDIR)/sample_player-actgen_strict_check_pass.Po
-#	source='chain_action/actgen_strict_check_pass.cpp' object='sample_player-actgen_strict_check_pass.obj' libtool=no \
+coisados_player-actgen_strict_check_pass.obj: chain_action/actgen_strict_check_pass.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-actgen_strict_check_pass.obj -MD -MP -MF $(DEPDIR)/coisados_player-actgen_strict_check_pass.Tpo -c -o coisados_player-actgen_strict_check_pass.obj `if test -f 'chain_action/actgen_strict_check_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_strict_check_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_strict_check_pass.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-actgen_strict_check_pass.Tpo $(DEPDIR)/coisados_player-actgen_strict_check_pass.Po
+#	source='chain_action/actgen_strict_check_pass.cpp' object='coisados_player-actgen_strict_check_pass.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-actgen_strict_check_pass.obj `if test -f 'chain_action/actgen_strict_check_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_strict_check_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_strict_check_pass.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-actgen_strict_check_pass.obj `if test -f 'chain_action/actgen_strict_check_pass.cpp'; then $(CYGPATH_W) 'chain_action/actgen_strict_check_pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/actgen_strict_check_pass.cpp'; fi`
 
-sample_player-action_chain_graph.o: chain_action/action_chain_graph.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-action_chain_graph.o -MD -MP -MF $(DEPDIR)/sample_player-action_chain_graph.Tpo -c -o sample_player-action_chain_graph.o `test -f 'chain_action/action_chain_graph.cpp' || echo '$(srcdir)/'`chain_action/action_chain_graph.cpp
-	$(am__mv) $(DEPDIR)/sample_player-action_chain_graph.Tpo $(DEPDIR)/sample_player-action_chain_graph.Po
-#	source='chain_action/action_chain_graph.cpp' object='sample_player-action_chain_graph.o' libtool=no \
+coisados_player-action_chain_graph.o: chain_action/action_chain_graph.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-action_chain_graph.o -MD -MP -MF $(DEPDIR)/coisados_player-action_chain_graph.Tpo -c -o coisados_player-action_chain_graph.o `test -f 'chain_action/action_chain_graph.cpp' || echo '$(srcdir)/'`chain_action/action_chain_graph.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-action_chain_graph.Tpo $(DEPDIR)/coisados_player-action_chain_graph.Po
+#	source='chain_action/action_chain_graph.cpp' object='coisados_player-action_chain_graph.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-action_chain_graph.o `test -f 'chain_action/action_chain_graph.cpp' || echo '$(srcdir)/'`chain_action/action_chain_graph.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-action_chain_graph.o `test -f 'chain_action/action_chain_graph.cpp' || echo '$(srcdir)/'`chain_action/action_chain_graph.cpp
 
-sample_player-action_chain_graph.obj: chain_action/action_chain_graph.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-action_chain_graph.obj -MD -MP -MF $(DEPDIR)/sample_player-action_chain_graph.Tpo -c -o sample_player-action_chain_graph.obj `if test -f 'chain_action/action_chain_graph.cpp'; then $(CYGPATH_W) 'chain_action/action_chain_graph.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/action_chain_graph.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-action_chain_graph.Tpo $(DEPDIR)/sample_player-action_chain_graph.Po
-#	source='chain_action/action_chain_graph.cpp' object='sample_player-action_chain_graph.obj' libtool=no \
+coisados_player-action_chain_graph.obj: chain_action/action_chain_graph.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-action_chain_graph.obj -MD -MP -MF $(DEPDIR)/coisados_player-action_chain_graph.Tpo -c -o coisados_player-action_chain_graph.obj `if test -f 'chain_action/action_chain_graph.cpp'; then $(CYGPATH_W) 'chain_action/action_chain_graph.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/action_chain_graph.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-action_chain_graph.Tpo $(DEPDIR)/coisados_player-action_chain_graph.Po
+#	source='chain_action/action_chain_graph.cpp' object='coisados_player-action_chain_graph.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-action_chain_graph.obj `if test -f 'chain_action/action_chain_graph.cpp'; then $(CYGPATH_W) 'chain_action/action_chain_graph.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/action_chain_graph.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-action_chain_graph.obj `if test -f 'chain_action/action_chain_graph.cpp'; then $(CYGPATH_W) 'chain_action/action_chain_graph.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/action_chain_graph.cpp'; fi`
 
-sample_player-action_chain_holder.o: chain_action/action_chain_holder.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-action_chain_holder.o -MD -MP -MF $(DEPDIR)/sample_player-action_chain_holder.Tpo -c -o sample_player-action_chain_holder.o `test -f 'chain_action/action_chain_holder.cpp' || echo '$(srcdir)/'`chain_action/action_chain_holder.cpp
-	$(am__mv) $(DEPDIR)/sample_player-action_chain_holder.Tpo $(DEPDIR)/sample_player-action_chain_holder.Po
-#	source='chain_action/action_chain_holder.cpp' object='sample_player-action_chain_holder.o' libtool=no \
+coisados_player-action_chain_holder.o: chain_action/action_chain_holder.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-action_chain_holder.o -MD -MP -MF $(DEPDIR)/coisados_player-action_chain_holder.Tpo -c -o coisados_player-action_chain_holder.o `test -f 'chain_action/action_chain_holder.cpp' || echo '$(srcdir)/'`chain_action/action_chain_holder.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-action_chain_holder.Tpo $(DEPDIR)/coisados_player-action_chain_holder.Po
+#	source='chain_action/action_chain_holder.cpp' object='coisados_player-action_chain_holder.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-action_chain_holder.o `test -f 'chain_action/action_chain_holder.cpp' || echo '$(srcdir)/'`chain_action/action_chain_holder.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-action_chain_holder.o `test -f 'chain_action/action_chain_holder.cpp' || echo '$(srcdir)/'`chain_action/action_chain_holder.cpp
 
-sample_player-action_chain_holder.obj: chain_action/action_chain_holder.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-action_chain_holder.obj -MD -MP -MF $(DEPDIR)/sample_player-action_chain_holder.Tpo -c -o sample_player-action_chain_holder.obj `if test -f 'chain_action/action_chain_holder.cpp'; then $(CYGPATH_W) 'chain_action/action_chain_holder.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/action_chain_holder.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-action_chain_holder.Tpo $(DEPDIR)/sample_player-action_chain_holder.Po
-#	source='chain_action/action_chain_holder.cpp' object='sample_player-action_chain_holder.obj' libtool=no \
+coisados_player-action_chain_holder.obj: chain_action/action_chain_holder.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-action_chain_holder.obj -MD -MP -MF $(DEPDIR)/coisados_player-action_chain_holder.Tpo -c -o coisados_player-action_chain_holder.obj `if test -f 'chain_action/action_chain_holder.cpp'; then $(CYGPATH_W) 'chain_action/action_chain_holder.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/action_chain_holder.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-action_chain_holder.Tpo $(DEPDIR)/coisados_player-action_chain_holder.Po
+#	source='chain_action/action_chain_holder.cpp' object='coisados_player-action_chain_holder.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-action_chain_holder.obj `if test -f 'chain_action/action_chain_holder.cpp'; then $(CYGPATH_W) 'chain_action/action_chain_holder.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/action_chain_holder.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-action_chain_holder.obj `if test -f 'chain_action/action_chain_holder.cpp'; then $(CYGPATH_W) 'chain_action/action_chain_holder.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/action_chain_holder.cpp'; fi`
 
-sample_player-bhv_chain_action.o: chain_action/bhv_chain_action.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_chain_action.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_chain_action.Tpo -c -o sample_player-bhv_chain_action.o `test -f 'chain_action/bhv_chain_action.cpp' || echo '$(srcdir)/'`chain_action/bhv_chain_action.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_chain_action.Tpo $(DEPDIR)/sample_player-bhv_chain_action.Po
-#	source='chain_action/bhv_chain_action.cpp' object='sample_player-bhv_chain_action.o' libtool=no \
+coisados_player-bhv_chain_action.o: chain_action/bhv_chain_action.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_chain_action.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_chain_action.Tpo -c -o coisados_player-bhv_chain_action.o `test -f 'chain_action/bhv_chain_action.cpp' || echo '$(srcdir)/'`chain_action/bhv_chain_action.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_chain_action.Tpo $(DEPDIR)/coisados_player-bhv_chain_action.Po
+#	source='chain_action/bhv_chain_action.cpp' object='coisados_player-bhv_chain_action.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_chain_action.o `test -f 'chain_action/bhv_chain_action.cpp' || echo '$(srcdir)/'`chain_action/bhv_chain_action.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_chain_action.o `test -f 'chain_action/bhv_chain_action.cpp' || echo '$(srcdir)/'`chain_action/bhv_chain_action.cpp
 
-sample_player-bhv_chain_action.obj: chain_action/bhv_chain_action.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_chain_action.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_chain_action.Tpo -c -o sample_player-bhv_chain_action.obj `if test -f 'chain_action/bhv_chain_action.cpp'; then $(CYGPATH_W) 'chain_action/bhv_chain_action.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_chain_action.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_chain_action.Tpo $(DEPDIR)/sample_player-bhv_chain_action.Po
-#	source='chain_action/bhv_chain_action.cpp' object='sample_player-bhv_chain_action.obj' libtool=no \
+coisados_player-bhv_chain_action.obj: chain_action/bhv_chain_action.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_chain_action.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_chain_action.Tpo -c -o coisados_player-bhv_chain_action.obj `if test -f 'chain_action/bhv_chain_action.cpp'; then $(CYGPATH_W) 'chain_action/bhv_chain_action.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_chain_action.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_chain_action.Tpo $(DEPDIR)/coisados_player-bhv_chain_action.Po
+#	source='chain_action/bhv_chain_action.cpp' object='coisados_player-bhv_chain_action.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_chain_action.obj `if test -f 'chain_action/bhv_chain_action.cpp'; then $(CYGPATH_W) 'chain_action/bhv_chain_action.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_chain_action.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_chain_action.obj `if test -f 'chain_action/bhv_chain_action.cpp'; then $(CYGPATH_W) 'chain_action/bhv_chain_action.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_chain_action.cpp'; fi`
 
-sample_player-bhv_normal_dribble.o: chain_action/bhv_normal_dribble.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_normal_dribble.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_normal_dribble.Tpo -c -o sample_player-bhv_normal_dribble.o `test -f 'chain_action/bhv_normal_dribble.cpp' || echo '$(srcdir)/'`chain_action/bhv_normal_dribble.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_normal_dribble.Tpo $(DEPDIR)/sample_player-bhv_normal_dribble.Po
-#	source='chain_action/bhv_normal_dribble.cpp' object='sample_player-bhv_normal_dribble.o' libtool=no \
+coisados_player-bhv_normal_dribble.o: chain_action/bhv_normal_dribble.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_normal_dribble.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_normal_dribble.Tpo -c -o coisados_player-bhv_normal_dribble.o `test -f 'chain_action/bhv_normal_dribble.cpp' || echo '$(srcdir)/'`chain_action/bhv_normal_dribble.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_normal_dribble.Tpo $(DEPDIR)/coisados_player-bhv_normal_dribble.Po
+#	source='chain_action/bhv_normal_dribble.cpp' object='coisados_player-bhv_normal_dribble.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_normal_dribble.o `test -f 'chain_action/bhv_normal_dribble.cpp' || echo '$(srcdir)/'`chain_action/bhv_normal_dribble.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_normal_dribble.o `test -f 'chain_action/bhv_normal_dribble.cpp' || echo '$(srcdir)/'`chain_action/bhv_normal_dribble.cpp
 
-sample_player-bhv_normal_dribble.obj: chain_action/bhv_normal_dribble.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_normal_dribble.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_normal_dribble.Tpo -c -o sample_player-bhv_normal_dribble.obj `if test -f 'chain_action/bhv_normal_dribble.cpp'; then $(CYGPATH_W) 'chain_action/bhv_normal_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_normal_dribble.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_normal_dribble.Tpo $(DEPDIR)/sample_player-bhv_normal_dribble.Po
-#	source='chain_action/bhv_normal_dribble.cpp' object='sample_player-bhv_normal_dribble.obj' libtool=no \
+coisados_player-bhv_normal_dribble.obj: chain_action/bhv_normal_dribble.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_normal_dribble.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_normal_dribble.Tpo -c -o coisados_player-bhv_normal_dribble.obj `if test -f 'chain_action/bhv_normal_dribble.cpp'; then $(CYGPATH_W) 'chain_action/bhv_normal_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_normal_dribble.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_normal_dribble.Tpo $(DEPDIR)/coisados_player-bhv_normal_dribble.Po
+#	source='chain_action/bhv_normal_dribble.cpp' object='coisados_player-bhv_normal_dribble.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_normal_dribble.obj `if test -f 'chain_action/bhv_normal_dribble.cpp'; then $(CYGPATH_W) 'chain_action/bhv_normal_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_normal_dribble.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_normal_dribble.obj `if test -f 'chain_action/bhv_normal_dribble.cpp'; then $(CYGPATH_W) 'chain_action/bhv_normal_dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_normal_dribble.cpp'; fi`
 
-sample_player-bhv_pass_kick_find_receiver.o: chain_action/bhv_pass_kick_find_receiver.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_pass_kick_find_receiver.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_pass_kick_find_receiver.Tpo -c -o sample_player-bhv_pass_kick_find_receiver.o `test -f 'chain_action/bhv_pass_kick_find_receiver.cpp' || echo '$(srcdir)/'`chain_action/bhv_pass_kick_find_receiver.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_pass_kick_find_receiver.Tpo $(DEPDIR)/sample_player-bhv_pass_kick_find_receiver.Po
-#	source='chain_action/bhv_pass_kick_find_receiver.cpp' object='sample_player-bhv_pass_kick_find_receiver.o' libtool=no \
+coisados_player-bhv_pass_kick_find_receiver.o: chain_action/bhv_pass_kick_find_receiver.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_pass_kick_find_receiver.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_pass_kick_find_receiver.Tpo -c -o coisados_player-bhv_pass_kick_find_receiver.o `test -f 'chain_action/bhv_pass_kick_find_receiver.cpp' || echo '$(srcdir)/'`chain_action/bhv_pass_kick_find_receiver.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_pass_kick_find_receiver.Tpo $(DEPDIR)/coisados_player-bhv_pass_kick_find_receiver.Po
+#	source='chain_action/bhv_pass_kick_find_receiver.cpp' object='coisados_player-bhv_pass_kick_find_receiver.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_pass_kick_find_receiver.o `test -f 'chain_action/bhv_pass_kick_find_receiver.cpp' || echo '$(srcdir)/'`chain_action/bhv_pass_kick_find_receiver.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_pass_kick_find_receiver.o `test -f 'chain_action/bhv_pass_kick_find_receiver.cpp' || echo '$(srcdir)/'`chain_action/bhv_pass_kick_find_receiver.cpp
 
-sample_player-bhv_pass_kick_find_receiver.obj: chain_action/bhv_pass_kick_find_receiver.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_pass_kick_find_receiver.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_pass_kick_find_receiver.Tpo -c -o sample_player-bhv_pass_kick_find_receiver.obj `if test -f 'chain_action/bhv_pass_kick_find_receiver.cpp'; then $(CYGPATH_W) 'chain_action/bhv_pass_kick_find_receiver.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_pass_kick_find_receiver.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_pass_kick_find_receiver.Tpo $(DEPDIR)/sample_player-bhv_pass_kick_find_receiver.Po
-#	source='chain_action/bhv_pass_kick_find_receiver.cpp' object='sample_player-bhv_pass_kick_find_receiver.obj' libtool=no \
+coisados_player-bhv_pass_kick_find_receiver.obj: chain_action/bhv_pass_kick_find_receiver.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_pass_kick_find_receiver.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_pass_kick_find_receiver.Tpo -c -o coisados_player-bhv_pass_kick_find_receiver.obj `if test -f 'chain_action/bhv_pass_kick_find_receiver.cpp'; then $(CYGPATH_W) 'chain_action/bhv_pass_kick_find_receiver.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_pass_kick_find_receiver.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_pass_kick_find_receiver.Tpo $(DEPDIR)/coisados_player-bhv_pass_kick_find_receiver.Po
+#	source='chain_action/bhv_pass_kick_find_receiver.cpp' object='coisados_player-bhv_pass_kick_find_receiver.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_pass_kick_find_receiver.obj `if test -f 'chain_action/bhv_pass_kick_find_receiver.cpp'; then $(CYGPATH_W) 'chain_action/bhv_pass_kick_find_receiver.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_pass_kick_find_receiver.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_pass_kick_find_receiver.obj `if test -f 'chain_action/bhv_pass_kick_find_receiver.cpp'; then $(CYGPATH_W) 'chain_action/bhv_pass_kick_find_receiver.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_pass_kick_find_receiver.cpp'; fi`
 
-sample_player-bhv_strict_check_shoot.o: chain_action/bhv_strict_check_shoot.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_strict_check_shoot.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_strict_check_shoot.Tpo -c -o sample_player-bhv_strict_check_shoot.o `test -f 'chain_action/bhv_strict_check_shoot.cpp' || echo '$(srcdir)/'`chain_action/bhv_strict_check_shoot.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_strict_check_shoot.Tpo $(DEPDIR)/sample_player-bhv_strict_check_shoot.Po
-#	source='chain_action/bhv_strict_check_shoot.cpp' object='sample_player-bhv_strict_check_shoot.o' libtool=no \
+coisados_player-bhv_strict_check_shoot.o: chain_action/bhv_strict_check_shoot.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_strict_check_shoot.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_strict_check_shoot.Tpo -c -o coisados_player-bhv_strict_check_shoot.o `test -f 'chain_action/bhv_strict_check_shoot.cpp' || echo '$(srcdir)/'`chain_action/bhv_strict_check_shoot.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_strict_check_shoot.Tpo $(DEPDIR)/coisados_player-bhv_strict_check_shoot.Po
+#	source='chain_action/bhv_strict_check_shoot.cpp' object='coisados_player-bhv_strict_check_shoot.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_strict_check_shoot.o `test -f 'chain_action/bhv_strict_check_shoot.cpp' || echo '$(srcdir)/'`chain_action/bhv_strict_check_shoot.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_strict_check_shoot.o `test -f 'chain_action/bhv_strict_check_shoot.cpp' || echo '$(srcdir)/'`chain_action/bhv_strict_check_shoot.cpp
 
-sample_player-bhv_strict_check_shoot.obj: chain_action/bhv_strict_check_shoot.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_strict_check_shoot.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_strict_check_shoot.Tpo -c -o sample_player-bhv_strict_check_shoot.obj `if test -f 'chain_action/bhv_strict_check_shoot.cpp'; then $(CYGPATH_W) 'chain_action/bhv_strict_check_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_strict_check_shoot.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_strict_check_shoot.Tpo $(DEPDIR)/sample_player-bhv_strict_check_shoot.Po
-#	source='chain_action/bhv_strict_check_shoot.cpp' object='sample_player-bhv_strict_check_shoot.obj' libtool=no \
+coisados_player-bhv_strict_check_shoot.obj: chain_action/bhv_strict_check_shoot.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_strict_check_shoot.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_strict_check_shoot.Tpo -c -o coisados_player-bhv_strict_check_shoot.obj `if test -f 'chain_action/bhv_strict_check_shoot.cpp'; then $(CYGPATH_W) 'chain_action/bhv_strict_check_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_strict_check_shoot.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_strict_check_shoot.Tpo $(DEPDIR)/coisados_player-bhv_strict_check_shoot.Po
+#	source='chain_action/bhv_strict_check_shoot.cpp' object='coisados_player-bhv_strict_check_shoot.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_strict_check_shoot.obj `if test -f 'chain_action/bhv_strict_check_shoot.cpp'; then $(CYGPATH_W) 'chain_action/bhv_strict_check_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_strict_check_shoot.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_strict_check_shoot.obj `if test -f 'chain_action/bhv_strict_check_shoot.cpp'; then $(CYGPATH_W) 'chain_action/bhv_strict_check_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/bhv_strict_check_shoot.cpp'; fi`
 
-sample_player-body_force_shoot.o: chain_action/body_force_shoot.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-body_force_shoot.o -MD -MP -MF $(DEPDIR)/sample_player-body_force_shoot.Tpo -c -o sample_player-body_force_shoot.o `test -f 'chain_action/body_force_shoot.cpp' || echo '$(srcdir)/'`chain_action/body_force_shoot.cpp
-	$(am__mv) $(DEPDIR)/sample_player-body_force_shoot.Tpo $(DEPDIR)/sample_player-body_force_shoot.Po
-#	source='chain_action/body_force_shoot.cpp' object='sample_player-body_force_shoot.o' libtool=no \
+coisados_player-body_force_shoot.o: chain_action/body_force_shoot.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-body_force_shoot.o -MD -MP -MF $(DEPDIR)/coisados_player-body_force_shoot.Tpo -c -o coisados_player-body_force_shoot.o `test -f 'chain_action/body_force_shoot.cpp' || echo '$(srcdir)/'`chain_action/body_force_shoot.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-body_force_shoot.Tpo $(DEPDIR)/coisados_player-body_force_shoot.Po
+#	source='chain_action/body_force_shoot.cpp' object='coisados_player-body_force_shoot.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-body_force_shoot.o `test -f 'chain_action/body_force_shoot.cpp' || echo '$(srcdir)/'`chain_action/body_force_shoot.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-body_force_shoot.o `test -f 'chain_action/body_force_shoot.cpp' || echo '$(srcdir)/'`chain_action/body_force_shoot.cpp
 
-sample_player-body_force_shoot.obj: chain_action/body_force_shoot.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-body_force_shoot.obj -MD -MP -MF $(DEPDIR)/sample_player-body_force_shoot.Tpo -c -o sample_player-body_force_shoot.obj `if test -f 'chain_action/body_force_shoot.cpp'; then $(CYGPATH_W) 'chain_action/body_force_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/body_force_shoot.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-body_force_shoot.Tpo $(DEPDIR)/sample_player-body_force_shoot.Po
-#	source='chain_action/body_force_shoot.cpp' object='sample_player-body_force_shoot.obj' libtool=no \
+coisados_player-body_force_shoot.obj: chain_action/body_force_shoot.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-body_force_shoot.obj -MD -MP -MF $(DEPDIR)/coisados_player-body_force_shoot.Tpo -c -o coisados_player-body_force_shoot.obj `if test -f 'chain_action/body_force_shoot.cpp'; then $(CYGPATH_W) 'chain_action/body_force_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/body_force_shoot.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-body_force_shoot.Tpo $(DEPDIR)/coisados_player-body_force_shoot.Po
+#	source='chain_action/body_force_shoot.cpp' object='coisados_player-body_force_shoot.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-body_force_shoot.obj `if test -f 'chain_action/body_force_shoot.cpp'; then $(CYGPATH_W) 'chain_action/body_force_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/body_force_shoot.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-body_force_shoot.obj `if test -f 'chain_action/body_force_shoot.cpp'; then $(CYGPATH_W) 'chain_action/body_force_shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/body_force_shoot.cpp'; fi`
 
-sample_player-clear_ball.o: chain_action/clear_ball.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-clear_ball.o -MD -MP -MF $(DEPDIR)/sample_player-clear_ball.Tpo -c -o sample_player-clear_ball.o `test -f 'chain_action/clear_ball.cpp' || echo '$(srcdir)/'`chain_action/clear_ball.cpp
-	$(am__mv) $(DEPDIR)/sample_player-clear_ball.Tpo $(DEPDIR)/sample_player-clear_ball.Po
-#	source='chain_action/clear_ball.cpp' object='sample_player-clear_ball.o' libtool=no \
+coisados_player-clear_ball.o: chain_action/clear_ball.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-clear_ball.o -MD -MP -MF $(DEPDIR)/coisados_player-clear_ball.Tpo -c -o coisados_player-clear_ball.o `test -f 'chain_action/clear_ball.cpp' || echo '$(srcdir)/'`chain_action/clear_ball.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-clear_ball.Tpo $(DEPDIR)/coisados_player-clear_ball.Po
+#	source='chain_action/clear_ball.cpp' object='coisados_player-clear_ball.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-clear_ball.o `test -f 'chain_action/clear_ball.cpp' || echo '$(srcdir)/'`chain_action/clear_ball.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-clear_ball.o `test -f 'chain_action/clear_ball.cpp' || echo '$(srcdir)/'`chain_action/clear_ball.cpp
 
-sample_player-clear_ball.obj: chain_action/clear_ball.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-clear_ball.obj -MD -MP -MF $(DEPDIR)/sample_player-clear_ball.Tpo -c -o sample_player-clear_ball.obj `if test -f 'chain_action/clear_ball.cpp'; then $(CYGPATH_W) 'chain_action/clear_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/clear_ball.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-clear_ball.Tpo $(DEPDIR)/sample_player-clear_ball.Po
-#	source='chain_action/clear_ball.cpp' object='sample_player-clear_ball.obj' libtool=no \
+coisados_player-clear_ball.obj: chain_action/clear_ball.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-clear_ball.obj -MD -MP -MF $(DEPDIR)/coisados_player-clear_ball.Tpo -c -o coisados_player-clear_ball.obj `if test -f 'chain_action/clear_ball.cpp'; then $(CYGPATH_W) 'chain_action/clear_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/clear_ball.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-clear_ball.Tpo $(DEPDIR)/coisados_player-clear_ball.Po
+#	source='chain_action/clear_ball.cpp' object='coisados_player-clear_ball.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-clear_ball.obj `if test -f 'chain_action/clear_ball.cpp'; then $(CYGPATH_W) 'chain_action/clear_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/clear_ball.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-clear_ball.obj `if test -f 'chain_action/clear_ball.cpp'; then $(CYGPATH_W) 'chain_action/clear_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/clear_ball.cpp'; fi`
 
-sample_player-clear_generator.o: chain_action/clear_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-clear_generator.o -MD -MP -MF $(DEPDIR)/sample_player-clear_generator.Tpo -c -o sample_player-clear_generator.o `test -f 'chain_action/clear_generator.cpp' || echo '$(srcdir)/'`chain_action/clear_generator.cpp
-	$(am__mv) $(DEPDIR)/sample_player-clear_generator.Tpo $(DEPDIR)/sample_player-clear_generator.Po
-#	source='chain_action/clear_generator.cpp' object='sample_player-clear_generator.o' libtool=no \
+coisados_player-clear_generator.o: chain_action/clear_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-clear_generator.o -MD -MP -MF $(DEPDIR)/coisados_player-clear_generator.Tpo -c -o coisados_player-clear_generator.o `test -f 'chain_action/clear_generator.cpp' || echo '$(srcdir)/'`chain_action/clear_generator.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-clear_generator.Tpo $(DEPDIR)/coisados_player-clear_generator.Po
+#	source='chain_action/clear_generator.cpp' object='coisados_player-clear_generator.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-clear_generator.o `test -f 'chain_action/clear_generator.cpp' || echo '$(srcdir)/'`chain_action/clear_generator.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-clear_generator.o `test -f 'chain_action/clear_generator.cpp' || echo '$(srcdir)/'`chain_action/clear_generator.cpp
 
-sample_player-clear_generator.obj: chain_action/clear_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-clear_generator.obj -MD -MP -MF $(DEPDIR)/sample_player-clear_generator.Tpo -c -o sample_player-clear_generator.obj `if test -f 'chain_action/clear_generator.cpp'; then $(CYGPATH_W) 'chain_action/clear_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/clear_generator.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-clear_generator.Tpo $(DEPDIR)/sample_player-clear_generator.Po
-#	source='chain_action/clear_generator.cpp' object='sample_player-clear_generator.obj' libtool=no \
+coisados_player-clear_generator.obj: chain_action/clear_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-clear_generator.obj -MD -MP -MF $(DEPDIR)/coisados_player-clear_generator.Tpo -c -o coisados_player-clear_generator.obj `if test -f 'chain_action/clear_generator.cpp'; then $(CYGPATH_W) 'chain_action/clear_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/clear_generator.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-clear_generator.Tpo $(DEPDIR)/coisados_player-clear_generator.Po
+#	source='chain_action/clear_generator.cpp' object='coisados_player-clear_generator.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-clear_generator.obj `if test -f 'chain_action/clear_generator.cpp'; then $(CYGPATH_W) 'chain_action/clear_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/clear_generator.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-clear_generator.obj `if test -f 'chain_action/clear_generator.cpp'; then $(CYGPATH_W) 'chain_action/clear_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/clear_generator.cpp'; fi`
 
-sample_player-cooperative_action.o: chain_action/cooperative_action.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-cooperative_action.o -MD -MP -MF $(DEPDIR)/sample_player-cooperative_action.Tpo -c -o sample_player-cooperative_action.o `test -f 'chain_action/cooperative_action.cpp' || echo '$(srcdir)/'`chain_action/cooperative_action.cpp
-	$(am__mv) $(DEPDIR)/sample_player-cooperative_action.Tpo $(DEPDIR)/sample_player-cooperative_action.Po
-#	source='chain_action/cooperative_action.cpp' object='sample_player-cooperative_action.o' libtool=no \
+coisados_player-cooperative_action.o: chain_action/cooperative_action.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-cooperative_action.o -MD -MP -MF $(DEPDIR)/coisados_player-cooperative_action.Tpo -c -o coisados_player-cooperative_action.o `test -f 'chain_action/cooperative_action.cpp' || echo '$(srcdir)/'`chain_action/cooperative_action.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-cooperative_action.Tpo $(DEPDIR)/coisados_player-cooperative_action.Po
+#	source='chain_action/cooperative_action.cpp' object='coisados_player-cooperative_action.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-cooperative_action.o `test -f 'chain_action/cooperative_action.cpp' || echo '$(srcdir)/'`chain_action/cooperative_action.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-cooperative_action.o `test -f 'chain_action/cooperative_action.cpp' || echo '$(srcdir)/'`chain_action/cooperative_action.cpp
 
-sample_player-cooperative_action.obj: chain_action/cooperative_action.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-cooperative_action.obj -MD -MP -MF $(DEPDIR)/sample_player-cooperative_action.Tpo -c -o sample_player-cooperative_action.obj `if test -f 'chain_action/cooperative_action.cpp'; then $(CYGPATH_W) 'chain_action/cooperative_action.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/cooperative_action.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-cooperative_action.Tpo $(DEPDIR)/sample_player-cooperative_action.Po
-#	source='chain_action/cooperative_action.cpp' object='sample_player-cooperative_action.obj' libtool=no \
+coisados_player-cooperative_action.obj: chain_action/cooperative_action.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-cooperative_action.obj -MD -MP -MF $(DEPDIR)/coisados_player-cooperative_action.Tpo -c -o coisados_player-cooperative_action.obj `if test -f 'chain_action/cooperative_action.cpp'; then $(CYGPATH_W) 'chain_action/cooperative_action.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/cooperative_action.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-cooperative_action.Tpo $(DEPDIR)/coisados_player-cooperative_action.Po
+#	source='chain_action/cooperative_action.cpp' object='coisados_player-cooperative_action.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-cooperative_action.obj `if test -f 'chain_action/cooperative_action.cpp'; then $(CYGPATH_W) 'chain_action/cooperative_action.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/cooperative_action.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-cooperative_action.obj `if test -f 'chain_action/cooperative_action.cpp'; then $(CYGPATH_W) 'chain_action/cooperative_action.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/cooperative_action.cpp'; fi`
 
-sample_player-cross_generator.o: chain_action/cross_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-cross_generator.o -MD -MP -MF $(DEPDIR)/sample_player-cross_generator.Tpo -c -o sample_player-cross_generator.o `test -f 'chain_action/cross_generator.cpp' || echo '$(srcdir)/'`chain_action/cross_generator.cpp
-	$(am__mv) $(DEPDIR)/sample_player-cross_generator.Tpo $(DEPDIR)/sample_player-cross_generator.Po
-#	source='chain_action/cross_generator.cpp' object='sample_player-cross_generator.o' libtool=no \
+coisados_player-cross_generator.o: chain_action/cross_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-cross_generator.o -MD -MP -MF $(DEPDIR)/coisados_player-cross_generator.Tpo -c -o coisados_player-cross_generator.o `test -f 'chain_action/cross_generator.cpp' || echo '$(srcdir)/'`chain_action/cross_generator.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-cross_generator.Tpo $(DEPDIR)/coisados_player-cross_generator.Po
+#	source='chain_action/cross_generator.cpp' object='coisados_player-cross_generator.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-cross_generator.o `test -f 'chain_action/cross_generator.cpp' || echo '$(srcdir)/'`chain_action/cross_generator.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-cross_generator.o `test -f 'chain_action/cross_generator.cpp' || echo '$(srcdir)/'`chain_action/cross_generator.cpp
 
-sample_player-cross_generator.obj: chain_action/cross_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-cross_generator.obj -MD -MP -MF $(DEPDIR)/sample_player-cross_generator.Tpo -c -o sample_player-cross_generator.obj `if test -f 'chain_action/cross_generator.cpp'; then $(CYGPATH_W) 'chain_action/cross_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/cross_generator.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-cross_generator.Tpo $(DEPDIR)/sample_player-cross_generator.Po
-#	source='chain_action/cross_generator.cpp' object='sample_player-cross_generator.obj' libtool=no \
+coisados_player-cross_generator.obj: chain_action/cross_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-cross_generator.obj -MD -MP -MF $(DEPDIR)/coisados_player-cross_generator.Tpo -c -o coisados_player-cross_generator.obj `if test -f 'chain_action/cross_generator.cpp'; then $(CYGPATH_W) 'chain_action/cross_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/cross_generator.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-cross_generator.Tpo $(DEPDIR)/coisados_player-cross_generator.Po
+#	source='chain_action/cross_generator.cpp' object='coisados_player-cross_generator.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-cross_generator.obj `if test -f 'chain_action/cross_generator.cpp'; then $(CYGPATH_W) 'chain_action/cross_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/cross_generator.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-cross_generator.obj `if test -f 'chain_action/cross_generator.cpp'; then $(CYGPATH_W) 'chain_action/cross_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/cross_generator.cpp'; fi`
 
-sample_player-dribble.o: chain_action/dribble.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-dribble.o -MD -MP -MF $(DEPDIR)/sample_player-dribble.Tpo -c -o sample_player-dribble.o `test -f 'chain_action/dribble.cpp' || echo '$(srcdir)/'`chain_action/dribble.cpp
-	$(am__mv) $(DEPDIR)/sample_player-dribble.Tpo $(DEPDIR)/sample_player-dribble.Po
-#	source='chain_action/dribble.cpp' object='sample_player-dribble.o' libtool=no \
+coisados_player-dribble.o: chain_action/dribble.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-dribble.o -MD -MP -MF $(DEPDIR)/coisados_player-dribble.Tpo -c -o coisados_player-dribble.o `test -f 'chain_action/dribble.cpp' || echo '$(srcdir)/'`chain_action/dribble.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-dribble.Tpo $(DEPDIR)/coisados_player-dribble.Po
+#	source='chain_action/dribble.cpp' object='coisados_player-dribble.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-dribble.o `test -f 'chain_action/dribble.cpp' || echo '$(srcdir)/'`chain_action/dribble.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-dribble.o `test -f 'chain_action/dribble.cpp' || echo '$(srcdir)/'`chain_action/dribble.cpp
 
-sample_player-dribble.obj: chain_action/dribble.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-dribble.obj -MD -MP -MF $(DEPDIR)/sample_player-dribble.Tpo -c -o sample_player-dribble.obj `if test -f 'chain_action/dribble.cpp'; then $(CYGPATH_W) 'chain_action/dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/dribble.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-dribble.Tpo $(DEPDIR)/sample_player-dribble.Po
-#	source='chain_action/dribble.cpp' object='sample_player-dribble.obj' libtool=no \
+coisados_player-dribble.obj: chain_action/dribble.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-dribble.obj -MD -MP -MF $(DEPDIR)/coisados_player-dribble.Tpo -c -o coisados_player-dribble.obj `if test -f 'chain_action/dribble.cpp'; then $(CYGPATH_W) 'chain_action/dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/dribble.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-dribble.Tpo $(DEPDIR)/coisados_player-dribble.Po
+#	source='chain_action/dribble.cpp' object='coisados_player-dribble.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-dribble.obj `if test -f 'chain_action/dribble.cpp'; then $(CYGPATH_W) 'chain_action/dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/dribble.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-dribble.obj `if test -f 'chain_action/dribble.cpp'; then $(CYGPATH_W) 'chain_action/dribble.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/dribble.cpp'; fi`
 
-sample_player-field_analyzer.o: chain_action/field_analyzer.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-field_analyzer.o -MD -MP -MF $(DEPDIR)/sample_player-field_analyzer.Tpo -c -o sample_player-field_analyzer.o `test -f 'chain_action/field_analyzer.cpp' || echo '$(srcdir)/'`chain_action/field_analyzer.cpp
-	$(am__mv) $(DEPDIR)/sample_player-field_analyzer.Tpo $(DEPDIR)/sample_player-field_analyzer.Po
-#	source='chain_action/field_analyzer.cpp' object='sample_player-field_analyzer.o' libtool=no \
+coisados_player-field_analyzer.o: chain_action/field_analyzer.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-field_analyzer.o -MD -MP -MF $(DEPDIR)/coisados_player-field_analyzer.Tpo -c -o coisados_player-field_analyzer.o `test -f 'chain_action/field_analyzer.cpp' || echo '$(srcdir)/'`chain_action/field_analyzer.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-field_analyzer.Tpo $(DEPDIR)/coisados_player-field_analyzer.Po
+#	source='chain_action/field_analyzer.cpp' object='coisados_player-field_analyzer.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-field_analyzer.o `test -f 'chain_action/field_analyzer.cpp' || echo '$(srcdir)/'`chain_action/field_analyzer.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-field_analyzer.o `test -f 'chain_action/field_analyzer.cpp' || echo '$(srcdir)/'`chain_action/field_analyzer.cpp
 
-sample_player-field_analyzer.obj: chain_action/field_analyzer.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-field_analyzer.obj -MD -MP -MF $(DEPDIR)/sample_player-field_analyzer.Tpo -c -o sample_player-field_analyzer.obj `if test -f 'chain_action/field_analyzer.cpp'; then $(CYGPATH_W) 'chain_action/field_analyzer.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/field_analyzer.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-field_analyzer.Tpo $(DEPDIR)/sample_player-field_analyzer.Po
-#	source='chain_action/field_analyzer.cpp' object='sample_player-field_analyzer.obj' libtool=no \
+coisados_player-field_analyzer.obj: chain_action/field_analyzer.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-field_analyzer.obj -MD -MP -MF $(DEPDIR)/coisados_player-field_analyzer.Tpo -c -o coisados_player-field_analyzer.obj `if test -f 'chain_action/field_analyzer.cpp'; then $(CYGPATH_W) 'chain_action/field_analyzer.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/field_analyzer.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-field_analyzer.Tpo $(DEPDIR)/coisados_player-field_analyzer.Po
+#	source='chain_action/field_analyzer.cpp' object='coisados_player-field_analyzer.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-field_analyzer.obj `if test -f 'chain_action/field_analyzer.cpp'; then $(CYGPATH_W) 'chain_action/field_analyzer.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/field_analyzer.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-field_analyzer.obj `if test -f 'chain_action/field_analyzer.cpp'; then $(CYGPATH_W) 'chain_action/field_analyzer.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/field_analyzer.cpp'; fi`
 
-sample_player-hold_ball.o: chain_action/hold_ball.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-hold_ball.o -MD -MP -MF $(DEPDIR)/sample_player-hold_ball.Tpo -c -o sample_player-hold_ball.o `test -f 'chain_action/hold_ball.cpp' || echo '$(srcdir)/'`chain_action/hold_ball.cpp
-	$(am__mv) $(DEPDIR)/sample_player-hold_ball.Tpo $(DEPDIR)/sample_player-hold_ball.Po
-#	source='chain_action/hold_ball.cpp' object='sample_player-hold_ball.o' libtool=no \
+coisados_player-hold_ball.o: chain_action/hold_ball.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-hold_ball.o -MD -MP -MF $(DEPDIR)/coisados_player-hold_ball.Tpo -c -o coisados_player-hold_ball.o `test -f 'chain_action/hold_ball.cpp' || echo '$(srcdir)/'`chain_action/hold_ball.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-hold_ball.Tpo $(DEPDIR)/coisados_player-hold_ball.Po
+#	source='chain_action/hold_ball.cpp' object='coisados_player-hold_ball.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-hold_ball.o `test -f 'chain_action/hold_ball.cpp' || echo '$(srcdir)/'`chain_action/hold_ball.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-hold_ball.o `test -f 'chain_action/hold_ball.cpp' || echo '$(srcdir)/'`chain_action/hold_ball.cpp
 
-sample_player-hold_ball.obj: chain_action/hold_ball.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-hold_ball.obj -MD -MP -MF $(DEPDIR)/sample_player-hold_ball.Tpo -c -o sample_player-hold_ball.obj `if test -f 'chain_action/hold_ball.cpp'; then $(CYGPATH_W) 'chain_action/hold_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/hold_ball.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-hold_ball.Tpo $(DEPDIR)/sample_player-hold_ball.Po
-#	source='chain_action/hold_ball.cpp' object='sample_player-hold_ball.obj' libtool=no \
+coisados_player-hold_ball.obj: chain_action/hold_ball.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-hold_ball.obj -MD -MP -MF $(DEPDIR)/coisados_player-hold_ball.Tpo -c -o coisados_player-hold_ball.obj `if test -f 'chain_action/hold_ball.cpp'; then $(CYGPATH_W) 'chain_action/hold_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/hold_ball.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-hold_ball.Tpo $(DEPDIR)/coisados_player-hold_ball.Po
+#	source='chain_action/hold_ball.cpp' object='coisados_player-hold_ball.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-hold_ball.obj `if test -f 'chain_action/hold_ball.cpp'; then $(CYGPATH_W) 'chain_action/hold_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/hold_ball.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-hold_ball.obj `if test -f 'chain_action/hold_ball.cpp'; then $(CYGPATH_W) 'chain_action/hold_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/hold_ball.cpp'; fi`
 
-sample_player-neck_turn_to_receiver.o: chain_action/neck_turn_to_receiver.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-neck_turn_to_receiver.o -MD -MP -MF $(DEPDIR)/sample_player-neck_turn_to_receiver.Tpo -c -o sample_player-neck_turn_to_receiver.o `test -f 'chain_action/neck_turn_to_receiver.cpp' || echo '$(srcdir)/'`chain_action/neck_turn_to_receiver.cpp
-	$(am__mv) $(DEPDIR)/sample_player-neck_turn_to_receiver.Tpo $(DEPDIR)/sample_player-neck_turn_to_receiver.Po
-#	source='chain_action/neck_turn_to_receiver.cpp' object='sample_player-neck_turn_to_receiver.o' libtool=no \
+coisados_player-neck_turn_to_receiver.o: chain_action/neck_turn_to_receiver.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-neck_turn_to_receiver.o -MD -MP -MF $(DEPDIR)/coisados_player-neck_turn_to_receiver.Tpo -c -o coisados_player-neck_turn_to_receiver.o `test -f 'chain_action/neck_turn_to_receiver.cpp' || echo '$(srcdir)/'`chain_action/neck_turn_to_receiver.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-neck_turn_to_receiver.Tpo $(DEPDIR)/coisados_player-neck_turn_to_receiver.Po
+#	source='chain_action/neck_turn_to_receiver.cpp' object='coisados_player-neck_turn_to_receiver.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-neck_turn_to_receiver.o `test -f 'chain_action/neck_turn_to_receiver.cpp' || echo '$(srcdir)/'`chain_action/neck_turn_to_receiver.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-neck_turn_to_receiver.o `test -f 'chain_action/neck_turn_to_receiver.cpp' || echo '$(srcdir)/'`chain_action/neck_turn_to_receiver.cpp
 
-sample_player-neck_turn_to_receiver.obj: chain_action/neck_turn_to_receiver.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-neck_turn_to_receiver.obj -MD -MP -MF $(DEPDIR)/sample_player-neck_turn_to_receiver.Tpo -c -o sample_player-neck_turn_to_receiver.obj `if test -f 'chain_action/neck_turn_to_receiver.cpp'; then $(CYGPATH_W) 'chain_action/neck_turn_to_receiver.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/neck_turn_to_receiver.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-neck_turn_to_receiver.Tpo $(DEPDIR)/sample_player-neck_turn_to_receiver.Po
-#	source='chain_action/neck_turn_to_receiver.cpp' object='sample_player-neck_turn_to_receiver.obj' libtool=no \
+coisados_player-neck_turn_to_receiver.obj: chain_action/neck_turn_to_receiver.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-neck_turn_to_receiver.obj -MD -MP -MF $(DEPDIR)/coisados_player-neck_turn_to_receiver.Tpo -c -o coisados_player-neck_turn_to_receiver.obj `if test -f 'chain_action/neck_turn_to_receiver.cpp'; then $(CYGPATH_W) 'chain_action/neck_turn_to_receiver.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/neck_turn_to_receiver.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-neck_turn_to_receiver.Tpo $(DEPDIR)/coisados_player-neck_turn_to_receiver.Po
+#	source='chain_action/neck_turn_to_receiver.cpp' object='coisados_player-neck_turn_to_receiver.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-neck_turn_to_receiver.obj `if test -f 'chain_action/neck_turn_to_receiver.cpp'; then $(CYGPATH_W) 'chain_action/neck_turn_to_receiver.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/neck_turn_to_receiver.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-neck_turn_to_receiver.obj `if test -f 'chain_action/neck_turn_to_receiver.cpp'; then $(CYGPATH_W) 'chain_action/neck_turn_to_receiver.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/neck_turn_to_receiver.cpp'; fi`
 
-sample_player-pass.o: chain_action/pass.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-pass.o -MD -MP -MF $(DEPDIR)/sample_player-pass.Tpo -c -o sample_player-pass.o `test -f 'chain_action/pass.cpp' || echo '$(srcdir)/'`chain_action/pass.cpp
-	$(am__mv) $(DEPDIR)/sample_player-pass.Tpo $(DEPDIR)/sample_player-pass.Po
-#	source='chain_action/pass.cpp' object='sample_player-pass.o' libtool=no \
+coisados_player-pass.o: chain_action/pass.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-pass.o -MD -MP -MF $(DEPDIR)/coisados_player-pass.Tpo -c -o coisados_player-pass.o `test -f 'chain_action/pass.cpp' || echo '$(srcdir)/'`chain_action/pass.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-pass.Tpo $(DEPDIR)/coisados_player-pass.Po
+#	source='chain_action/pass.cpp' object='coisados_player-pass.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-pass.o `test -f 'chain_action/pass.cpp' || echo '$(srcdir)/'`chain_action/pass.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-pass.o `test -f 'chain_action/pass.cpp' || echo '$(srcdir)/'`chain_action/pass.cpp
 
-sample_player-pass.obj: chain_action/pass.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-pass.obj -MD -MP -MF $(DEPDIR)/sample_player-pass.Tpo -c -o sample_player-pass.obj `if test -f 'chain_action/pass.cpp'; then $(CYGPATH_W) 'chain_action/pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/pass.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-pass.Tpo $(DEPDIR)/sample_player-pass.Po
-#	source='chain_action/pass.cpp' object='sample_player-pass.obj' libtool=no \
+coisados_player-pass.obj: chain_action/pass.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-pass.obj -MD -MP -MF $(DEPDIR)/coisados_player-pass.Tpo -c -o coisados_player-pass.obj `if test -f 'chain_action/pass.cpp'; then $(CYGPATH_W) 'chain_action/pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/pass.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-pass.Tpo $(DEPDIR)/coisados_player-pass.Po
+#	source='chain_action/pass.cpp' object='coisados_player-pass.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-pass.obj `if test -f 'chain_action/pass.cpp'; then $(CYGPATH_W) 'chain_action/pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/pass.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-pass.obj `if test -f 'chain_action/pass.cpp'; then $(CYGPATH_W) 'chain_action/pass.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/pass.cpp'; fi`
 
-sample_player-predict_state.o: chain_action/predict_state.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-predict_state.o -MD -MP -MF $(DEPDIR)/sample_player-predict_state.Tpo -c -o sample_player-predict_state.o `test -f 'chain_action/predict_state.cpp' || echo '$(srcdir)/'`chain_action/predict_state.cpp
-	$(am__mv) $(DEPDIR)/sample_player-predict_state.Tpo $(DEPDIR)/sample_player-predict_state.Po
-#	source='chain_action/predict_state.cpp' object='sample_player-predict_state.o' libtool=no \
+coisados_player-predict_state.o: chain_action/predict_state.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-predict_state.o -MD -MP -MF $(DEPDIR)/coisados_player-predict_state.Tpo -c -o coisados_player-predict_state.o `test -f 'chain_action/predict_state.cpp' || echo '$(srcdir)/'`chain_action/predict_state.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-predict_state.Tpo $(DEPDIR)/coisados_player-predict_state.Po
+#	source='chain_action/predict_state.cpp' object='coisados_player-predict_state.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-predict_state.o `test -f 'chain_action/predict_state.cpp' || echo '$(srcdir)/'`chain_action/predict_state.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-predict_state.o `test -f 'chain_action/predict_state.cpp' || echo '$(srcdir)/'`chain_action/predict_state.cpp
 
-sample_player-predict_state.obj: chain_action/predict_state.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-predict_state.obj -MD -MP -MF $(DEPDIR)/sample_player-predict_state.Tpo -c -o sample_player-predict_state.obj `if test -f 'chain_action/predict_state.cpp'; then $(CYGPATH_W) 'chain_action/predict_state.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/predict_state.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-predict_state.Tpo $(DEPDIR)/sample_player-predict_state.Po
-#	source='chain_action/predict_state.cpp' object='sample_player-predict_state.obj' libtool=no \
+coisados_player-predict_state.obj: chain_action/predict_state.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-predict_state.obj -MD -MP -MF $(DEPDIR)/coisados_player-predict_state.Tpo -c -o coisados_player-predict_state.obj `if test -f 'chain_action/predict_state.cpp'; then $(CYGPATH_W) 'chain_action/predict_state.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/predict_state.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-predict_state.Tpo $(DEPDIR)/coisados_player-predict_state.Po
+#	source='chain_action/predict_state.cpp' object='coisados_player-predict_state.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-predict_state.obj `if test -f 'chain_action/predict_state.cpp'; then $(CYGPATH_W) 'chain_action/predict_state.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/predict_state.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-predict_state.obj `if test -f 'chain_action/predict_state.cpp'; then $(CYGPATH_W) 'chain_action/predict_state.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/predict_state.cpp'; fi`
 
-sample_player-self_pass_generator.o: chain_action/self_pass_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-self_pass_generator.o -MD -MP -MF $(DEPDIR)/sample_player-self_pass_generator.Tpo -c -o sample_player-self_pass_generator.o `test -f 'chain_action/self_pass_generator.cpp' || echo '$(srcdir)/'`chain_action/self_pass_generator.cpp
-	$(am__mv) $(DEPDIR)/sample_player-self_pass_generator.Tpo $(DEPDIR)/sample_player-self_pass_generator.Po
-#	source='chain_action/self_pass_generator.cpp' object='sample_player-self_pass_generator.o' libtool=no \
+coisados_player-self_pass_generator.o: chain_action/self_pass_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-self_pass_generator.o -MD -MP -MF $(DEPDIR)/coisados_player-self_pass_generator.Tpo -c -o coisados_player-self_pass_generator.o `test -f 'chain_action/self_pass_generator.cpp' || echo '$(srcdir)/'`chain_action/self_pass_generator.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-self_pass_generator.Tpo $(DEPDIR)/coisados_player-self_pass_generator.Po
+#	source='chain_action/self_pass_generator.cpp' object='coisados_player-self_pass_generator.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-self_pass_generator.o `test -f 'chain_action/self_pass_generator.cpp' || echo '$(srcdir)/'`chain_action/self_pass_generator.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-self_pass_generator.o `test -f 'chain_action/self_pass_generator.cpp' || echo '$(srcdir)/'`chain_action/self_pass_generator.cpp
 
-sample_player-self_pass_generator.obj: chain_action/self_pass_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-self_pass_generator.obj -MD -MP -MF $(DEPDIR)/sample_player-self_pass_generator.Tpo -c -o sample_player-self_pass_generator.obj `if test -f 'chain_action/self_pass_generator.cpp'; then $(CYGPATH_W) 'chain_action/self_pass_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/self_pass_generator.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-self_pass_generator.Tpo $(DEPDIR)/sample_player-self_pass_generator.Po
-#	source='chain_action/self_pass_generator.cpp' object='sample_player-self_pass_generator.obj' libtool=no \
+coisados_player-self_pass_generator.obj: chain_action/self_pass_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-self_pass_generator.obj -MD -MP -MF $(DEPDIR)/coisados_player-self_pass_generator.Tpo -c -o coisados_player-self_pass_generator.obj `if test -f 'chain_action/self_pass_generator.cpp'; then $(CYGPATH_W) 'chain_action/self_pass_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/self_pass_generator.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-self_pass_generator.Tpo $(DEPDIR)/coisados_player-self_pass_generator.Po
+#	source='chain_action/self_pass_generator.cpp' object='coisados_player-self_pass_generator.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-self_pass_generator.obj `if test -f 'chain_action/self_pass_generator.cpp'; then $(CYGPATH_W) 'chain_action/self_pass_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/self_pass_generator.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-self_pass_generator.obj `if test -f 'chain_action/self_pass_generator.cpp'; then $(CYGPATH_W) 'chain_action/self_pass_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/self_pass_generator.cpp'; fi`
 
-sample_player-shoot.o: chain_action/shoot.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-shoot.o -MD -MP -MF $(DEPDIR)/sample_player-shoot.Tpo -c -o sample_player-shoot.o `test -f 'chain_action/shoot.cpp' || echo '$(srcdir)/'`chain_action/shoot.cpp
-	$(am__mv) $(DEPDIR)/sample_player-shoot.Tpo $(DEPDIR)/sample_player-shoot.Po
-#	source='chain_action/shoot.cpp' object='sample_player-shoot.o' libtool=no \
+coisados_player-shoot.o: chain_action/shoot.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-shoot.o -MD -MP -MF $(DEPDIR)/coisados_player-shoot.Tpo -c -o coisados_player-shoot.o `test -f 'chain_action/shoot.cpp' || echo '$(srcdir)/'`chain_action/shoot.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-shoot.Tpo $(DEPDIR)/coisados_player-shoot.Po
+#	source='chain_action/shoot.cpp' object='coisados_player-shoot.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-shoot.o `test -f 'chain_action/shoot.cpp' || echo '$(srcdir)/'`chain_action/shoot.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-shoot.o `test -f 'chain_action/shoot.cpp' || echo '$(srcdir)/'`chain_action/shoot.cpp
 
-sample_player-shoot.obj: chain_action/shoot.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-shoot.obj -MD -MP -MF $(DEPDIR)/sample_player-shoot.Tpo -c -o sample_player-shoot.obj `if test -f 'chain_action/shoot.cpp'; then $(CYGPATH_W) 'chain_action/shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/shoot.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-shoot.Tpo $(DEPDIR)/sample_player-shoot.Po
-#	source='chain_action/shoot.cpp' object='sample_player-shoot.obj' libtool=no \
+coisados_player-shoot.obj: chain_action/shoot.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-shoot.obj -MD -MP -MF $(DEPDIR)/coisados_player-shoot.Tpo -c -o coisados_player-shoot.obj `if test -f 'chain_action/shoot.cpp'; then $(CYGPATH_W) 'chain_action/shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/shoot.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-shoot.Tpo $(DEPDIR)/coisados_player-shoot.Po
+#	source='chain_action/shoot.cpp' object='coisados_player-shoot.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-shoot.obj `if test -f 'chain_action/shoot.cpp'; then $(CYGPATH_W) 'chain_action/shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/shoot.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-shoot.obj `if test -f 'chain_action/shoot.cpp'; then $(CYGPATH_W) 'chain_action/shoot.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/shoot.cpp'; fi`
 
-sample_player-shoot_generator.o: chain_action/shoot_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-shoot_generator.o -MD -MP -MF $(DEPDIR)/sample_player-shoot_generator.Tpo -c -o sample_player-shoot_generator.o `test -f 'chain_action/shoot_generator.cpp' || echo '$(srcdir)/'`chain_action/shoot_generator.cpp
-	$(am__mv) $(DEPDIR)/sample_player-shoot_generator.Tpo $(DEPDIR)/sample_player-shoot_generator.Po
-#	source='chain_action/shoot_generator.cpp' object='sample_player-shoot_generator.o' libtool=no \
+coisados_player-shoot_generator.o: chain_action/shoot_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-shoot_generator.o -MD -MP -MF $(DEPDIR)/coisados_player-shoot_generator.Tpo -c -o coisados_player-shoot_generator.o `test -f 'chain_action/shoot_generator.cpp' || echo '$(srcdir)/'`chain_action/shoot_generator.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-shoot_generator.Tpo $(DEPDIR)/coisados_player-shoot_generator.Po
+#	source='chain_action/shoot_generator.cpp' object='coisados_player-shoot_generator.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-shoot_generator.o `test -f 'chain_action/shoot_generator.cpp' || echo '$(srcdir)/'`chain_action/shoot_generator.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-shoot_generator.o `test -f 'chain_action/shoot_generator.cpp' || echo '$(srcdir)/'`chain_action/shoot_generator.cpp
 
-sample_player-shoot_generator.obj: chain_action/shoot_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-shoot_generator.obj -MD -MP -MF $(DEPDIR)/sample_player-shoot_generator.Tpo -c -o sample_player-shoot_generator.obj `if test -f 'chain_action/shoot_generator.cpp'; then $(CYGPATH_W) 'chain_action/shoot_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/shoot_generator.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-shoot_generator.Tpo $(DEPDIR)/sample_player-shoot_generator.Po
-#	source='chain_action/shoot_generator.cpp' object='sample_player-shoot_generator.obj' libtool=no \
+coisados_player-shoot_generator.obj: chain_action/shoot_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-shoot_generator.obj -MD -MP -MF $(DEPDIR)/coisados_player-shoot_generator.Tpo -c -o coisados_player-shoot_generator.obj `if test -f 'chain_action/shoot_generator.cpp'; then $(CYGPATH_W) 'chain_action/shoot_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/shoot_generator.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-shoot_generator.Tpo $(DEPDIR)/coisados_player-shoot_generator.Po
+#	source='chain_action/shoot_generator.cpp' object='coisados_player-shoot_generator.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-shoot_generator.obj `if test -f 'chain_action/shoot_generator.cpp'; then $(CYGPATH_W) 'chain_action/shoot_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/shoot_generator.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-shoot_generator.obj `if test -f 'chain_action/shoot_generator.cpp'; then $(CYGPATH_W) 'chain_action/shoot_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/shoot_generator.cpp'; fi`
 
-sample_player-short_dribble_generator.o: chain_action/short_dribble_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-short_dribble_generator.o -MD -MP -MF $(DEPDIR)/sample_player-short_dribble_generator.Tpo -c -o sample_player-short_dribble_generator.o `test -f 'chain_action/short_dribble_generator.cpp' || echo '$(srcdir)/'`chain_action/short_dribble_generator.cpp
-	$(am__mv) $(DEPDIR)/sample_player-short_dribble_generator.Tpo $(DEPDIR)/sample_player-short_dribble_generator.Po
-#	source='chain_action/short_dribble_generator.cpp' object='sample_player-short_dribble_generator.o' libtool=no \
+coisados_player-short_dribble_generator.o: chain_action/short_dribble_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-short_dribble_generator.o -MD -MP -MF $(DEPDIR)/coisados_player-short_dribble_generator.Tpo -c -o coisados_player-short_dribble_generator.o `test -f 'chain_action/short_dribble_generator.cpp' || echo '$(srcdir)/'`chain_action/short_dribble_generator.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-short_dribble_generator.Tpo $(DEPDIR)/coisados_player-short_dribble_generator.Po
+#	source='chain_action/short_dribble_generator.cpp' object='coisados_player-short_dribble_generator.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-short_dribble_generator.o `test -f 'chain_action/short_dribble_generator.cpp' || echo '$(srcdir)/'`chain_action/short_dribble_generator.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-short_dribble_generator.o `test -f 'chain_action/short_dribble_generator.cpp' || echo '$(srcdir)/'`chain_action/short_dribble_generator.cpp
 
-sample_player-short_dribble_generator.obj: chain_action/short_dribble_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-short_dribble_generator.obj -MD -MP -MF $(DEPDIR)/sample_player-short_dribble_generator.Tpo -c -o sample_player-short_dribble_generator.obj `if test -f 'chain_action/short_dribble_generator.cpp'; then $(CYGPATH_W) 'chain_action/short_dribble_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/short_dribble_generator.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-short_dribble_generator.Tpo $(DEPDIR)/sample_player-short_dribble_generator.Po
-#	source='chain_action/short_dribble_generator.cpp' object='sample_player-short_dribble_generator.obj' libtool=no \
+coisados_player-short_dribble_generator.obj: chain_action/short_dribble_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-short_dribble_generator.obj -MD -MP -MF $(DEPDIR)/coisados_player-short_dribble_generator.Tpo -c -o coisados_player-short_dribble_generator.obj `if test -f 'chain_action/short_dribble_generator.cpp'; then $(CYGPATH_W) 'chain_action/short_dribble_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/short_dribble_generator.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-short_dribble_generator.Tpo $(DEPDIR)/coisados_player-short_dribble_generator.Po
+#	source='chain_action/short_dribble_generator.cpp' object='coisados_player-short_dribble_generator.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-short_dribble_generator.obj `if test -f 'chain_action/short_dribble_generator.cpp'; then $(CYGPATH_W) 'chain_action/short_dribble_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/short_dribble_generator.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-short_dribble_generator.obj `if test -f 'chain_action/short_dribble_generator.cpp'; then $(CYGPATH_W) 'chain_action/short_dribble_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/short_dribble_generator.cpp'; fi`
 
-sample_player-simple_pass_checker.o: chain_action/simple_pass_checker.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-simple_pass_checker.o -MD -MP -MF $(DEPDIR)/sample_player-simple_pass_checker.Tpo -c -o sample_player-simple_pass_checker.o `test -f 'chain_action/simple_pass_checker.cpp' || echo '$(srcdir)/'`chain_action/simple_pass_checker.cpp
-	$(am__mv) $(DEPDIR)/sample_player-simple_pass_checker.Tpo $(DEPDIR)/sample_player-simple_pass_checker.Po
-#	source='chain_action/simple_pass_checker.cpp' object='sample_player-simple_pass_checker.o' libtool=no \
+coisados_player-simple_pass_checker.o: chain_action/simple_pass_checker.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-simple_pass_checker.o -MD -MP -MF $(DEPDIR)/coisados_player-simple_pass_checker.Tpo -c -o coisados_player-simple_pass_checker.o `test -f 'chain_action/simple_pass_checker.cpp' || echo '$(srcdir)/'`chain_action/simple_pass_checker.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-simple_pass_checker.Tpo $(DEPDIR)/coisados_player-simple_pass_checker.Po
+#	source='chain_action/simple_pass_checker.cpp' object='coisados_player-simple_pass_checker.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-simple_pass_checker.o `test -f 'chain_action/simple_pass_checker.cpp' || echo '$(srcdir)/'`chain_action/simple_pass_checker.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-simple_pass_checker.o `test -f 'chain_action/simple_pass_checker.cpp' || echo '$(srcdir)/'`chain_action/simple_pass_checker.cpp
 
-sample_player-simple_pass_checker.obj: chain_action/simple_pass_checker.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-simple_pass_checker.obj -MD -MP -MF $(DEPDIR)/sample_player-simple_pass_checker.Tpo -c -o sample_player-simple_pass_checker.obj `if test -f 'chain_action/simple_pass_checker.cpp'; then $(CYGPATH_W) 'chain_action/simple_pass_checker.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/simple_pass_checker.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-simple_pass_checker.Tpo $(DEPDIR)/sample_player-simple_pass_checker.Po
-#	source='chain_action/simple_pass_checker.cpp' object='sample_player-simple_pass_checker.obj' libtool=no \
+coisados_player-simple_pass_checker.obj: chain_action/simple_pass_checker.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-simple_pass_checker.obj -MD -MP -MF $(DEPDIR)/coisados_player-simple_pass_checker.Tpo -c -o coisados_player-simple_pass_checker.obj `if test -f 'chain_action/simple_pass_checker.cpp'; then $(CYGPATH_W) 'chain_action/simple_pass_checker.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/simple_pass_checker.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-simple_pass_checker.Tpo $(DEPDIR)/coisados_player-simple_pass_checker.Po
+#	source='chain_action/simple_pass_checker.cpp' object='coisados_player-simple_pass_checker.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-simple_pass_checker.obj `if test -f 'chain_action/simple_pass_checker.cpp'; then $(CYGPATH_W) 'chain_action/simple_pass_checker.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/simple_pass_checker.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-simple_pass_checker.obj `if test -f 'chain_action/simple_pass_checker.cpp'; then $(CYGPATH_W) 'chain_action/simple_pass_checker.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/simple_pass_checker.cpp'; fi`
 
-sample_player-strict_check_pass_generator.o: chain_action/strict_check_pass_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-strict_check_pass_generator.o -MD -MP -MF $(DEPDIR)/sample_player-strict_check_pass_generator.Tpo -c -o sample_player-strict_check_pass_generator.o `test -f 'chain_action/strict_check_pass_generator.cpp' || echo '$(srcdir)/'`chain_action/strict_check_pass_generator.cpp
-	$(am__mv) $(DEPDIR)/sample_player-strict_check_pass_generator.Tpo $(DEPDIR)/sample_player-strict_check_pass_generator.Po
-#	source='chain_action/strict_check_pass_generator.cpp' object='sample_player-strict_check_pass_generator.o' libtool=no \
+coisados_player-strict_check_pass_generator.o: chain_action/strict_check_pass_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-strict_check_pass_generator.o -MD -MP -MF $(DEPDIR)/coisados_player-strict_check_pass_generator.Tpo -c -o coisados_player-strict_check_pass_generator.o `test -f 'chain_action/strict_check_pass_generator.cpp' || echo '$(srcdir)/'`chain_action/strict_check_pass_generator.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-strict_check_pass_generator.Tpo $(DEPDIR)/coisados_player-strict_check_pass_generator.Po
+#	source='chain_action/strict_check_pass_generator.cpp' object='coisados_player-strict_check_pass_generator.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-strict_check_pass_generator.o `test -f 'chain_action/strict_check_pass_generator.cpp' || echo '$(srcdir)/'`chain_action/strict_check_pass_generator.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-strict_check_pass_generator.o `test -f 'chain_action/strict_check_pass_generator.cpp' || echo '$(srcdir)/'`chain_action/strict_check_pass_generator.cpp
 
-sample_player-strict_check_pass_generator.obj: chain_action/strict_check_pass_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-strict_check_pass_generator.obj -MD -MP -MF $(DEPDIR)/sample_player-strict_check_pass_generator.Tpo -c -o sample_player-strict_check_pass_generator.obj `if test -f 'chain_action/strict_check_pass_generator.cpp'; then $(CYGPATH_W) 'chain_action/strict_check_pass_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/strict_check_pass_generator.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-strict_check_pass_generator.Tpo $(DEPDIR)/sample_player-strict_check_pass_generator.Po
-#	source='chain_action/strict_check_pass_generator.cpp' object='sample_player-strict_check_pass_generator.obj' libtool=no \
+coisados_player-strict_check_pass_generator.obj: chain_action/strict_check_pass_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-strict_check_pass_generator.obj -MD -MP -MF $(DEPDIR)/coisados_player-strict_check_pass_generator.Tpo -c -o coisados_player-strict_check_pass_generator.obj `if test -f 'chain_action/strict_check_pass_generator.cpp'; then $(CYGPATH_W) 'chain_action/strict_check_pass_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/strict_check_pass_generator.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-strict_check_pass_generator.Tpo $(DEPDIR)/coisados_player-strict_check_pass_generator.Po
+#	source='chain_action/strict_check_pass_generator.cpp' object='coisados_player-strict_check_pass_generator.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-strict_check_pass_generator.obj `if test -f 'chain_action/strict_check_pass_generator.cpp'; then $(CYGPATH_W) 'chain_action/strict_check_pass_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/strict_check_pass_generator.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-strict_check_pass_generator.obj `if test -f 'chain_action/strict_check_pass_generator.cpp'; then $(CYGPATH_W) 'chain_action/strict_check_pass_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/strict_check_pass_generator.cpp'; fi`
 
-sample_player-tackle_generator.o: chain_action/tackle_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-tackle_generator.o -MD -MP -MF $(DEPDIR)/sample_player-tackle_generator.Tpo -c -o sample_player-tackle_generator.o `test -f 'chain_action/tackle_generator.cpp' || echo '$(srcdir)/'`chain_action/tackle_generator.cpp
-	$(am__mv) $(DEPDIR)/sample_player-tackle_generator.Tpo $(DEPDIR)/sample_player-tackle_generator.Po
-#	source='chain_action/tackle_generator.cpp' object='sample_player-tackle_generator.o' libtool=no \
+coisados_player-tackle_generator.o: chain_action/tackle_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-tackle_generator.o -MD -MP -MF $(DEPDIR)/coisados_player-tackle_generator.Tpo -c -o coisados_player-tackle_generator.o `test -f 'chain_action/tackle_generator.cpp' || echo '$(srcdir)/'`chain_action/tackle_generator.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-tackle_generator.Tpo $(DEPDIR)/coisados_player-tackle_generator.Po
+#	source='chain_action/tackle_generator.cpp' object='coisados_player-tackle_generator.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-tackle_generator.o `test -f 'chain_action/tackle_generator.cpp' || echo '$(srcdir)/'`chain_action/tackle_generator.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-tackle_generator.o `test -f 'chain_action/tackle_generator.cpp' || echo '$(srcdir)/'`chain_action/tackle_generator.cpp
 
-sample_player-tackle_generator.obj: chain_action/tackle_generator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-tackle_generator.obj -MD -MP -MF $(DEPDIR)/sample_player-tackle_generator.Tpo -c -o sample_player-tackle_generator.obj `if test -f 'chain_action/tackle_generator.cpp'; then $(CYGPATH_W) 'chain_action/tackle_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/tackle_generator.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-tackle_generator.Tpo $(DEPDIR)/sample_player-tackle_generator.Po
-#	source='chain_action/tackle_generator.cpp' object='sample_player-tackle_generator.obj' libtool=no \
+coisados_player-tackle_generator.obj: chain_action/tackle_generator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-tackle_generator.obj -MD -MP -MF $(DEPDIR)/coisados_player-tackle_generator.Tpo -c -o coisados_player-tackle_generator.obj `if test -f 'chain_action/tackle_generator.cpp'; then $(CYGPATH_W) 'chain_action/tackle_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/tackle_generator.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-tackle_generator.Tpo $(DEPDIR)/coisados_player-tackle_generator.Po
+#	source='chain_action/tackle_generator.cpp' object='coisados_player-tackle_generator.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-tackle_generator.obj `if test -f 'chain_action/tackle_generator.cpp'; then $(CYGPATH_W) 'chain_action/tackle_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/tackle_generator.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-tackle_generator.obj `if test -f 'chain_action/tackle_generator.cpp'; then $(CYGPATH_W) 'chain_action/tackle_generator.cpp'; else $(CYGPATH_W) '$(srcdir)/chain_action/tackle_generator.cpp'; fi`
 
-sample_player-bhv_basic_move.o: bhv_basic_move.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_basic_move.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_basic_move.Tpo -c -o sample_player-bhv_basic_move.o `test -f 'bhv_basic_move.cpp' || echo '$(srcdir)/'`bhv_basic_move.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_basic_move.Tpo $(DEPDIR)/sample_player-bhv_basic_move.Po
-#	source='bhv_basic_move.cpp' object='sample_player-bhv_basic_move.o' libtool=no \
+coisados_player-bhv_basic_move.o: bhv_basic_move.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_basic_move.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_basic_move.Tpo -c -o coisados_player-bhv_basic_move.o `test -f 'bhv_basic_move.cpp' || echo '$(srcdir)/'`bhv_basic_move.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_basic_move.Tpo $(DEPDIR)/coisados_player-bhv_basic_move.Po
+#	source='bhv_basic_move.cpp' object='coisados_player-bhv_basic_move.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_basic_move.o `test -f 'bhv_basic_move.cpp' || echo '$(srcdir)/'`bhv_basic_move.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_basic_move.o `test -f 'bhv_basic_move.cpp' || echo '$(srcdir)/'`bhv_basic_move.cpp
 
-sample_player-bhv_basic_move.obj: bhv_basic_move.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_basic_move.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_basic_move.Tpo -c -o sample_player-bhv_basic_move.obj `if test -f 'bhv_basic_move.cpp'; then $(CYGPATH_W) 'bhv_basic_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_move.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_basic_move.Tpo $(DEPDIR)/sample_player-bhv_basic_move.Po
-#	source='bhv_basic_move.cpp' object='sample_player-bhv_basic_move.obj' libtool=no \
+coisados_player-bhv_basic_move.obj: bhv_basic_move.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_basic_move.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_basic_move.Tpo -c -o coisados_player-bhv_basic_move.obj `if test -f 'bhv_basic_move.cpp'; then $(CYGPATH_W) 'bhv_basic_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_move.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_basic_move.Tpo $(DEPDIR)/coisados_player-bhv_basic_move.Po
+#	source='bhv_basic_move.cpp' object='coisados_player-bhv_basic_move.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_basic_move.obj `if test -f 'bhv_basic_move.cpp'; then $(CYGPATH_W) 'bhv_basic_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_move.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_basic_move.obj `if test -f 'bhv_basic_move.cpp'; then $(CYGPATH_W) 'bhv_basic_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_move.cpp'; fi`
 
-sample_player-bhv_basic_offensive_kick.o: bhv_basic_offensive_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_basic_offensive_kick.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_basic_offensive_kick.Tpo -c -o sample_player-bhv_basic_offensive_kick.o `test -f 'bhv_basic_offensive_kick.cpp' || echo '$(srcdir)/'`bhv_basic_offensive_kick.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_basic_offensive_kick.Tpo $(DEPDIR)/sample_player-bhv_basic_offensive_kick.Po
-#	source='bhv_basic_offensive_kick.cpp' object='sample_player-bhv_basic_offensive_kick.o' libtool=no \
+coisados_player-bhv_basic_offensive_kick.o: bhv_basic_offensive_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_basic_offensive_kick.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_basic_offensive_kick.Tpo -c -o coisados_player-bhv_basic_offensive_kick.o `test -f 'bhv_basic_offensive_kick.cpp' || echo '$(srcdir)/'`bhv_basic_offensive_kick.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_basic_offensive_kick.Tpo $(DEPDIR)/coisados_player-bhv_basic_offensive_kick.Po
+#	source='bhv_basic_offensive_kick.cpp' object='coisados_player-bhv_basic_offensive_kick.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_basic_offensive_kick.o `test -f 'bhv_basic_offensive_kick.cpp' || echo '$(srcdir)/'`bhv_basic_offensive_kick.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_basic_offensive_kick.o `test -f 'bhv_basic_offensive_kick.cpp' || echo '$(srcdir)/'`bhv_basic_offensive_kick.cpp
 
-sample_player-bhv_basic_offensive_kick.obj: bhv_basic_offensive_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_basic_offensive_kick.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_basic_offensive_kick.Tpo -c -o sample_player-bhv_basic_offensive_kick.obj `if test -f 'bhv_basic_offensive_kick.cpp'; then $(CYGPATH_W) 'bhv_basic_offensive_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_offensive_kick.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_basic_offensive_kick.Tpo $(DEPDIR)/sample_player-bhv_basic_offensive_kick.Po
-#	source='bhv_basic_offensive_kick.cpp' object='sample_player-bhv_basic_offensive_kick.obj' libtool=no \
+coisados_player-bhv_basic_offensive_kick.obj: bhv_basic_offensive_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_basic_offensive_kick.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_basic_offensive_kick.Tpo -c -o coisados_player-bhv_basic_offensive_kick.obj `if test -f 'bhv_basic_offensive_kick.cpp'; then $(CYGPATH_W) 'bhv_basic_offensive_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_offensive_kick.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_basic_offensive_kick.Tpo $(DEPDIR)/coisados_player-bhv_basic_offensive_kick.Po
+#	source='bhv_basic_offensive_kick.cpp' object='coisados_player-bhv_basic_offensive_kick.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_basic_offensive_kick.obj `if test -f 'bhv_basic_offensive_kick.cpp'; then $(CYGPATH_W) 'bhv_basic_offensive_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_offensive_kick.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_basic_offensive_kick.obj `if test -f 'bhv_basic_offensive_kick.cpp'; then $(CYGPATH_W) 'bhv_basic_offensive_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_offensive_kick.cpp'; fi`
 
-sample_player-bhv_basic_tackle.o: bhv_basic_tackle.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_basic_tackle.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_basic_tackle.Tpo -c -o sample_player-bhv_basic_tackle.o `test -f 'bhv_basic_tackle.cpp' || echo '$(srcdir)/'`bhv_basic_tackle.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_basic_tackle.Tpo $(DEPDIR)/sample_player-bhv_basic_tackle.Po
-#	source='bhv_basic_tackle.cpp' object='sample_player-bhv_basic_tackle.o' libtool=no \
+coisados_player-bhv_basic_tackle.o: bhv_basic_tackle.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_basic_tackle.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_basic_tackle.Tpo -c -o coisados_player-bhv_basic_tackle.o `test -f 'bhv_basic_tackle.cpp' || echo '$(srcdir)/'`bhv_basic_tackle.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_basic_tackle.Tpo $(DEPDIR)/coisados_player-bhv_basic_tackle.Po
+#	source='bhv_basic_tackle.cpp' object='coisados_player-bhv_basic_tackle.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_basic_tackle.o `test -f 'bhv_basic_tackle.cpp' || echo '$(srcdir)/'`bhv_basic_tackle.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_basic_tackle.o `test -f 'bhv_basic_tackle.cpp' || echo '$(srcdir)/'`bhv_basic_tackle.cpp
 
-sample_player-bhv_basic_tackle.obj: bhv_basic_tackle.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_basic_tackle.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_basic_tackle.Tpo -c -o sample_player-bhv_basic_tackle.obj `if test -f 'bhv_basic_tackle.cpp'; then $(CYGPATH_W) 'bhv_basic_tackle.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_tackle.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_basic_tackle.Tpo $(DEPDIR)/sample_player-bhv_basic_tackle.Po
-#	source='bhv_basic_tackle.cpp' object='sample_player-bhv_basic_tackle.obj' libtool=no \
+coisados_player-bhv_basic_tackle.obj: bhv_basic_tackle.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_basic_tackle.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_basic_tackle.Tpo -c -o coisados_player-bhv_basic_tackle.obj `if test -f 'bhv_basic_tackle.cpp'; then $(CYGPATH_W) 'bhv_basic_tackle.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_tackle.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_basic_tackle.Tpo $(DEPDIR)/coisados_player-bhv_basic_tackle.Po
+#	source='bhv_basic_tackle.cpp' object='coisados_player-bhv_basic_tackle.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_basic_tackle.obj `if test -f 'bhv_basic_tackle.cpp'; then $(CYGPATH_W) 'bhv_basic_tackle.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_tackle.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_basic_tackle.obj `if test -f 'bhv_basic_tackle.cpp'; then $(CYGPATH_W) 'bhv_basic_tackle.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_basic_tackle.cpp'; fi`
 
-sample_player-bhv_custom_before_kick_off.o: bhv_custom_before_kick_off.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_custom_before_kick_off.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_custom_before_kick_off.Tpo -c -o sample_player-bhv_custom_before_kick_off.o `test -f 'bhv_custom_before_kick_off.cpp' || echo '$(srcdir)/'`bhv_custom_before_kick_off.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_custom_before_kick_off.Tpo $(DEPDIR)/sample_player-bhv_custom_before_kick_off.Po
-#	source='bhv_custom_before_kick_off.cpp' object='sample_player-bhv_custom_before_kick_off.o' libtool=no \
+coisados_player-bhv_custom_before_kick_off.o: bhv_custom_before_kick_off.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_custom_before_kick_off.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_custom_before_kick_off.Tpo -c -o coisados_player-bhv_custom_before_kick_off.o `test -f 'bhv_custom_before_kick_off.cpp' || echo '$(srcdir)/'`bhv_custom_before_kick_off.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_custom_before_kick_off.Tpo $(DEPDIR)/coisados_player-bhv_custom_before_kick_off.Po
+#	source='bhv_custom_before_kick_off.cpp' object='coisados_player-bhv_custom_before_kick_off.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_custom_before_kick_off.o `test -f 'bhv_custom_before_kick_off.cpp' || echo '$(srcdir)/'`bhv_custom_before_kick_off.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_custom_before_kick_off.o `test -f 'bhv_custom_before_kick_off.cpp' || echo '$(srcdir)/'`bhv_custom_before_kick_off.cpp
 
-sample_player-bhv_custom_before_kick_off.obj: bhv_custom_before_kick_off.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_custom_before_kick_off.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_custom_before_kick_off.Tpo -c -o sample_player-bhv_custom_before_kick_off.obj `if test -f 'bhv_custom_before_kick_off.cpp'; then $(CYGPATH_W) 'bhv_custom_before_kick_off.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_custom_before_kick_off.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_custom_before_kick_off.Tpo $(DEPDIR)/sample_player-bhv_custom_before_kick_off.Po
-#	source='bhv_custom_before_kick_off.cpp' object='sample_player-bhv_custom_before_kick_off.obj' libtool=no \
+coisados_player-bhv_custom_before_kick_off.obj: bhv_custom_before_kick_off.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_custom_before_kick_off.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_custom_before_kick_off.Tpo -c -o coisados_player-bhv_custom_before_kick_off.obj `if test -f 'bhv_custom_before_kick_off.cpp'; then $(CYGPATH_W) 'bhv_custom_before_kick_off.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_custom_before_kick_off.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_custom_before_kick_off.Tpo $(DEPDIR)/coisados_player-bhv_custom_before_kick_off.Po
+#	source='bhv_custom_before_kick_off.cpp' object='coisados_player-bhv_custom_before_kick_off.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_custom_before_kick_off.obj `if test -f 'bhv_custom_before_kick_off.cpp'; then $(CYGPATH_W) 'bhv_custom_before_kick_off.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_custom_before_kick_off.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_custom_before_kick_off.obj `if test -f 'bhv_custom_before_kick_off.cpp'; then $(CYGPATH_W) 'bhv_custom_before_kick_off.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_custom_before_kick_off.cpp'; fi`
 
-sample_player-bhv_go_to_static_ball.o: bhv_go_to_static_ball.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_go_to_static_ball.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_go_to_static_ball.Tpo -c -o sample_player-bhv_go_to_static_ball.o `test -f 'bhv_go_to_static_ball.cpp' || echo '$(srcdir)/'`bhv_go_to_static_ball.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_go_to_static_ball.Tpo $(DEPDIR)/sample_player-bhv_go_to_static_ball.Po
-#	source='bhv_go_to_static_ball.cpp' object='sample_player-bhv_go_to_static_ball.o' libtool=no \
+coisados_player-bhv_go_to_static_ball.o: bhv_go_to_static_ball.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_go_to_static_ball.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_go_to_static_ball.Tpo -c -o coisados_player-bhv_go_to_static_ball.o `test -f 'bhv_go_to_static_ball.cpp' || echo '$(srcdir)/'`bhv_go_to_static_ball.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_go_to_static_ball.Tpo $(DEPDIR)/coisados_player-bhv_go_to_static_ball.Po
+#	source='bhv_go_to_static_ball.cpp' object='coisados_player-bhv_go_to_static_ball.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_go_to_static_ball.o `test -f 'bhv_go_to_static_ball.cpp' || echo '$(srcdir)/'`bhv_go_to_static_ball.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_go_to_static_ball.o `test -f 'bhv_go_to_static_ball.cpp' || echo '$(srcdir)/'`bhv_go_to_static_ball.cpp
 
-sample_player-bhv_go_to_static_ball.obj: bhv_go_to_static_ball.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_go_to_static_ball.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_go_to_static_ball.Tpo -c -o sample_player-bhv_go_to_static_ball.obj `if test -f 'bhv_go_to_static_ball.cpp'; then $(CYGPATH_W) 'bhv_go_to_static_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_go_to_static_ball.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_go_to_static_ball.Tpo $(DEPDIR)/sample_player-bhv_go_to_static_ball.Po
-#	source='bhv_go_to_static_ball.cpp' object='sample_player-bhv_go_to_static_ball.obj' libtool=no \
+coisados_player-bhv_go_to_static_ball.obj: bhv_go_to_static_ball.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_go_to_static_ball.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_go_to_static_ball.Tpo -c -o coisados_player-bhv_go_to_static_ball.obj `if test -f 'bhv_go_to_static_ball.cpp'; then $(CYGPATH_W) 'bhv_go_to_static_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_go_to_static_ball.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_go_to_static_ball.Tpo $(DEPDIR)/coisados_player-bhv_go_to_static_ball.Po
+#	source='bhv_go_to_static_ball.cpp' object='coisados_player-bhv_go_to_static_ball.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_go_to_static_ball.obj `if test -f 'bhv_go_to_static_ball.cpp'; then $(CYGPATH_W) 'bhv_go_to_static_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_go_to_static_ball.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_go_to_static_ball.obj `if test -f 'bhv_go_to_static_ball.cpp'; then $(CYGPATH_W) 'bhv_go_to_static_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_go_to_static_ball.cpp'; fi`
 
-sample_player-bhv_goalie_basic_move.o: bhv_goalie_basic_move.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_goalie_basic_move.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_goalie_basic_move.Tpo -c -o sample_player-bhv_goalie_basic_move.o `test -f 'bhv_goalie_basic_move.cpp' || echo '$(srcdir)/'`bhv_goalie_basic_move.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_goalie_basic_move.Tpo $(DEPDIR)/sample_player-bhv_goalie_basic_move.Po
-#	source='bhv_goalie_basic_move.cpp' object='sample_player-bhv_goalie_basic_move.o' libtool=no \
+coisados_player-bhv_goalie_basic_move.o: bhv_goalie_basic_move.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_goalie_basic_move.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_goalie_basic_move.Tpo -c -o coisados_player-bhv_goalie_basic_move.o `test -f 'bhv_goalie_basic_move.cpp' || echo '$(srcdir)/'`bhv_goalie_basic_move.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_goalie_basic_move.Tpo $(DEPDIR)/coisados_player-bhv_goalie_basic_move.Po
+#	source='bhv_goalie_basic_move.cpp' object='coisados_player-bhv_goalie_basic_move.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_goalie_basic_move.o `test -f 'bhv_goalie_basic_move.cpp' || echo '$(srcdir)/'`bhv_goalie_basic_move.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_goalie_basic_move.o `test -f 'bhv_goalie_basic_move.cpp' || echo '$(srcdir)/'`bhv_goalie_basic_move.cpp
 
-sample_player-bhv_goalie_basic_move.obj: bhv_goalie_basic_move.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_goalie_basic_move.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_goalie_basic_move.Tpo -c -o sample_player-bhv_goalie_basic_move.obj `if test -f 'bhv_goalie_basic_move.cpp'; then $(CYGPATH_W) 'bhv_goalie_basic_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_basic_move.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_goalie_basic_move.Tpo $(DEPDIR)/sample_player-bhv_goalie_basic_move.Po
-#	source='bhv_goalie_basic_move.cpp' object='sample_player-bhv_goalie_basic_move.obj' libtool=no \
+coisados_player-bhv_goalie_basic_move.obj: bhv_goalie_basic_move.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_goalie_basic_move.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_goalie_basic_move.Tpo -c -o coisados_player-bhv_goalie_basic_move.obj `if test -f 'bhv_goalie_basic_move.cpp'; then $(CYGPATH_W) 'bhv_goalie_basic_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_basic_move.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_goalie_basic_move.Tpo $(DEPDIR)/coisados_player-bhv_goalie_basic_move.Po
+#	source='bhv_goalie_basic_move.cpp' object='coisados_player-bhv_goalie_basic_move.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_goalie_basic_move.obj `if test -f 'bhv_goalie_basic_move.cpp'; then $(CYGPATH_W) 'bhv_goalie_basic_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_basic_move.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_goalie_basic_move.obj `if test -f 'bhv_goalie_basic_move.cpp'; then $(CYGPATH_W) 'bhv_goalie_basic_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_basic_move.cpp'; fi`
 
-sample_player-bhv_goalie_chase_ball.o: bhv_goalie_chase_ball.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_goalie_chase_ball.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_goalie_chase_ball.Tpo -c -o sample_player-bhv_goalie_chase_ball.o `test -f 'bhv_goalie_chase_ball.cpp' || echo '$(srcdir)/'`bhv_goalie_chase_ball.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_goalie_chase_ball.Tpo $(DEPDIR)/sample_player-bhv_goalie_chase_ball.Po
-#	source='bhv_goalie_chase_ball.cpp' object='sample_player-bhv_goalie_chase_ball.o' libtool=no \
+coisados_player-bhv_goalie_chase_ball.o: bhv_goalie_chase_ball.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_goalie_chase_ball.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_goalie_chase_ball.Tpo -c -o coisados_player-bhv_goalie_chase_ball.o `test -f 'bhv_goalie_chase_ball.cpp' || echo '$(srcdir)/'`bhv_goalie_chase_ball.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_goalie_chase_ball.Tpo $(DEPDIR)/coisados_player-bhv_goalie_chase_ball.Po
+#	source='bhv_goalie_chase_ball.cpp' object='coisados_player-bhv_goalie_chase_ball.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_goalie_chase_ball.o `test -f 'bhv_goalie_chase_ball.cpp' || echo '$(srcdir)/'`bhv_goalie_chase_ball.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_goalie_chase_ball.o `test -f 'bhv_goalie_chase_ball.cpp' || echo '$(srcdir)/'`bhv_goalie_chase_ball.cpp
 
-sample_player-bhv_goalie_chase_ball.obj: bhv_goalie_chase_ball.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_goalie_chase_ball.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_goalie_chase_ball.Tpo -c -o sample_player-bhv_goalie_chase_ball.obj `if test -f 'bhv_goalie_chase_ball.cpp'; then $(CYGPATH_W) 'bhv_goalie_chase_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_chase_ball.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_goalie_chase_ball.Tpo $(DEPDIR)/sample_player-bhv_goalie_chase_ball.Po
-#	source='bhv_goalie_chase_ball.cpp' object='sample_player-bhv_goalie_chase_ball.obj' libtool=no \
+coisados_player-bhv_goalie_chase_ball.obj: bhv_goalie_chase_ball.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_goalie_chase_ball.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_goalie_chase_ball.Tpo -c -o coisados_player-bhv_goalie_chase_ball.obj `if test -f 'bhv_goalie_chase_ball.cpp'; then $(CYGPATH_W) 'bhv_goalie_chase_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_chase_ball.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_goalie_chase_ball.Tpo $(DEPDIR)/coisados_player-bhv_goalie_chase_ball.Po
+#	source='bhv_goalie_chase_ball.cpp' object='coisados_player-bhv_goalie_chase_ball.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_goalie_chase_ball.obj `if test -f 'bhv_goalie_chase_ball.cpp'; then $(CYGPATH_W) 'bhv_goalie_chase_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_chase_ball.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_goalie_chase_ball.obj `if test -f 'bhv_goalie_chase_ball.cpp'; then $(CYGPATH_W) 'bhv_goalie_chase_ball.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_chase_ball.cpp'; fi`
 
-sample_player-bhv_goalie_free_kick.o: bhv_goalie_free_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_goalie_free_kick.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_goalie_free_kick.Tpo -c -o sample_player-bhv_goalie_free_kick.o `test -f 'bhv_goalie_free_kick.cpp' || echo '$(srcdir)/'`bhv_goalie_free_kick.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_goalie_free_kick.Tpo $(DEPDIR)/sample_player-bhv_goalie_free_kick.Po
-#	source='bhv_goalie_free_kick.cpp' object='sample_player-bhv_goalie_free_kick.o' libtool=no \
+coisados_player-bhv_goalie_free_kick.o: bhv_goalie_free_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_goalie_free_kick.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_goalie_free_kick.Tpo -c -o coisados_player-bhv_goalie_free_kick.o `test -f 'bhv_goalie_free_kick.cpp' || echo '$(srcdir)/'`bhv_goalie_free_kick.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_goalie_free_kick.Tpo $(DEPDIR)/coisados_player-bhv_goalie_free_kick.Po
+#	source='bhv_goalie_free_kick.cpp' object='coisados_player-bhv_goalie_free_kick.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_goalie_free_kick.o `test -f 'bhv_goalie_free_kick.cpp' || echo '$(srcdir)/'`bhv_goalie_free_kick.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_goalie_free_kick.o `test -f 'bhv_goalie_free_kick.cpp' || echo '$(srcdir)/'`bhv_goalie_free_kick.cpp
 
-sample_player-bhv_goalie_free_kick.obj: bhv_goalie_free_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_goalie_free_kick.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_goalie_free_kick.Tpo -c -o sample_player-bhv_goalie_free_kick.obj `if test -f 'bhv_goalie_free_kick.cpp'; then $(CYGPATH_W) 'bhv_goalie_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_free_kick.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_goalie_free_kick.Tpo $(DEPDIR)/sample_player-bhv_goalie_free_kick.Po
-#	source='bhv_goalie_free_kick.cpp' object='sample_player-bhv_goalie_free_kick.obj' libtool=no \
+coisados_player-bhv_goalie_free_kick.obj: bhv_goalie_free_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_goalie_free_kick.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_goalie_free_kick.Tpo -c -o coisados_player-bhv_goalie_free_kick.obj `if test -f 'bhv_goalie_free_kick.cpp'; then $(CYGPATH_W) 'bhv_goalie_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_free_kick.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_goalie_free_kick.Tpo $(DEPDIR)/coisados_player-bhv_goalie_free_kick.Po
+#	source='bhv_goalie_free_kick.cpp' object='coisados_player-bhv_goalie_free_kick.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_goalie_free_kick.obj `if test -f 'bhv_goalie_free_kick.cpp'; then $(CYGPATH_W) 'bhv_goalie_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_free_kick.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_goalie_free_kick.obj `if test -f 'bhv_goalie_free_kick.cpp'; then $(CYGPATH_W) 'bhv_goalie_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_goalie_free_kick.cpp'; fi`
 
-sample_player-bhv_prepare_set_play_kick.o: bhv_prepare_set_play_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_prepare_set_play_kick.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_prepare_set_play_kick.Tpo -c -o sample_player-bhv_prepare_set_play_kick.o `test -f 'bhv_prepare_set_play_kick.cpp' || echo '$(srcdir)/'`bhv_prepare_set_play_kick.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_prepare_set_play_kick.Tpo $(DEPDIR)/sample_player-bhv_prepare_set_play_kick.Po
-#	source='bhv_prepare_set_play_kick.cpp' object='sample_player-bhv_prepare_set_play_kick.o' libtool=no \
+coisados_player-bhv_prepare_set_play_kick.o: bhv_prepare_set_play_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_prepare_set_play_kick.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_prepare_set_play_kick.Tpo -c -o coisados_player-bhv_prepare_set_play_kick.o `test -f 'bhv_prepare_set_play_kick.cpp' || echo '$(srcdir)/'`bhv_prepare_set_play_kick.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_prepare_set_play_kick.Tpo $(DEPDIR)/coisados_player-bhv_prepare_set_play_kick.Po
+#	source='bhv_prepare_set_play_kick.cpp' object='coisados_player-bhv_prepare_set_play_kick.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_prepare_set_play_kick.o `test -f 'bhv_prepare_set_play_kick.cpp' || echo '$(srcdir)/'`bhv_prepare_set_play_kick.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_prepare_set_play_kick.o `test -f 'bhv_prepare_set_play_kick.cpp' || echo '$(srcdir)/'`bhv_prepare_set_play_kick.cpp
 
-sample_player-bhv_prepare_set_play_kick.obj: bhv_prepare_set_play_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_prepare_set_play_kick.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_prepare_set_play_kick.Tpo -c -o sample_player-bhv_prepare_set_play_kick.obj `if test -f 'bhv_prepare_set_play_kick.cpp'; then $(CYGPATH_W) 'bhv_prepare_set_play_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_prepare_set_play_kick.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_prepare_set_play_kick.Tpo $(DEPDIR)/sample_player-bhv_prepare_set_play_kick.Po
-#	source='bhv_prepare_set_play_kick.cpp' object='sample_player-bhv_prepare_set_play_kick.obj' libtool=no \
+coisados_player-bhv_prepare_set_play_kick.obj: bhv_prepare_set_play_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_prepare_set_play_kick.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_prepare_set_play_kick.Tpo -c -o coisados_player-bhv_prepare_set_play_kick.obj `if test -f 'bhv_prepare_set_play_kick.cpp'; then $(CYGPATH_W) 'bhv_prepare_set_play_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_prepare_set_play_kick.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_prepare_set_play_kick.Tpo $(DEPDIR)/coisados_player-bhv_prepare_set_play_kick.Po
+#	source='bhv_prepare_set_play_kick.cpp' object='coisados_player-bhv_prepare_set_play_kick.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_prepare_set_play_kick.obj `if test -f 'bhv_prepare_set_play_kick.cpp'; then $(CYGPATH_W) 'bhv_prepare_set_play_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_prepare_set_play_kick.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_prepare_set_play_kick.obj `if test -f 'bhv_prepare_set_play_kick.cpp'; then $(CYGPATH_W) 'bhv_prepare_set_play_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_prepare_set_play_kick.cpp'; fi`
 
-sample_player-bhv_set_play.o: bhv_set_play.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play.Tpo -c -o sample_player-bhv_set_play.o `test -f 'bhv_set_play.cpp' || echo '$(srcdir)/'`bhv_set_play.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play.Tpo $(DEPDIR)/sample_player-bhv_set_play.Po
-#	source='bhv_set_play.cpp' object='sample_player-bhv_set_play.o' libtool=no \
+coisados_player-bhv_set_play.o: bhv_set_play.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play.Tpo -c -o coisados_player-bhv_set_play.o `test -f 'bhv_set_play.cpp' || echo '$(srcdir)/'`bhv_set_play.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play.Tpo $(DEPDIR)/coisados_player-bhv_set_play.Po
+#	source='bhv_set_play.cpp' object='coisados_player-bhv_set_play.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play.o `test -f 'bhv_set_play.cpp' || echo '$(srcdir)/'`bhv_set_play.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play.o `test -f 'bhv_set_play.cpp' || echo '$(srcdir)/'`bhv_set_play.cpp
 
-sample_player-bhv_set_play.obj: bhv_set_play.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play.Tpo -c -o sample_player-bhv_set_play.obj `if test -f 'bhv_set_play.cpp'; then $(CYGPATH_W) 'bhv_set_play.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play.Tpo $(DEPDIR)/sample_player-bhv_set_play.Po
-#	source='bhv_set_play.cpp' object='sample_player-bhv_set_play.obj' libtool=no \
+coisados_player-bhv_set_play.obj: bhv_set_play.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play.Tpo -c -o coisados_player-bhv_set_play.obj `if test -f 'bhv_set_play.cpp'; then $(CYGPATH_W) 'bhv_set_play.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play.Tpo $(DEPDIR)/coisados_player-bhv_set_play.Po
+#	source='bhv_set_play.cpp' object='coisados_player-bhv_set_play.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play.obj `if test -f 'bhv_set_play.cpp'; then $(CYGPATH_W) 'bhv_set_play.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play.obj `if test -f 'bhv_set_play.cpp'; then $(CYGPATH_W) 'bhv_set_play.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play.cpp'; fi`
 
-sample_player-bhv_set_play_free_kick.o: bhv_set_play_free_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play_free_kick.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play_free_kick.Tpo -c -o sample_player-bhv_set_play_free_kick.o `test -f 'bhv_set_play_free_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_free_kick.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play_free_kick.Tpo $(DEPDIR)/sample_player-bhv_set_play_free_kick.Po
-#	source='bhv_set_play_free_kick.cpp' object='sample_player-bhv_set_play_free_kick.o' libtool=no \
+coisados_player-bhv_set_play_free_kick.o: bhv_set_play_free_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play_free_kick.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play_free_kick.Tpo -c -o coisados_player-bhv_set_play_free_kick.o `test -f 'bhv_set_play_free_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_free_kick.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play_free_kick.Tpo $(DEPDIR)/coisados_player-bhv_set_play_free_kick.Po
+#	source='bhv_set_play_free_kick.cpp' object='coisados_player-bhv_set_play_free_kick.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play_free_kick.o `test -f 'bhv_set_play_free_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_free_kick.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play_free_kick.o `test -f 'bhv_set_play_free_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_free_kick.cpp
 
-sample_player-bhv_set_play_free_kick.obj: bhv_set_play_free_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play_free_kick.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play_free_kick.Tpo -c -o sample_player-bhv_set_play_free_kick.obj `if test -f 'bhv_set_play_free_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_free_kick.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play_free_kick.Tpo $(DEPDIR)/sample_player-bhv_set_play_free_kick.Po
-#	source='bhv_set_play_free_kick.cpp' object='sample_player-bhv_set_play_free_kick.obj' libtool=no \
+coisados_player-bhv_set_play_free_kick.obj: bhv_set_play_free_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play_free_kick.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play_free_kick.Tpo -c -o coisados_player-bhv_set_play_free_kick.obj `if test -f 'bhv_set_play_free_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_free_kick.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play_free_kick.Tpo $(DEPDIR)/coisados_player-bhv_set_play_free_kick.Po
+#	source='bhv_set_play_free_kick.cpp' object='coisados_player-bhv_set_play_free_kick.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play_free_kick.obj `if test -f 'bhv_set_play_free_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_free_kick.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play_free_kick.obj `if test -f 'bhv_set_play_free_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_free_kick.cpp'; fi`
 
-sample_player-bhv_set_play_goal_kick.o: bhv_set_play_goal_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play_goal_kick.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play_goal_kick.Tpo -c -o sample_player-bhv_set_play_goal_kick.o `test -f 'bhv_set_play_goal_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_goal_kick.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play_goal_kick.Tpo $(DEPDIR)/sample_player-bhv_set_play_goal_kick.Po
-#	source='bhv_set_play_goal_kick.cpp' object='sample_player-bhv_set_play_goal_kick.o' libtool=no \
+coisados_player-bhv_set_play_goal_kick.o: bhv_set_play_goal_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play_goal_kick.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play_goal_kick.Tpo -c -o coisados_player-bhv_set_play_goal_kick.o `test -f 'bhv_set_play_goal_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_goal_kick.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play_goal_kick.Tpo $(DEPDIR)/coisados_player-bhv_set_play_goal_kick.Po
+#	source='bhv_set_play_goal_kick.cpp' object='coisados_player-bhv_set_play_goal_kick.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play_goal_kick.o `test -f 'bhv_set_play_goal_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_goal_kick.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play_goal_kick.o `test -f 'bhv_set_play_goal_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_goal_kick.cpp
 
-sample_player-bhv_set_play_goal_kick.obj: bhv_set_play_goal_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play_goal_kick.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play_goal_kick.Tpo -c -o sample_player-bhv_set_play_goal_kick.obj `if test -f 'bhv_set_play_goal_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_goal_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_goal_kick.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play_goal_kick.Tpo $(DEPDIR)/sample_player-bhv_set_play_goal_kick.Po
-#	source='bhv_set_play_goal_kick.cpp' object='sample_player-bhv_set_play_goal_kick.obj' libtool=no \
+coisados_player-bhv_set_play_goal_kick.obj: bhv_set_play_goal_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play_goal_kick.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play_goal_kick.Tpo -c -o coisados_player-bhv_set_play_goal_kick.obj `if test -f 'bhv_set_play_goal_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_goal_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_goal_kick.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play_goal_kick.Tpo $(DEPDIR)/coisados_player-bhv_set_play_goal_kick.Po
+#	source='bhv_set_play_goal_kick.cpp' object='coisados_player-bhv_set_play_goal_kick.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play_goal_kick.obj `if test -f 'bhv_set_play_goal_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_goal_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_goal_kick.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play_goal_kick.obj `if test -f 'bhv_set_play_goal_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_goal_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_goal_kick.cpp'; fi`
 
-sample_player-bhv_set_play_indirect_free_kick.o: bhv_set_play_indirect_free_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play_indirect_free_kick.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play_indirect_free_kick.Tpo -c -o sample_player-bhv_set_play_indirect_free_kick.o `test -f 'bhv_set_play_indirect_free_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_indirect_free_kick.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play_indirect_free_kick.Tpo $(DEPDIR)/sample_player-bhv_set_play_indirect_free_kick.Po
-#	source='bhv_set_play_indirect_free_kick.cpp' object='sample_player-bhv_set_play_indirect_free_kick.o' libtool=no \
+coisados_player-bhv_set_play_indirect_free_kick.o: bhv_set_play_indirect_free_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play_indirect_free_kick.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play_indirect_free_kick.Tpo -c -o coisados_player-bhv_set_play_indirect_free_kick.o `test -f 'bhv_set_play_indirect_free_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_indirect_free_kick.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play_indirect_free_kick.Tpo $(DEPDIR)/coisados_player-bhv_set_play_indirect_free_kick.Po
+#	source='bhv_set_play_indirect_free_kick.cpp' object='coisados_player-bhv_set_play_indirect_free_kick.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play_indirect_free_kick.o `test -f 'bhv_set_play_indirect_free_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_indirect_free_kick.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play_indirect_free_kick.o `test -f 'bhv_set_play_indirect_free_kick.cpp' || echo '$(srcdir)/'`bhv_set_play_indirect_free_kick.cpp
 
-sample_player-bhv_set_play_indirect_free_kick.obj: bhv_set_play_indirect_free_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play_indirect_free_kick.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play_indirect_free_kick.Tpo -c -o sample_player-bhv_set_play_indirect_free_kick.obj `if test -f 'bhv_set_play_indirect_free_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_indirect_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_indirect_free_kick.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play_indirect_free_kick.Tpo $(DEPDIR)/sample_player-bhv_set_play_indirect_free_kick.Po
-#	source='bhv_set_play_indirect_free_kick.cpp' object='sample_player-bhv_set_play_indirect_free_kick.obj' libtool=no \
+coisados_player-bhv_set_play_indirect_free_kick.obj: bhv_set_play_indirect_free_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play_indirect_free_kick.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play_indirect_free_kick.Tpo -c -o coisados_player-bhv_set_play_indirect_free_kick.obj `if test -f 'bhv_set_play_indirect_free_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_indirect_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_indirect_free_kick.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play_indirect_free_kick.Tpo $(DEPDIR)/coisados_player-bhv_set_play_indirect_free_kick.Po
+#	source='bhv_set_play_indirect_free_kick.cpp' object='coisados_player-bhv_set_play_indirect_free_kick.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play_indirect_free_kick.obj `if test -f 'bhv_set_play_indirect_free_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_indirect_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_indirect_free_kick.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play_indirect_free_kick.obj `if test -f 'bhv_set_play_indirect_free_kick.cpp'; then $(CYGPATH_W) 'bhv_set_play_indirect_free_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_indirect_free_kick.cpp'; fi`
 
-sample_player-bhv_set_play_kick_in.o: bhv_set_play_kick_in.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play_kick_in.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play_kick_in.Tpo -c -o sample_player-bhv_set_play_kick_in.o `test -f 'bhv_set_play_kick_in.cpp' || echo '$(srcdir)/'`bhv_set_play_kick_in.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play_kick_in.Tpo $(DEPDIR)/sample_player-bhv_set_play_kick_in.Po
-#	source='bhv_set_play_kick_in.cpp' object='sample_player-bhv_set_play_kick_in.o' libtool=no \
+coisados_player-bhv_set_play_kick_in.o: bhv_set_play_kick_in.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play_kick_in.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play_kick_in.Tpo -c -o coisados_player-bhv_set_play_kick_in.o `test -f 'bhv_set_play_kick_in.cpp' || echo '$(srcdir)/'`bhv_set_play_kick_in.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play_kick_in.Tpo $(DEPDIR)/coisados_player-bhv_set_play_kick_in.Po
+#	source='bhv_set_play_kick_in.cpp' object='coisados_player-bhv_set_play_kick_in.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play_kick_in.o `test -f 'bhv_set_play_kick_in.cpp' || echo '$(srcdir)/'`bhv_set_play_kick_in.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play_kick_in.o `test -f 'bhv_set_play_kick_in.cpp' || echo '$(srcdir)/'`bhv_set_play_kick_in.cpp
 
-sample_player-bhv_set_play_kick_in.obj: bhv_set_play_kick_in.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play_kick_in.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play_kick_in.Tpo -c -o sample_player-bhv_set_play_kick_in.obj `if test -f 'bhv_set_play_kick_in.cpp'; then $(CYGPATH_W) 'bhv_set_play_kick_in.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_kick_in.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play_kick_in.Tpo $(DEPDIR)/sample_player-bhv_set_play_kick_in.Po
-#	source='bhv_set_play_kick_in.cpp' object='sample_player-bhv_set_play_kick_in.obj' libtool=no \
+coisados_player-bhv_set_play_kick_in.obj: bhv_set_play_kick_in.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play_kick_in.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play_kick_in.Tpo -c -o coisados_player-bhv_set_play_kick_in.obj `if test -f 'bhv_set_play_kick_in.cpp'; then $(CYGPATH_W) 'bhv_set_play_kick_in.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_kick_in.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play_kick_in.Tpo $(DEPDIR)/coisados_player-bhv_set_play_kick_in.Po
+#	source='bhv_set_play_kick_in.cpp' object='coisados_player-bhv_set_play_kick_in.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play_kick_in.obj `if test -f 'bhv_set_play_kick_in.cpp'; then $(CYGPATH_W) 'bhv_set_play_kick_in.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_kick_in.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play_kick_in.obj `if test -f 'bhv_set_play_kick_in.cpp'; then $(CYGPATH_W) 'bhv_set_play_kick_in.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_kick_in.cpp'; fi`
 
-sample_player-bhv_set_play_kick_off.o: bhv_set_play_kick_off.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play_kick_off.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play_kick_off.Tpo -c -o sample_player-bhv_set_play_kick_off.o `test -f 'bhv_set_play_kick_off.cpp' || echo '$(srcdir)/'`bhv_set_play_kick_off.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play_kick_off.Tpo $(DEPDIR)/sample_player-bhv_set_play_kick_off.Po
-#	source='bhv_set_play_kick_off.cpp' object='sample_player-bhv_set_play_kick_off.o' libtool=no \
+coisados_player-bhv_set_play_kick_off.o: bhv_set_play_kick_off.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play_kick_off.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play_kick_off.Tpo -c -o coisados_player-bhv_set_play_kick_off.o `test -f 'bhv_set_play_kick_off.cpp' || echo '$(srcdir)/'`bhv_set_play_kick_off.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play_kick_off.Tpo $(DEPDIR)/coisados_player-bhv_set_play_kick_off.Po
+#	source='bhv_set_play_kick_off.cpp' object='coisados_player-bhv_set_play_kick_off.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play_kick_off.o `test -f 'bhv_set_play_kick_off.cpp' || echo '$(srcdir)/'`bhv_set_play_kick_off.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play_kick_off.o `test -f 'bhv_set_play_kick_off.cpp' || echo '$(srcdir)/'`bhv_set_play_kick_off.cpp
 
-sample_player-bhv_set_play_kick_off.obj: bhv_set_play_kick_off.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_set_play_kick_off.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_set_play_kick_off.Tpo -c -o sample_player-bhv_set_play_kick_off.obj `if test -f 'bhv_set_play_kick_off.cpp'; then $(CYGPATH_W) 'bhv_set_play_kick_off.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_kick_off.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_set_play_kick_off.Tpo $(DEPDIR)/sample_player-bhv_set_play_kick_off.Po
-#	source='bhv_set_play_kick_off.cpp' object='sample_player-bhv_set_play_kick_off.obj' libtool=no \
+coisados_player-bhv_set_play_kick_off.obj: bhv_set_play_kick_off.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_set_play_kick_off.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_set_play_kick_off.Tpo -c -o coisados_player-bhv_set_play_kick_off.obj `if test -f 'bhv_set_play_kick_off.cpp'; then $(CYGPATH_W) 'bhv_set_play_kick_off.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_kick_off.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_set_play_kick_off.Tpo $(DEPDIR)/coisados_player-bhv_set_play_kick_off.Po
+#	source='bhv_set_play_kick_off.cpp' object='coisados_player-bhv_set_play_kick_off.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_set_play_kick_off.obj `if test -f 'bhv_set_play_kick_off.cpp'; then $(CYGPATH_W) 'bhv_set_play_kick_off.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_kick_off.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_set_play_kick_off.obj `if test -f 'bhv_set_play_kick_off.cpp'; then $(CYGPATH_W) 'bhv_set_play_kick_off.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_set_play_kick_off.cpp'; fi`
 
-sample_player-bhv_their_goal_kick_move.o: bhv_their_goal_kick_move.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_their_goal_kick_move.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_their_goal_kick_move.Tpo -c -o sample_player-bhv_their_goal_kick_move.o `test -f 'bhv_their_goal_kick_move.cpp' || echo '$(srcdir)/'`bhv_their_goal_kick_move.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_their_goal_kick_move.Tpo $(DEPDIR)/sample_player-bhv_their_goal_kick_move.Po
-#	source='bhv_their_goal_kick_move.cpp' object='sample_player-bhv_their_goal_kick_move.o' libtool=no \
+coisados_player-bhv_their_goal_kick_move.o: bhv_their_goal_kick_move.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_their_goal_kick_move.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_their_goal_kick_move.Tpo -c -o coisados_player-bhv_their_goal_kick_move.o `test -f 'bhv_their_goal_kick_move.cpp' || echo '$(srcdir)/'`bhv_their_goal_kick_move.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_their_goal_kick_move.Tpo $(DEPDIR)/coisados_player-bhv_their_goal_kick_move.Po
+#	source='bhv_their_goal_kick_move.cpp' object='coisados_player-bhv_their_goal_kick_move.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_their_goal_kick_move.o `test -f 'bhv_their_goal_kick_move.cpp' || echo '$(srcdir)/'`bhv_their_goal_kick_move.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_their_goal_kick_move.o `test -f 'bhv_their_goal_kick_move.cpp' || echo '$(srcdir)/'`bhv_their_goal_kick_move.cpp
 
-sample_player-bhv_their_goal_kick_move.obj: bhv_their_goal_kick_move.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_their_goal_kick_move.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_their_goal_kick_move.Tpo -c -o sample_player-bhv_their_goal_kick_move.obj `if test -f 'bhv_their_goal_kick_move.cpp'; then $(CYGPATH_W) 'bhv_their_goal_kick_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_their_goal_kick_move.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_their_goal_kick_move.Tpo $(DEPDIR)/sample_player-bhv_their_goal_kick_move.Po
-#	source='bhv_their_goal_kick_move.cpp' object='sample_player-bhv_their_goal_kick_move.obj' libtool=no \
+coisados_player-bhv_their_goal_kick_move.obj: bhv_their_goal_kick_move.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_their_goal_kick_move.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_their_goal_kick_move.Tpo -c -o coisados_player-bhv_their_goal_kick_move.obj `if test -f 'bhv_their_goal_kick_move.cpp'; then $(CYGPATH_W) 'bhv_their_goal_kick_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_their_goal_kick_move.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_their_goal_kick_move.Tpo $(DEPDIR)/coisados_player-bhv_their_goal_kick_move.Po
+#	source='bhv_their_goal_kick_move.cpp' object='coisados_player-bhv_their_goal_kick_move.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_their_goal_kick_move.obj `if test -f 'bhv_their_goal_kick_move.cpp'; then $(CYGPATH_W) 'bhv_their_goal_kick_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_their_goal_kick_move.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_their_goal_kick_move.obj `if test -f 'bhv_their_goal_kick_move.cpp'; then $(CYGPATH_W) 'bhv_their_goal_kick_move.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_their_goal_kick_move.cpp'; fi`
 
-sample_player-bhv_penalty_kick.o: bhv_penalty_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_penalty_kick.o -MD -MP -MF $(DEPDIR)/sample_player-bhv_penalty_kick.Tpo -c -o sample_player-bhv_penalty_kick.o `test -f 'bhv_penalty_kick.cpp' || echo '$(srcdir)/'`bhv_penalty_kick.cpp
-	$(am__mv) $(DEPDIR)/sample_player-bhv_penalty_kick.Tpo $(DEPDIR)/sample_player-bhv_penalty_kick.Po
-#	source='bhv_penalty_kick.cpp' object='sample_player-bhv_penalty_kick.o' libtool=no \
+coisados_player-bhv_penalty_kick.o: bhv_penalty_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_penalty_kick.o -MD -MP -MF $(DEPDIR)/coisados_player-bhv_penalty_kick.Tpo -c -o coisados_player-bhv_penalty_kick.o `test -f 'bhv_penalty_kick.cpp' || echo '$(srcdir)/'`bhv_penalty_kick.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_penalty_kick.Tpo $(DEPDIR)/coisados_player-bhv_penalty_kick.Po
+#	source='bhv_penalty_kick.cpp' object='coisados_player-bhv_penalty_kick.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_penalty_kick.o `test -f 'bhv_penalty_kick.cpp' || echo '$(srcdir)/'`bhv_penalty_kick.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_penalty_kick.o `test -f 'bhv_penalty_kick.cpp' || echo '$(srcdir)/'`bhv_penalty_kick.cpp
 
-sample_player-bhv_penalty_kick.obj: bhv_penalty_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-bhv_penalty_kick.obj -MD -MP -MF $(DEPDIR)/sample_player-bhv_penalty_kick.Tpo -c -o sample_player-bhv_penalty_kick.obj `if test -f 'bhv_penalty_kick.cpp'; then $(CYGPATH_W) 'bhv_penalty_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_penalty_kick.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-bhv_penalty_kick.Tpo $(DEPDIR)/sample_player-bhv_penalty_kick.Po
-#	source='bhv_penalty_kick.cpp' object='sample_player-bhv_penalty_kick.obj' libtool=no \
+coisados_player-bhv_penalty_kick.obj: bhv_penalty_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-bhv_penalty_kick.obj -MD -MP -MF $(DEPDIR)/coisados_player-bhv_penalty_kick.Tpo -c -o coisados_player-bhv_penalty_kick.obj `if test -f 'bhv_penalty_kick.cpp'; then $(CYGPATH_W) 'bhv_penalty_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_penalty_kick.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-bhv_penalty_kick.Tpo $(DEPDIR)/coisados_player-bhv_penalty_kick.Po
+#	source='bhv_penalty_kick.cpp' object='coisados_player-bhv_penalty_kick.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-bhv_penalty_kick.obj `if test -f 'bhv_penalty_kick.cpp'; then $(CYGPATH_W) 'bhv_penalty_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_penalty_kick.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-bhv_penalty_kick.obj `if test -f 'bhv_penalty_kick.cpp'; then $(CYGPATH_W) 'bhv_penalty_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/bhv_penalty_kick.cpp'; fi`
 
-sample_player-neck_default_intercept_neck.o: neck_default_intercept_neck.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-neck_default_intercept_neck.o -MD -MP -MF $(DEPDIR)/sample_player-neck_default_intercept_neck.Tpo -c -o sample_player-neck_default_intercept_neck.o `test -f 'neck_default_intercept_neck.cpp' || echo '$(srcdir)/'`neck_default_intercept_neck.cpp
-	$(am__mv) $(DEPDIR)/sample_player-neck_default_intercept_neck.Tpo $(DEPDIR)/sample_player-neck_default_intercept_neck.Po
-#	source='neck_default_intercept_neck.cpp' object='sample_player-neck_default_intercept_neck.o' libtool=no \
+coisados_player-neck_default_intercept_neck.o: neck_default_intercept_neck.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-neck_default_intercept_neck.o -MD -MP -MF $(DEPDIR)/coisados_player-neck_default_intercept_neck.Tpo -c -o coisados_player-neck_default_intercept_neck.o `test -f 'neck_default_intercept_neck.cpp' || echo '$(srcdir)/'`neck_default_intercept_neck.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-neck_default_intercept_neck.Tpo $(DEPDIR)/coisados_player-neck_default_intercept_neck.Po
+#	source='neck_default_intercept_neck.cpp' object='coisados_player-neck_default_intercept_neck.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-neck_default_intercept_neck.o `test -f 'neck_default_intercept_neck.cpp' || echo '$(srcdir)/'`neck_default_intercept_neck.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-neck_default_intercept_neck.o `test -f 'neck_default_intercept_neck.cpp' || echo '$(srcdir)/'`neck_default_intercept_neck.cpp
 
-sample_player-neck_default_intercept_neck.obj: neck_default_intercept_neck.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-neck_default_intercept_neck.obj -MD -MP -MF $(DEPDIR)/sample_player-neck_default_intercept_neck.Tpo -c -o sample_player-neck_default_intercept_neck.obj `if test -f 'neck_default_intercept_neck.cpp'; then $(CYGPATH_W) 'neck_default_intercept_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_default_intercept_neck.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-neck_default_intercept_neck.Tpo $(DEPDIR)/sample_player-neck_default_intercept_neck.Po
-#	source='neck_default_intercept_neck.cpp' object='sample_player-neck_default_intercept_neck.obj' libtool=no \
+coisados_player-neck_default_intercept_neck.obj: neck_default_intercept_neck.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-neck_default_intercept_neck.obj -MD -MP -MF $(DEPDIR)/coisados_player-neck_default_intercept_neck.Tpo -c -o coisados_player-neck_default_intercept_neck.obj `if test -f 'neck_default_intercept_neck.cpp'; then $(CYGPATH_W) 'neck_default_intercept_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_default_intercept_neck.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-neck_default_intercept_neck.Tpo $(DEPDIR)/coisados_player-neck_default_intercept_neck.Po
+#	source='neck_default_intercept_neck.cpp' object='coisados_player-neck_default_intercept_neck.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-neck_default_intercept_neck.obj `if test -f 'neck_default_intercept_neck.cpp'; then $(CYGPATH_W) 'neck_default_intercept_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_default_intercept_neck.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-neck_default_intercept_neck.obj `if test -f 'neck_default_intercept_neck.cpp'; then $(CYGPATH_W) 'neck_default_intercept_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_default_intercept_neck.cpp'; fi`
 
-sample_player-neck_goalie_turn_neck.o: neck_goalie_turn_neck.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-neck_goalie_turn_neck.o -MD -MP -MF $(DEPDIR)/sample_player-neck_goalie_turn_neck.Tpo -c -o sample_player-neck_goalie_turn_neck.o `test -f 'neck_goalie_turn_neck.cpp' || echo '$(srcdir)/'`neck_goalie_turn_neck.cpp
-	$(am__mv) $(DEPDIR)/sample_player-neck_goalie_turn_neck.Tpo $(DEPDIR)/sample_player-neck_goalie_turn_neck.Po
-#	source='neck_goalie_turn_neck.cpp' object='sample_player-neck_goalie_turn_neck.o' libtool=no \
+coisados_player-neck_goalie_turn_neck.o: neck_goalie_turn_neck.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-neck_goalie_turn_neck.o -MD -MP -MF $(DEPDIR)/coisados_player-neck_goalie_turn_neck.Tpo -c -o coisados_player-neck_goalie_turn_neck.o `test -f 'neck_goalie_turn_neck.cpp' || echo '$(srcdir)/'`neck_goalie_turn_neck.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-neck_goalie_turn_neck.Tpo $(DEPDIR)/coisados_player-neck_goalie_turn_neck.Po
+#	source='neck_goalie_turn_neck.cpp' object='coisados_player-neck_goalie_turn_neck.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-neck_goalie_turn_neck.o `test -f 'neck_goalie_turn_neck.cpp' || echo '$(srcdir)/'`neck_goalie_turn_neck.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-neck_goalie_turn_neck.o `test -f 'neck_goalie_turn_neck.cpp' || echo '$(srcdir)/'`neck_goalie_turn_neck.cpp
 
-sample_player-neck_goalie_turn_neck.obj: neck_goalie_turn_neck.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-neck_goalie_turn_neck.obj -MD -MP -MF $(DEPDIR)/sample_player-neck_goalie_turn_neck.Tpo -c -o sample_player-neck_goalie_turn_neck.obj `if test -f 'neck_goalie_turn_neck.cpp'; then $(CYGPATH_W) 'neck_goalie_turn_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_goalie_turn_neck.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-neck_goalie_turn_neck.Tpo $(DEPDIR)/sample_player-neck_goalie_turn_neck.Po
-#	source='neck_goalie_turn_neck.cpp' object='sample_player-neck_goalie_turn_neck.obj' libtool=no \
+coisados_player-neck_goalie_turn_neck.obj: neck_goalie_turn_neck.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-neck_goalie_turn_neck.obj -MD -MP -MF $(DEPDIR)/coisados_player-neck_goalie_turn_neck.Tpo -c -o coisados_player-neck_goalie_turn_neck.obj `if test -f 'neck_goalie_turn_neck.cpp'; then $(CYGPATH_W) 'neck_goalie_turn_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_goalie_turn_neck.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-neck_goalie_turn_neck.Tpo $(DEPDIR)/coisados_player-neck_goalie_turn_neck.Po
+#	source='neck_goalie_turn_neck.cpp' object='coisados_player-neck_goalie_turn_neck.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-neck_goalie_turn_neck.obj `if test -f 'neck_goalie_turn_neck.cpp'; then $(CYGPATH_W) 'neck_goalie_turn_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_goalie_turn_neck.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-neck_goalie_turn_neck.obj `if test -f 'neck_goalie_turn_neck.cpp'; then $(CYGPATH_W) 'neck_goalie_turn_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_goalie_turn_neck.cpp'; fi`
 
-sample_player-neck_offensive_intercept_neck.o: neck_offensive_intercept_neck.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-neck_offensive_intercept_neck.o -MD -MP -MF $(DEPDIR)/sample_player-neck_offensive_intercept_neck.Tpo -c -o sample_player-neck_offensive_intercept_neck.o `test -f 'neck_offensive_intercept_neck.cpp' || echo '$(srcdir)/'`neck_offensive_intercept_neck.cpp
-	$(am__mv) $(DEPDIR)/sample_player-neck_offensive_intercept_neck.Tpo $(DEPDIR)/sample_player-neck_offensive_intercept_neck.Po
-#	source='neck_offensive_intercept_neck.cpp' object='sample_player-neck_offensive_intercept_neck.o' libtool=no \
+coisados_player-neck_offensive_intercept_neck.o: neck_offensive_intercept_neck.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-neck_offensive_intercept_neck.o -MD -MP -MF $(DEPDIR)/coisados_player-neck_offensive_intercept_neck.Tpo -c -o coisados_player-neck_offensive_intercept_neck.o `test -f 'neck_offensive_intercept_neck.cpp' || echo '$(srcdir)/'`neck_offensive_intercept_neck.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-neck_offensive_intercept_neck.Tpo $(DEPDIR)/coisados_player-neck_offensive_intercept_neck.Po
+#	source='neck_offensive_intercept_neck.cpp' object='coisados_player-neck_offensive_intercept_neck.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-neck_offensive_intercept_neck.o `test -f 'neck_offensive_intercept_neck.cpp' || echo '$(srcdir)/'`neck_offensive_intercept_neck.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-neck_offensive_intercept_neck.o `test -f 'neck_offensive_intercept_neck.cpp' || echo '$(srcdir)/'`neck_offensive_intercept_neck.cpp
 
-sample_player-neck_offensive_intercept_neck.obj: neck_offensive_intercept_neck.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-neck_offensive_intercept_neck.obj -MD -MP -MF $(DEPDIR)/sample_player-neck_offensive_intercept_neck.Tpo -c -o sample_player-neck_offensive_intercept_neck.obj `if test -f 'neck_offensive_intercept_neck.cpp'; then $(CYGPATH_W) 'neck_offensive_intercept_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_offensive_intercept_neck.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-neck_offensive_intercept_neck.Tpo $(DEPDIR)/sample_player-neck_offensive_intercept_neck.Po
-#	source='neck_offensive_intercept_neck.cpp' object='sample_player-neck_offensive_intercept_neck.obj' libtool=no \
+coisados_player-neck_offensive_intercept_neck.obj: neck_offensive_intercept_neck.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-neck_offensive_intercept_neck.obj -MD -MP -MF $(DEPDIR)/coisados_player-neck_offensive_intercept_neck.Tpo -c -o coisados_player-neck_offensive_intercept_neck.obj `if test -f 'neck_offensive_intercept_neck.cpp'; then $(CYGPATH_W) 'neck_offensive_intercept_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_offensive_intercept_neck.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-neck_offensive_intercept_neck.Tpo $(DEPDIR)/coisados_player-neck_offensive_intercept_neck.Po
+#	source='neck_offensive_intercept_neck.cpp' object='coisados_player-neck_offensive_intercept_neck.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-neck_offensive_intercept_neck.obj `if test -f 'neck_offensive_intercept_neck.cpp'; then $(CYGPATH_W) 'neck_offensive_intercept_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_offensive_intercept_neck.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-neck_offensive_intercept_neck.obj `if test -f 'neck_offensive_intercept_neck.cpp'; then $(CYGPATH_W) 'neck_offensive_intercept_neck.cpp'; else $(CYGPATH_W) '$(srcdir)/neck_offensive_intercept_neck.cpp'; fi`
 
-sample_player-view_tactical.o: view_tactical.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-view_tactical.o -MD -MP -MF $(DEPDIR)/sample_player-view_tactical.Tpo -c -o sample_player-view_tactical.o `test -f 'view_tactical.cpp' || echo '$(srcdir)/'`view_tactical.cpp
-	$(am__mv) $(DEPDIR)/sample_player-view_tactical.Tpo $(DEPDIR)/sample_player-view_tactical.Po
-#	source='view_tactical.cpp' object='sample_player-view_tactical.o' libtool=no \
+coisados_player-view_tactical.o: view_tactical.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-view_tactical.o -MD -MP -MF $(DEPDIR)/coisados_player-view_tactical.Tpo -c -o coisados_player-view_tactical.o `test -f 'view_tactical.cpp' || echo '$(srcdir)/'`view_tactical.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-view_tactical.Tpo $(DEPDIR)/coisados_player-view_tactical.Po
+#	source='view_tactical.cpp' object='coisados_player-view_tactical.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-view_tactical.o `test -f 'view_tactical.cpp' || echo '$(srcdir)/'`view_tactical.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-view_tactical.o `test -f 'view_tactical.cpp' || echo '$(srcdir)/'`view_tactical.cpp
 
-sample_player-view_tactical.obj: view_tactical.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-view_tactical.obj -MD -MP -MF $(DEPDIR)/sample_player-view_tactical.Tpo -c -o sample_player-view_tactical.obj `if test -f 'view_tactical.cpp'; then $(CYGPATH_W) 'view_tactical.cpp'; else $(CYGPATH_W) '$(srcdir)/view_tactical.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-view_tactical.Tpo $(DEPDIR)/sample_player-view_tactical.Po
-#	source='view_tactical.cpp' object='sample_player-view_tactical.obj' libtool=no \
+coisados_player-view_tactical.obj: view_tactical.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-view_tactical.obj -MD -MP -MF $(DEPDIR)/coisados_player-view_tactical.Tpo -c -o coisados_player-view_tactical.obj `if test -f 'view_tactical.cpp'; then $(CYGPATH_W) 'view_tactical.cpp'; else $(CYGPATH_W) '$(srcdir)/view_tactical.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-view_tactical.Tpo $(DEPDIR)/coisados_player-view_tactical.Po
+#	source='view_tactical.cpp' object='coisados_player-view_tactical.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-view_tactical.obj `if test -f 'view_tactical.cpp'; then $(CYGPATH_W) 'view_tactical.cpp'; else $(CYGPATH_W) '$(srcdir)/view_tactical.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-view_tactical.obj `if test -f 'view_tactical.cpp'; then $(CYGPATH_W) 'view_tactical.cpp'; else $(CYGPATH_W) '$(srcdir)/view_tactical.cpp'; fi`
 
-sample_player-intention_receive.o: intention_receive.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-intention_receive.o -MD -MP -MF $(DEPDIR)/sample_player-intention_receive.Tpo -c -o sample_player-intention_receive.o `test -f 'intention_receive.cpp' || echo '$(srcdir)/'`intention_receive.cpp
-	$(am__mv) $(DEPDIR)/sample_player-intention_receive.Tpo $(DEPDIR)/sample_player-intention_receive.Po
-#	source='intention_receive.cpp' object='sample_player-intention_receive.o' libtool=no \
+coisados_player-intention_receive.o: intention_receive.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-intention_receive.o -MD -MP -MF $(DEPDIR)/coisados_player-intention_receive.Tpo -c -o coisados_player-intention_receive.o `test -f 'intention_receive.cpp' || echo '$(srcdir)/'`intention_receive.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-intention_receive.Tpo $(DEPDIR)/coisados_player-intention_receive.Po
+#	source='intention_receive.cpp' object='coisados_player-intention_receive.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-intention_receive.o `test -f 'intention_receive.cpp' || echo '$(srcdir)/'`intention_receive.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-intention_receive.o `test -f 'intention_receive.cpp' || echo '$(srcdir)/'`intention_receive.cpp
 
-sample_player-intention_receive.obj: intention_receive.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-intention_receive.obj -MD -MP -MF $(DEPDIR)/sample_player-intention_receive.Tpo -c -o sample_player-intention_receive.obj `if test -f 'intention_receive.cpp'; then $(CYGPATH_W) 'intention_receive.cpp'; else $(CYGPATH_W) '$(srcdir)/intention_receive.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-intention_receive.Tpo $(DEPDIR)/sample_player-intention_receive.Po
-#	source='intention_receive.cpp' object='sample_player-intention_receive.obj' libtool=no \
+coisados_player-intention_receive.obj: intention_receive.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-intention_receive.obj -MD -MP -MF $(DEPDIR)/coisados_player-intention_receive.Tpo -c -o coisados_player-intention_receive.obj `if test -f 'intention_receive.cpp'; then $(CYGPATH_W) 'intention_receive.cpp'; else $(CYGPATH_W) '$(srcdir)/intention_receive.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-intention_receive.Tpo $(DEPDIR)/coisados_player-intention_receive.Po
+#	source='intention_receive.cpp' object='coisados_player-intention_receive.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-intention_receive.obj `if test -f 'intention_receive.cpp'; then $(CYGPATH_W) 'intention_receive.cpp'; else $(CYGPATH_W) '$(srcdir)/intention_receive.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-intention_receive.obj `if test -f 'intention_receive.cpp'; then $(CYGPATH_W) 'intention_receive.cpp'; else $(CYGPATH_W) '$(srcdir)/intention_receive.cpp'; fi`
 
-sample_player-intention_wait_after_set_play_kick.o: intention_wait_after_set_play_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-intention_wait_after_set_play_kick.o -MD -MP -MF $(DEPDIR)/sample_player-intention_wait_after_set_play_kick.Tpo -c -o sample_player-intention_wait_after_set_play_kick.o `test -f 'intention_wait_after_set_play_kick.cpp' || echo '$(srcdir)/'`intention_wait_after_set_play_kick.cpp
-	$(am__mv) $(DEPDIR)/sample_player-intention_wait_after_set_play_kick.Tpo $(DEPDIR)/sample_player-intention_wait_after_set_play_kick.Po
-#	source='intention_wait_after_set_play_kick.cpp' object='sample_player-intention_wait_after_set_play_kick.o' libtool=no \
+coisados_player-intention_wait_after_set_play_kick.o: intention_wait_after_set_play_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-intention_wait_after_set_play_kick.o -MD -MP -MF $(DEPDIR)/coisados_player-intention_wait_after_set_play_kick.Tpo -c -o coisados_player-intention_wait_after_set_play_kick.o `test -f 'intention_wait_after_set_play_kick.cpp' || echo '$(srcdir)/'`intention_wait_after_set_play_kick.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-intention_wait_after_set_play_kick.Tpo $(DEPDIR)/coisados_player-intention_wait_after_set_play_kick.Po
+#	source='intention_wait_after_set_play_kick.cpp' object='coisados_player-intention_wait_after_set_play_kick.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-intention_wait_after_set_play_kick.o `test -f 'intention_wait_after_set_play_kick.cpp' || echo '$(srcdir)/'`intention_wait_after_set_play_kick.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-intention_wait_after_set_play_kick.o `test -f 'intention_wait_after_set_play_kick.cpp' || echo '$(srcdir)/'`intention_wait_after_set_play_kick.cpp
 
-sample_player-intention_wait_after_set_play_kick.obj: intention_wait_after_set_play_kick.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-intention_wait_after_set_play_kick.obj -MD -MP -MF $(DEPDIR)/sample_player-intention_wait_after_set_play_kick.Tpo -c -o sample_player-intention_wait_after_set_play_kick.obj `if test -f 'intention_wait_after_set_play_kick.cpp'; then $(CYGPATH_W) 'intention_wait_after_set_play_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/intention_wait_after_set_play_kick.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-intention_wait_after_set_play_kick.Tpo $(DEPDIR)/sample_player-intention_wait_after_set_play_kick.Po
-#	source='intention_wait_after_set_play_kick.cpp' object='sample_player-intention_wait_after_set_play_kick.obj' libtool=no \
+coisados_player-intention_wait_after_set_play_kick.obj: intention_wait_after_set_play_kick.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-intention_wait_after_set_play_kick.obj -MD -MP -MF $(DEPDIR)/coisados_player-intention_wait_after_set_play_kick.Tpo -c -o coisados_player-intention_wait_after_set_play_kick.obj `if test -f 'intention_wait_after_set_play_kick.cpp'; then $(CYGPATH_W) 'intention_wait_after_set_play_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/intention_wait_after_set_play_kick.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-intention_wait_after_set_play_kick.Tpo $(DEPDIR)/coisados_player-intention_wait_after_set_play_kick.Po
+#	source='intention_wait_after_set_play_kick.cpp' object='coisados_player-intention_wait_after_set_play_kick.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-intention_wait_after_set_play_kick.obj `if test -f 'intention_wait_after_set_play_kick.cpp'; then $(CYGPATH_W) 'intention_wait_after_set_play_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/intention_wait_after_set_play_kick.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-intention_wait_after_set_play_kick.obj `if test -f 'intention_wait_after_set_play_kick.cpp'; then $(CYGPATH_W) 'intention_wait_after_set_play_kick.cpp'; else $(CYGPATH_W) '$(srcdir)/intention_wait_after_set_play_kick.cpp'; fi`
 
-sample_player-soccer_role.o: soccer_role.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-soccer_role.o -MD -MP -MF $(DEPDIR)/sample_player-soccer_role.Tpo -c -o sample_player-soccer_role.o `test -f 'soccer_role.cpp' || echo '$(srcdir)/'`soccer_role.cpp
-	$(am__mv) $(DEPDIR)/sample_player-soccer_role.Tpo $(DEPDIR)/sample_player-soccer_role.Po
-#	source='soccer_role.cpp' object='sample_player-soccer_role.o' libtool=no \
+coisados_player-soccer_role.o: soccer_role.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-soccer_role.o -MD -MP -MF $(DEPDIR)/coisados_player-soccer_role.Tpo -c -o coisados_player-soccer_role.o `test -f 'soccer_role.cpp' || echo '$(srcdir)/'`soccer_role.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-soccer_role.Tpo $(DEPDIR)/coisados_player-soccer_role.Po
+#	source='soccer_role.cpp' object='coisados_player-soccer_role.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-soccer_role.o `test -f 'soccer_role.cpp' || echo '$(srcdir)/'`soccer_role.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-soccer_role.o `test -f 'soccer_role.cpp' || echo '$(srcdir)/'`soccer_role.cpp
 
-sample_player-soccer_role.obj: soccer_role.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-soccer_role.obj -MD -MP -MF $(DEPDIR)/sample_player-soccer_role.Tpo -c -o sample_player-soccer_role.obj `if test -f 'soccer_role.cpp'; then $(CYGPATH_W) 'soccer_role.cpp'; else $(CYGPATH_W) '$(srcdir)/soccer_role.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-soccer_role.Tpo $(DEPDIR)/sample_player-soccer_role.Po
-#	source='soccer_role.cpp' object='sample_player-soccer_role.obj' libtool=no \
+coisados_player-soccer_role.obj: soccer_role.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-soccer_role.obj -MD -MP -MF $(DEPDIR)/coisados_player-soccer_role.Tpo -c -o coisados_player-soccer_role.obj `if test -f 'soccer_role.cpp'; then $(CYGPATH_W) 'soccer_role.cpp'; else $(CYGPATH_W) '$(srcdir)/soccer_role.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-soccer_role.Tpo $(DEPDIR)/coisados_player-soccer_role.Po
+#	source='soccer_role.cpp' object='coisados_player-soccer_role.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-soccer_role.obj `if test -f 'soccer_role.cpp'; then $(CYGPATH_W) 'soccer_role.cpp'; else $(CYGPATH_W) '$(srcdir)/soccer_role.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-soccer_role.obj `if test -f 'soccer_role.cpp'; then $(CYGPATH_W) 'soccer_role.cpp'; else $(CYGPATH_W) '$(srcdir)/soccer_role.cpp'; fi`
 
-sample_player-role_center_back.o: role_center_back.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_center_back.o -MD -MP -MF $(DEPDIR)/sample_player-role_center_back.Tpo -c -o sample_player-role_center_back.o `test -f 'role_center_back.cpp' || echo '$(srcdir)/'`role_center_back.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_center_back.Tpo $(DEPDIR)/sample_player-role_center_back.Po
-#	source='role_center_back.cpp' object='sample_player-role_center_back.o' libtool=no \
+coisados_player-role_center_back.o: role_center_back.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_center_back.o -MD -MP -MF $(DEPDIR)/coisados_player-role_center_back.Tpo -c -o coisados_player-role_center_back.o `test -f 'role_center_back.cpp' || echo '$(srcdir)/'`role_center_back.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_center_back.Tpo $(DEPDIR)/coisados_player-role_center_back.Po
+#	source='role_center_back.cpp' object='coisados_player-role_center_back.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_center_back.o `test -f 'role_center_back.cpp' || echo '$(srcdir)/'`role_center_back.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_center_back.o `test -f 'role_center_back.cpp' || echo '$(srcdir)/'`role_center_back.cpp
 
-sample_player-role_center_back.obj: role_center_back.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_center_back.obj -MD -MP -MF $(DEPDIR)/sample_player-role_center_back.Tpo -c -o sample_player-role_center_back.obj `if test -f 'role_center_back.cpp'; then $(CYGPATH_W) 'role_center_back.cpp'; else $(CYGPATH_W) '$(srcdir)/role_center_back.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_center_back.Tpo $(DEPDIR)/sample_player-role_center_back.Po
-#	source='role_center_back.cpp' object='sample_player-role_center_back.obj' libtool=no \
+coisados_player-role_center_back.obj: role_center_back.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_center_back.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_center_back.Tpo -c -o coisados_player-role_center_back.obj `if test -f 'role_center_back.cpp'; then $(CYGPATH_W) 'role_center_back.cpp'; else $(CYGPATH_W) '$(srcdir)/role_center_back.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_center_back.Tpo $(DEPDIR)/coisados_player-role_center_back.Po
+#	source='role_center_back.cpp' object='coisados_player-role_center_back.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_center_back.obj `if test -f 'role_center_back.cpp'; then $(CYGPATH_W) 'role_center_back.cpp'; else $(CYGPATH_W) '$(srcdir)/role_center_back.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_center_back.obj `if test -f 'role_center_back.cpp'; then $(CYGPATH_W) 'role_center_back.cpp'; else $(CYGPATH_W) '$(srcdir)/role_center_back.cpp'; fi`
 
-sample_player-role_center_forward.o: role_center_forward.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_center_forward.o -MD -MP -MF $(DEPDIR)/sample_player-role_center_forward.Tpo -c -o sample_player-role_center_forward.o `test -f 'role_center_forward.cpp' || echo '$(srcdir)/'`role_center_forward.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_center_forward.Tpo $(DEPDIR)/sample_player-role_center_forward.Po
-#	source='role_center_forward.cpp' object='sample_player-role_center_forward.o' libtool=no \
+coisados_player-role_center_forward.o: role_center_forward.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_center_forward.o -MD -MP -MF $(DEPDIR)/coisados_player-role_center_forward.Tpo -c -o coisados_player-role_center_forward.o `test -f 'role_center_forward.cpp' || echo '$(srcdir)/'`role_center_forward.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_center_forward.Tpo $(DEPDIR)/coisados_player-role_center_forward.Po
+#	source='role_center_forward.cpp' object='coisados_player-role_center_forward.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_center_forward.o `test -f 'role_center_forward.cpp' || echo '$(srcdir)/'`role_center_forward.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_center_forward.o `test -f 'role_center_forward.cpp' || echo '$(srcdir)/'`role_center_forward.cpp
 
-sample_player-role_center_forward.obj: role_center_forward.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_center_forward.obj -MD -MP -MF $(DEPDIR)/sample_player-role_center_forward.Tpo -c -o sample_player-role_center_forward.obj `if test -f 'role_center_forward.cpp'; then $(CYGPATH_W) 'role_center_forward.cpp'; else $(CYGPATH_W) '$(srcdir)/role_center_forward.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_center_forward.Tpo $(DEPDIR)/sample_player-role_center_forward.Po
-#	source='role_center_forward.cpp' object='sample_player-role_center_forward.obj' libtool=no \
+coisados_player-role_center_forward.obj: role_center_forward.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_center_forward.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_center_forward.Tpo -c -o coisados_player-role_center_forward.obj `if test -f 'role_center_forward.cpp'; then $(CYGPATH_W) 'role_center_forward.cpp'; else $(CYGPATH_W) '$(srcdir)/role_center_forward.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_center_forward.Tpo $(DEPDIR)/coisados_player-role_center_forward.Po
+#	source='role_center_forward.cpp' object='coisados_player-role_center_forward.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_center_forward.obj `if test -f 'role_center_forward.cpp'; then $(CYGPATH_W) 'role_center_forward.cpp'; else $(CYGPATH_W) '$(srcdir)/role_center_forward.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_center_forward.obj `if test -f 'role_center_forward.cpp'; then $(CYGPATH_W) 'role_center_forward.cpp'; else $(CYGPATH_W) '$(srcdir)/role_center_forward.cpp'; fi`
 
-sample_player-role_defensive_half.o: role_defensive_half.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_defensive_half.o -MD -MP -MF $(DEPDIR)/sample_player-role_defensive_half.Tpo -c -o sample_player-role_defensive_half.o `test -f 'role_defensive_half.cpp' || echo '$(srcdir)/'`role_defensive_half.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_defensive_half.Tpo $(DEPDIR)/sample_player-role_defensive_half.Po
-#	source='role_defensive_half.cpp' object='sample_player-role_defensive_half.o' libtool=no \
+coisados_player-role_defensive_half.o: role_defensive_half.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_defensive_half.o -MD -MP -MF $(DEPDIR)/coisados_player-role_defensive_half.Tpo -c -o coisados_player-role_defensive_half.o `test -f 'role_defensive_half.cpp' || echo '$(srcdir)/'`role_defensive_half.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_defensive_half.Tpo $(DEPDIR)/coisados_player-role_defensive_half.Po
+#	source='role_defensive_half.cpp' object='coisados_player-role_defensive_half.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_defensive_half.o `test -f 'role_defensive_half.cpp' || echo '$(srcdir)/'`role_defensive_half.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_defensive_half.o `test -f 'role_defensive_half.cpp' || echo '$(srcdir)/'`role_defensive_half.cpp
 
-sample_player-role_defensive_half.obj: role_defensive_half.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_defensive_half.obj -MD -MP -MF $(DEPDIR)/sample_player-role_defensive_half.Tpo -c -o sample_player-role_defensive_half.obj `if test -f 'role_defensive_half.cpp'; then $(CYGPATH_W) 'role_defensive_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_defensive_half.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_defensive_half.Tpo $(DEPDIR)/sample_player-role_defensive_half.Po
-#	source='role_defensive_half.cpp' object='sample_player-role_defensive_half.obj' libtool=no \
+coisados_player-role_defensive_half.obj: role_defensive_half.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_defensive_half.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_defensive_half.Tpo -c -o coisados_player-role_defensive_half.obj `if test -f 'role_defensive_half.cpp'; then $(CYGPATH_W) 'role_defensive_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_defensive_half.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_defensive_half.Tpo $(DEPDIR)/coisados_player-role_defensive_half.Po
+#	source='role_defensive_half.cpp' object='coisados_player-role_defensive_half.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_defensive_half.obj `if test -f 'role_defensive_half.cpp'; then $(CYGPATH_W) 'role_defensive_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_defensive_half.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_defensive_half.obj `if test -f 'role_defensive_half.cpp'; then $(CYGPATH_W) 'role_defensive_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_defensive_half.cpp'; fi`
 
-sample_player-role_goalie.o: role_goalie.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_goalie.o -MD -MP -MF $(DEPDIR)/sample_player-role_goalie.Tpo -c -o sample_player-role_goalie.o `test -f 'role_goalie.cpp' || echo '$(srcdir)/'`role_goalie.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_goalie.Tpo $(DEPDIR)/sample_player-role_goalie.Po
-#	source='role_goalie.cpp' object='sample_player-role_goalie.o' libtool=no \
+coisados_player-role_goalie.o: role_goalie.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_goalie.o -MD -MP -MF $(DEPDIR)/coisados_player-role_goalie.Tpo -c -o coisados_player-role_goalie.o `test -f 'role_goalie.cpp' || echo '$(srcdir)/'`role_goalie.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_goalie.Tpo $(DEPDIR)/coisados_player-role_goalie.Po
+#	source='role_goalie.cpp' object='coisados_player-role_goalie.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_goalie.o `test -f 'role_goalie.cpp' || echo '$(srcdir)/'`role_goalie.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_goalie.o `test -f 'role_goalie.cpp' || echo '$(srcdir)/'`role_goalie.cpp
 
-sample_player-role_goalie.obj: role_goalie.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_goalie.obj -MD -MP -MF $(DEPDIR)/sample_player-role_goalie.Tpo -c -o sample_player-role_goalie.obj `if test -f 'role_goalie.cpp'; then $(CYGPATH_W) 'role_goalie.cpp'; else $(CYGPATH_W) '$(srcdir)/role_goalie.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_goalie.Tpo $(DEPDIR)/sample_player-role_goalie.Po
-#	source='role_goalie.cpp' object='sample_player-role_goalie.obj' libtool=no \
+coisados_player-role_goalie.obj: role_goalie.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_goalie.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_goalie.Tpo -c -o coisados_player-role_goalie.obj `if test -f 'role_goalie.cpp'; then $(CYGPATH_W) 'role_goalie.cpp'; else $(CYGPATH_W) '$(srcdir)/role_goalie.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_goalie.Tpo $(DEPDIR)/coisados_player-role_goalie.Po
+#	source='role_goalie.cpp' object='coisados_player-role_goalie.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_goalie.obj `if test -f 'role_goalie.cpp'; then $(CYGPATH_W) 'role_goalie.cpp'; else $(CYGPATH_W) '$(srcdir)/role_goalie.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_goalie.obj `if test -f 'role_goalie.cpp'; then $(CYGPATH_W) 'role_goalie.cpp'; else $(CYGPATH_W) '$(srcdir)/role_goalie.cpp'; fi`
 
-sample_player-role_offensive_half.o: role_offensive_half.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_offensive_half.o -MD -MP -MF $(DEPDIR)/sample_player-role_offensive_half.Tpo -c -o sample_player-role_offensive_half.o `test -f 'role_offensive_half.cpp' || echo '$(srcdir)/'`role_offensive_half.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_offensive_half.Tpo $(DEPDIR)/sample_player-role_offensive_half.Po
-#	source='role_offensive_half.cpp' object='sample_player-role_offensive_half.o' libtool=no \
+coisados_player-role_offensive_half.o: role_offensive_half.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_offensive_half.o -MD -MP -MF $(DEPDIR)/coisados_player-role_offensive_half.Tpo -c -o coisados_player-role_offensive_half.o `test -f 'role_offensive_half.cpp' || echo '$(srcdir)/'`role_offensive_half.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_offensive_half.Tpo $(DEPDIR)/coisados_player-role_offensive_half.Po
+#	source='role_offensive_half.cpp' object='coisados_player-role_offensive_half.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_offensive_half.o `test -f 'role_offensive_half.cpp' || echo '$(srcdir)/'`role_offensive_half.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_offensive_half.o `test -f 'role_offensive_half.cpp' || echo '$(srcdir)/'`role_offensive_half.cpp
 
-sample_player-role_offensive_half.obj: role_offensive_half.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_offensive_half.obj -MD -MP -MF $(DEPDIR)/sample_player-role_offensive_half.Tpo -c -o sample_player-role_offensive_half.obj `if test -f 'role_offensive_half.cpp'; then $(CYGPATH_W) 'role_offensive_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_offensive_half.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_offensive_half.Tpo $(DEPDIR)/sample_player-role_offensive_half.Po
-#	source='role_offensive_half.cpp' object='sample_player-role_offensive_half.obj' libtool=no \
+coisados_player-role_offensive_half.obj: role_offensive_half.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_offensive_half.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_offensive_half.Tpo -c -o coisados_player-role_offensive_half.obj `if test -f 'role_offensive_half.cpp'; then $(CYGPATH_W) 'role_offensive_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_offensive_half.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_offensive_half.Tpo $(DEPDIR)/coisados_player-role_offensive_half.Po
+#	source='role_offensive_half.cpp' object='coisados_player-role_offensive_half.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_offensive_half.obj `if test -f 'role_offensive_half.cpp'; then $(CYGPATH_W) 'role_offensive_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_offensive_half.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_offensive_half.obj `if test -f 'role_offensive_half.cpp'; then $(CYGPATH_W) 'role_offensive_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_offensive_half.cpp'; fi`
 
-sample_player-role_sample.o: role_sample.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_sample.o -MD -MP -MF $(DEPDIR)/sample_player-role_sample.Tpo -c -o sample_player-role_sample.o `test -f 'role_sample.cpp' || echo '$(srcdir)/'`role_sample.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_sample.Tpo $(DEPDIR)/sample_player-role_sample.Po
-#	source='role_sample.cpp' object='sample_player-role_sample.o' libtool=no \
+coisados_player-role_coisados.o: role_coisados.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_coisados.o -MD -MP -MF $(DEPDIR)/coisados_player-role_coisados.Tpo -c -o coisados_player-role_coisados.o `test -f 'role_coisados.cpp' || echo '$(srcdir)/'`role_coisados.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_coisados.Tpo $(DEPDIR)/coisados_player-role_coisados.Po
+#	source='role_coisados.cpp' object='coisados_player-role_coisados.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_sample.o `test -f 'role_sample.cpp' || echo '$(srcdir)/'`role_sample.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_coisados.o `test -f 'role_coisados.cpp' || echo '$(srcdir)/'`role_coisados.cpp
 
-sample_player-role_sample.obj: role_sample.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_sample.obj -MD -MP -MF $(DEPDIR)/sample_player-role_sample.Tpo -c -o sample_player-role_sample.obj `if test -f 'role_sample.cpp'; then $(CYGPATH_W) 'role_sample.cpp'; else $(CYGPATH_W) '$(srcdir)/role_sample.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_sample.Tpo $(DEPDIR)/sample_player-role_sample.Po
-#	source='role_sample.cpp' object='sample_player-role_sample.obj' libtool=no \
+coisados_player-role_coisados.obj: role_coisados.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_coisados.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_coisados.Tpo -c -o coisados_player-role_coisados.obj `if test -f 'role_coisados.cpp'; then $(CYGPATH_W) 'role_coisados.cpp'; else $(CYGPATH_W) '$(srcdir)/role_coisados.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_coisados.Tpo $(DEPDIR)/coisados_player-role_coisados.Po
+#	source='role_coisados.cpp' object='coisados_player-role_coisados.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_sample.obj `if test -f 'role_sample.cpp'; then $(CYGPATH_W) 'role_sample.cpp'; else $(CYGPATH_W) '$(srcdir)/role_sample.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_coisados.obj `if test -f 'role_coisados.cpp'; then $(CYGPATH_W) 'role_coisados.cpp'; else $(CYGPATH_W) '$(srcdir)/role_coisados.cpp'; fi`
 
-sample_player-role_side_back.o: role_side_back.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_side_back.o -MD -MP -MF $(DEPDIR)/sample_player-role_side_back.Tpo -c -o sample_player-role_side_back.o `test -f 'role_side_back.cpp' || echo '$(srcdir)/'`role_side_back.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_side_back.Tpo $(DEPDIR)/sample_player-role_side_back.Po
-#	source='role_side_back.cpp' object='sample_player-role_side_back.o' libtool=no \
+coisados_player-role_side_back.o: role_side_back.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_side_back.o -MD -MP -MF $(DEPDIR)/coisados_player-role_side_back.Tpo -c -o coisados_player-role_side_back.o `test -f 'role_side_back.cpp' || echo '$(srcdir)/'`role_side_back.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_side_back.Tpo $(DEPDIR)/coisados_player-role_side_back.Po
+#	source='role_side_back.cpp' object='coisados_player-role_side_back.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_side_back.o `test -f 'role_side_back.cpp' || echo '$(srcdir)/'`role_side_back.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_side_back.o `test -f 'role_side_back.cpp' || echo '$(srcdir)/'`role_side_back.cpp
 
-sample_player-role_side_back.obj: role_side_back.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_side_back.obj -MD -MP -MF $(DEPDIR)/sample_player-role_side_back.Tpo -c -o sample_player-role_side_back.obj `if test -f 'role_side_back.cpp'; then $(CYGPATH_W) 'role_side_back.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_back.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_side_back.Tpo $(DEPDIR)/sample_player-role_side_back.Po
-#	source='role_side_back.cpp' object='sample_player-role_side_back.obj' libtool=no \
+coisados_player-role_side_back.obj: role_side_back.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_side_back.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_side_back.Tpo -c -o coisados_player-role_side_back.obj `if test -f 'role_side_back.cpp'; then $(CYGPATH_W) 'role_side_back.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_back.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_side_back.Tpo $(DEPDIR)/coisados_player-role_side_back.Po
+#	source='role_side_back.cpp' object='coisados_player-role_side_back.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_side_back.obj `if test -f 'role_side_back.cpp'; then $(CYGPATH_W) 'role_side_back.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_back.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_side_back.obj `if test -f 'role_side_back.cpp'; then $(CYGPATH_W) 'role_side_back.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_back.cpp'; fi`
 
-sample_player-role_side_forward.o: role_side_forward.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_side_forward.o -MD -MP -MF $(DEPDIR)/sample_player-role_side_forward.Tpo -c -o sample_player-role_side_forward.o `test -f 'role_side_forward.cpp' || echo '$(srcdir)/'`role_side_forward.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_side_forward.Tpo $(DEPDIR)/sample_player-role_side_forward.Po
-#	source='role_side_forward.cpp' object='sample_player-role_side_forward.o' libtool=no \
+coisados_player-role_side_forward.o: role_side_forward.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_side_forward.o -MD -MP -MF $(DEPDIR)/coisados_player-role_side_forward.Tpo -c -o coisados_player-role_side_forward.o `test -f 'role_side_forward.cpp' || echo '$(srcdir)/'`role_side_forward.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_side_forward.Tpo $(DEPDIR)/coisados_player-role_side_forward.Po
+#	source='role_side_forward.cpp' object='coisados_player-role_side_forward.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_side_forward.o `test -f 'role_side_forward.cpp' || echo '$(srcdir)/'`role_side_forward.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_side_forward.o `test -f 'role_side_forward.cpp' || echo '$(srcdir)/'`role_side_forward.cpp
 
-sample_player-role_side_forward.obj: role_side_forward.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_side_forward.obj -MD -MP -MF $(DEPDIR)/sample_player-role_side_forward.Tpo -c -o sample_player-role_side_forward.obj `if test -f 'role_side_forward.cpp'; then $(CYGPATH_W) 'role_side_forward.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_forward.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_side_forward.Tpo $(DEPDIR)/sample_player-role_side_forward.Po
-#	source='role_side_forward.cpp' object='sample_player-role_side_forward.obj' libtool=no \
+coisados_player-role_side_forward.obj: role_side_forward.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_side_forward.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_side_forward.Tpo -c -o coisados_player-role_side_forward.obj `if test -f 'role_side_forward.cpp'; then $(CYGPATH_W) 'role_side_forward.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_forward.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_side_forward.Tpo $(DEPDIR)/coisados_player-role_side_forward.Po
+#	source='role_side_forward.cpp' object='coisados_player-role_side_forward.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_side_forward.obj `if test -f 'role_side_forward.cpp'; then $(CYGPATH_W) 'role_side_forward.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_forward.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_side_forward.obj `if test -f 'role_side_forward.cpp'; then $(CYGPATH_W) 'role_side_forward.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_forward.cpp'; fi`
 
-sample_player-role_side_half.o: role_side_half.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_side_half.o -MD -MP -MF $(DEPDIR)/sample_player-role_side_half.Tpo -c -o sample_player-role_side_half.o `test -f 'role_side_half.cpp' || echo '$(srcdir)/'`role_side_half.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_side_half.Tpo $(DEPDIR)/sample_player-role_side_half.Po
-#	source='role_side_half.cpp' object='sample_player-role_side_half.o' libtool=no \
+coisados_player-role_side_half.o: role_side_half.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_side_half.o -MD -MP -MF $(DEPDIR)/coisados_player-role_side_half.Tpo -c -o coisados_player-role_side_half.o `test -f 'role_side_half.cpp' || echo '$(srcdir)/'`role_side_half.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_side_half.Tpo $(DEPDIR)/coisados_player-role_side_half.Po
+#	source='role_side_half.cpp' object='coisados_player-role_side_half.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_side_half.o `test -f 'role_side_half.cpp' || echo '$(srcdir)/'`role_side_half.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_side_half.o `test -f 'role_side_half.cpp' || echo '$(srcdir)/'`role_side_half.cpp
 
-sample_player-role_side_half.obj: role_side_half.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_side_half.obj -MD -MP -MF $(DEPDIR)/sample_player-role_side_half.Tpo -c -o sample_player-role_side_half.obj `if test -f 'role_side_half.cpp'; then $(CYGPATH_W) 'role_side_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_half.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_side_half.Tpo $(DEPDIR)/sample_player-role_side_half.Po
-#	source='role_side_half.cpp' object='sample_player-role_side_half.obj' libtool=no \
+coisados_player-role_side_half.obj: role_side_half.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_side_half.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_side_half.Tpo -c -o coisados_player-role_side_half.obj `if test -f 'role_side_half.cpp'; then $(CYGPATH_W) 'role_side_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_half.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_side_half.Tpo $(DEPDIR)/coisados_player-role_side_half.Po
+#	source='role_side_half.cpp' object='coisados_player-role_side_half.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_side_half.obj `if test -f 'role_side_half.cpp'; then $(CYGPATH_W) 'role_side_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_half.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_side_half.obj `if test -f 'role_side_half.cpp'; then $(CYGPATH_W) 'role_side_half.cpp'; else $(CYGPATH_W) '$(srcdir)/role_side_half.cpp'; fi`
 
-sample_player-role_keepaway_keeper.o: role_keepaway_keeper.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_keepaway_keeper.o -MD -MP -MF $(DEPDIR)/sample_player-role_keepaway_keeper.Tpo -c -o sample_player-role_keepaway_keeper.o `test -f 'role_keepaway_keeper.cpp' || echo '$(srcdir)/'`role_keepaway_keeper.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_keepaway_keeper.Tpo $(DEPDIR)/sample_player-role_keepaway_keeper.Po
-#	source='role_keepaway_keeper.cpp' object='sample_player-role_keepaway_keeper.o' libtool=no \
+coisados_player-role_keepaway_keeper.o: role_keepaway_keeper.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_keepaway_keeper.o -MD -MP -MF $(DEPDIR)/coisados_player-role_keepaway_keeper.Tpo -c -o coisados_player-role_keepaway_keeper.o `test -f 'role_keepaway_keeper.cpp' || echo '$(srcdir)/'`role_keepaway_keeper.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_keepaway_keeper.Tpo $(DEPDIR)/coisados_player-role_keepaway_keeper.Po
+#	source='role_keepaway_keeper.cpp' object='coisados_player-role_keepaway_keeper.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_keepaway_keeper.o `test -f 'role_keepaway_keeper.cpp' || echo '$(srcdir)/'`role_keepaway_keeper.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_keepaway_keeper.o `test -f 'role_keepaway_keeper.cpp' || echo '$(srcdir)/'`role_keepaway_keeper.cpp
 
-sample_player-role_keepaway_keeper.obj: role_keepaway_keeper.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_keepaway_keeper.obj -MD -MP -MF $(DEPDIR)/sample_player-role_keepaway_keeper.Tpo -c -o sample_player-role_keepaway_keeper.obj `if test -f 'role_keepaway_keeper.cpp'; then $(CYGPATH_W) 'role_keepaway_keeper.cpp'; else $(CYGPATH_W) '$(srcdir)/role_keepaway_keeper.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_keepaway_keeper.Tpo $(DEPDIR)/sample_player-role_keepaway_keeper.Po
-#	source='role_keepaway_keeper.cpp' object='sample_player-role_keepaway_keeper.obj' libtool=no \
+coisados_player-role_keepaway_keeper.obj: role_keepaway_keeper.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_keepaway_keeper.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_keepaway_keeper.Tpo -c -o coisados_player-role_keepaway_keeper.obj `if test -f 'role_keepaway_keeper.cpp'; then $(CYGPATH_W) 'role_keepaway_keeper.cpp'; else $(CYGPATH_W) '$(srcdir)/role_keepaway_keeper.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_keepaway_keeper.Tpo $(DEPDIR)/coisados_player-role_keepaway_keeper.Po
+#	source='role_keepaway_keeper.cpp' object='coisados_player-role_keepaway_keeper.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_keepaway_keeper.obj `if test -f 'role_keepaway_keeper.cpp'; then $(CYGPATH_W) 'role_keepaway_keeper.cpp'; else $(CYGPATH_W) '$(srcdir)/role_keepaway_keeper.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_keepaway_keeper.obj `if test -f 'role_keepaway_keeper.cpp'; then $(CYGPATH_W) 'role_keepaway_keeper.cpp'; else $(CYGPATH_W) '$(srcdir)/role_keepaway_keeper.cpp'; fi`
 
-sample_player-role_keepaway_taker.o: role_keepaway_taker.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_keepaway_taker.o -MD -MP -MF $(DEPDIR)/sample_player-role_keepaway_taker.Tpo -c -o sample_player-role_keepaway_taker.o `test -f 'role_keepaway_taker.cpp' || echo '$(srcdir)/'`role_keepaway_taker.cpp
-	$(am__mv) $(DEPDIR)/sample_player-role_keepaway_taker.Tpo $(DEPDIR)/sample_player-role_keepaway_taker.Po
-#	source='role_keepaway_taker.cpp' object='sample_player-role_keepaway_taker.o' libtool=no \
+coisados_player-role_keepaway_taker.o: role_keepaway_taker.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_keepaway_taker.o -MD -MP -MF $(DEPDIR)/coisados_player-role_keepaway_taker.Tpo -c -o coisados_player-role_keepaway_taker.o `test -f 'role_keepaway_taker.cpp' || echo '$(srcdir)/'`role_keepaway_taker.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-role_keepaway_taker.Tpo $(DEPDIR)/coisados_player-role_keepaway_taker.Po
+#	source='role_keepaway_taker.cpp' object='coisados_player-role_keepaway_taker.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_keepaway_taker.o `test -f 'role_keepaway_taker.cpp' || echo '$(srcdir)/'`role_keepaway_taker.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_keepaway_taker.o `test -f 'role_keepaway_taker.cpp' || echo '$(srcdir)/'`role_keepaway_taker.cpp
 
-sample_player-role_keepaway_taker.obj: role_keepaway_taker.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-role_keepaway_taker.obj -MD -MP -MF $(DEPDIR)/sample_player-role_keepaway_taker.Tpo -c -o sample_player-role_keepaway_taker.obj `if test -f 'role_keepaway_taker.cpp'; then $(CYGPATH_W) 'role_keepaway_taker.cpp'; else $(CYGPATH_W) '$(srcdir)/role_keepaway_taker.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-role_keepaway_taker.Tpo $(DEPDIR)/sample_player-role_keepaway_taker.Po
-#	source='role_keepaway_taker.cpp' object='sample_player-role_keepaway_taker.obj' libtool=no \
+coisados_player-role_keepaway_taker.obj: role_keepaway_taker.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-role_keepaway_taker.obj -MD -MP -MF $(DEPDIR)/coisados_player-role_keepaway_taker.Tpo -c -o coisados_player-role_keepaway_taker.obj `if test -f 'role_keepaway_taker.cpp'; then $(CYGPATH_W) 'role_keepaway_taker.cpp'; else $(CYGPATH_W) '$(srcdir)/role_keepaway_taker.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-role_keepaway_taker.Tpo $(DEPDIR)/coisados_player-role_keepaway_taker.Po
+#	source='role_keepaway_taker.cpp' object='coisados_player-role_keepaway_taker.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-role_keepaway_taker.obj `if test -f 'role_keepaway_taker.cpp'; then $(CYGPATH_W) 'role_keepaway_taker.cpp'; else $(CYGPATH_W) '$(srcdir)/role_keepaway_taker.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-role_keepaway_taker.obj `if test -f 'role_keepaway_taker.cpp'; then $(CYGPATH_W) 'role_keepaway_taker.cpp'; else $(CYGPATH_W) '$(srcdir)/role_keepaway_taker.cpp'; fi`
 
-sample_player-sample_communication.o: sample_communication.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-sample_communication.o -MD -MP -MF $(DEPDIR)/sample_player-sample_communication.Tpo -c -o sample_player-sample_communication.o `test -f 'sample_communication.cpp' || echo '$(srcdir)/'`sample_communication.cpp
-	$(am__mv) $(DEPDIR)/sample_player-sample_communication.Tpo $(DEPDIR)/sample_player-sample_communication.Po
-#	source='sample_communication.cpp' object='sample_player-sample_communication.o' libtool=no \
+coisados_player-coisados_communication.o: coisados_communication.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-coisados_communication.o -MD -MP -MF $(DEPDIR)/coisados_player-coisados_communication.Tpo -c -o coisados_player-coisados_communication.o `test -f 'coisados_communication.cpp' || echo '$(srcdir)/'`coisados_communication.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-coisados_communication.Tpo $(DEPDIR)/coisados_player-coisados_communication.Po
+#	source='coisados_communication.cpp' object='coisados_player-coisados_communication.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-sample_communication.o `test -f 'sample_communication.cpp' || echo '$(srcdir)/'`sample_communication.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-coisados_communication.o `test -f 'coisados_communication.cpp' || echo '$(srcdir)/'`coisados_communication.cpp
 
-sample_player-sample_communication.obj: sample_communication.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-sample_communication.obj -MD -MP -MF $(DEPDIR)/sample_player-sample_communication.Tpo -c -o sample_player-sample_communication.obj `if test -f 'sample_communication.cpp'; then $(CYGPATH_W) 'sample_communication.cpp'; else $(CYGPATH_W) '$(srcdir)/sample_communication.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-sample_communication.Tpo $(DEPDIR)/sample_player-sample_communication.Po
-#	source='sample_communication.cpp' object='sample_player-sample_communication.obj' libtool=no \
+coisados_player-coisados_communication.obj: coisados_communication.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-coisados_communication.obj -MD -MP -MF $(DEPDIR)/coisados_player-coisados_communication.Tpo -c -o coisados_player-coisados_communication.obj `if test -f 'coisados_communication.cpp'; then $(CYGPATH_W) 'coisados_communication.cpp'; else $(CYGPATH_W) '$(srcdir)/coisados_communication.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-coisados_communication.Tpo $(DEPDIR)/coisados_player-coisados_communication.Po
+#	source='coisados_communication.cpp' object='coisados_player-coisados_communication.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-sample_communication.obj `if test -f 'sample_communication.cpp'; then $(CYGPATH_W) 'sample_communication.cpp'; else $(CYGPATH_W) '$(srcdir)/sample_communication.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-coisados_communication.obj `if test -f 'coisados_communication.cpp'; then $(CYGPATH_W) 'coisados_communication.cpp'; else $(CYGPATH_W) '$(srcdir)/coisados_communication.cpp'; fi`
 
-sample_player-keepaway_communication.o: keepaway_communication.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-keepaway_communication.o -MD -MP -MF $(DEPDIR)/sample_player-keepaway_communication.Tpo -c -o sample_player-keepaway_communication.o `test -f 'keepaway_communication.cpp' || echo '$(srcdir)/'`keepaway_communication.cpp
-	$(am__mv) $(DEPDIR)/sample_player-keepaway_communication.Tpo $(DEPDIR)/sample_player-keepaway_communication.Po
-#	source='keepaway_communication.cpp' object='sample_player-keepaway_communication.o' libtool=no \
+coisados_player-keepaway_communication.o: keepaway_communication.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-keepaway_communication.o -MD -MP -MF $(DEPDIR)/coisados_player-keepaway_communication.Tpo -c -o coisados_player-keepaway_communication.o `test -f 'keepaway_communication.cpp' || echo '$(srcdir)/'`keepaway_communication.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-keepaway_communication.Tpo $(DEPDIR)/coisados_player-keepaway_communication.Po
+#	source='keepaway_communication.cpp' object='coisados_player-keepaway_communication.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-keepaway_communication.o `test -f 'keepaway_communication.cpp' || echo '$(srcdir)/'`keepaway_communication.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-keepaway_communication.o `test -f 'keepaway_communication.cpp' || echo '$(srcdir)/'`keepaway_communication.cpp
 
-sample_player-keepaway_communication.obj: keepaway_communication.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-keepaway_communication.obj -MD -MP -MF $(DEPDIR)/sample_player-keepaway_communication.Tpo -c -o sample_player-keepaway_communication.obj `if test -f 'keepaway_communication.cpp'; then $(CYGPATH_W) 'keepaway_communication.cpp'; else $(CYGPATH_W) '$(srcdir)/keepaway_communication.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-keepaway_communication.Tpo $(DEPDIR)/sample_player-keepaway_communication.Po
-#	source='keepaway_communication.cpp' object='sample_player-keepaway_communication.obj' libtool=no \
+coisados_player-keepaway_communication.obj: keepaway_communication.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-keepaway_communication.obj -MD -MP -MF $(DEPDIR)/coisados_player-keepaway_communication.Tpo -c -o coisados_player-keepaway_communication.obj `if test -f 'keepaway_communication.cpp'; then $(CYGPATH_W) 'keepaway_communication.cpp'; else $(CYGPATH_W) '$(srcdir)/keepaway_communication.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-keepaway_communication.Tpo $(DEPDIR)/coisados_player-keepaway_communication.Po
+#	source='keepaway_communication.cpp' object='coisados_player-keepaway_communication.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-keepaway_communication.obj `if test -f 'keepaway_communication.cpp'; then $(CYGPATH_W) 'keepaway_communication.cpp'; else $(CYGPATH_W) '$(srcdir)/keepaway_communication.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-keepaway_communication.obj `if test -f 'keepaway_communication.cpp'; then $(CYGPATH_W) 'keepaway_communication.cpp'; else $(CYGPATH_W) '$(srcdir)/keepaway_communication.cpp'; fi`
 
-sample_player-sample_field_evaluator.o: sample_field_evaluator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-sample_field_evaluator.o -MD -MP -MF $(DEPDIR)/sample_player-sample_field_evaluator.Tpo -c -o sample_player-sample_field_evaluator.o `test -f 'sample_field_evaluator.cpp' || echo '$(srcdir)/'`sample_field_evaluator.cpp
-	$(am__mv) $(DEPDIR)/sample_player-sample_field_evaluator.Tpo $(DEPDIR)/sample_player-sample_field_evaluator.Po
-#	source='sample_field_evaluator.cpp' object='sample_player-sample_field_evaluator.o' libtool=no \
+coisados_player-coisados_field_evaluator.o: coisados_field_evaluator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-coisados_field_evaluator.o -MD -MP -MF $(DEPDIR)/coisados_player-coisados_field_evaluator.Tpo -c -o coisados_player-coisados_field_evaluator.o `test -f 'coisados_field_evaluator.cpp' || echo '$(srcdir)/'`coisados_field_evaluator.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-coisados_field_evaluator.Tpo $(DEPDIR)/coisados_player-coisados_field_evaluator.Po
+#	source='coisados_field_evaluator.cpp' object='coisados_player-coisados_field_evaluator.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-sample_field_evaluator.o `test -f 'sample_field_evaluator.cpp' || echo '$(srcdir)/'`sample_field_evaluator.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-coisados_field_evaluator.o `test -f 'coisados_field_evaluator.cpp' || echo '$(srcdir)/'`coisados_field_evaluator.cpp
 
-sample_player-sample_field_evaluator.obj: sample_field_evaluator.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-sample_field_evaluator.obj -MD -MP -MF $(DEPDIR)/sample_player-sample_field_evaluator.Tpo -c -o sample_player-sample_field_evaluator.obj `if test -f 'sample_field_evaluator.cpp'; then $(CYGPATH_W) 'sample_field_evaluator.cpp'; else $(CYGPATH_W) '$(srcdir)/sample_field_evaluator.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-sample_field_evaluator.Tpo $(DEPDIR)/sample_player-sample_field_evaluator.Po
-#	source='sample_field_evaluator.cpp' object='sample_player-sample_field_evaluator.obj' libtool=no \
+coisados_player-coisados_field_evaluator.obj: coisados_field_evaluator.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-coisados_field_evaluator.obj -MD -MP -MF $(DEPDIR)/coisados_player-coisados_field_evaluator.Tpo -c -o coisados_player-coisados_field_evaluator.obj `if test -f 'coisados_field_evaluator.cpp'; then $(CYGPATH_W) 'coisados_field_evaluator.cpp'; else $(CYGPATH_W) '$(srcdir)/coisados_field_evaluator.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-coisados_field_evaluator.Tpo $(DEPDIR)/coisados_player-coisados_field_evaluator.Po
+#	source='coisados_field_evaluator.cpp' object='coisados_player-coisados_field_evaluator.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-sample_field_evaluator.obj `if test -f 'sample_field_evaluator.cpp'; then $(CYGPATH_W) 'sample_field_evaluator.cpp'; else $(CYGPATH_W) '$(srcdir)/sample_field_evaluator.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-coisados_field_evaluator.obj `if test -f 'coisados_field_evaluator.cpp'; then $(CYGPATH_W) 'coisados_field_evaluator.cpp'; else $(CYGPATH_W) '$(srcdir)/coisados_field_evaluator.cpp'; fi`
 
-sample_player-sample_player.o: sample_player.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-sample_player.o -MD -MP -MF $(DEPDIR)/sample_player-sample_player.Tpo -c -o sample_player-sample_player.o `test -f 'sample_player.cpp' || echo '$(srcdir)/'`sample_player.cpp
-	$(am__mv) $(DEPDIR)/sample_player-sample_player.Tpo $(DEPDIR)/sample_player-sample_player.Po
-#	source='sample_player.cpp' object='sample_player-sample_player.o' libtool=no \
+coisados_player-coisados_player.o: coisados_player.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-coisados_player.o -MD -MP -MF $(DEPDIR)/coisados_player-coisados_player.Tpo -c -o coisados_player-coisados_player.o `test -f 'coisados_player.cpp' || echo '$(srcdir)/'`coisados_player.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-coisados_player.Tpo $(DEPDIR)/coisados_player-coisados_player.Po
+#	source='coisados_player.cpp' object='coisados_player-coisados_player.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-sample_player.o `test -f 'sample_player.cpp' || echo '$(srcdir)/'`sample_player.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-coisados_player.o `test -f 'coisados_player.cpp' || echo '$(srcdir)/'`coisados_player.cpp
 
-sample_player-sample_player.obj: sample_player.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-sample_player.obj -MD -MP -MF $(DEPDIR)/sample_player-sample_player.Tpo -c -o sample_player-sample_player.obj `if test -f 'sample_player.cpp'; then $(CYGPATH_W) 'sample_player.cpp'; else $(CYGPATH_W) '$(srcdir)/sample_player.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-sample_player.Tpo $(DEPDIR)/sample_player-sample_player.Po
-#	source='sample_player.cpp' object='sample_player-sample_player.obj' libtool=no \
+coisados_player-coisados_player.obj: coisados_player.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-coisados_player.obj -MD -MP -MF $(DEPDIR)/coisados_player-coisados_player.Tpo -c -o coisados_player-coisados_player.obj `if test -f 'coisados_player.cpp'; then $(CYGPATH_W) 'coisados_player.cpp'; else $(CYGPATH_W) '$(srcdir)/coisados_player.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-coisados_player.Tpo $(DEPDIR)/coisados_player-coisados_player.Po
+#	source='coisados_player.cpp' object='coisados_player-coisados_player.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-sample_player.obj `if test -f 'sample_player.cpp'; then $(CYGPATH_W) 'sample_player.cpp'; else $(CYGPATH_W) '$(srcdir)/sample_player.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-coisados_player.obj `if test -f 'coisados_player.cpp'; then $(CYGPATH_W) 'coisados_player.cpp'; else $(CYGPATH_W) '$(srcdir)/coisados_player.cpp'; fi`
 
-sample_player-strategy.o: strategy.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-strategy.o -MD -MP -MF $(DEPDIR)/sample_player-strategy.Tpo -c -o sample_player-strategy.o `test -f 'strategy.cpp' || echo '$(srcdir)/'`strategy.cpp
-	$(am__mv) $(DEPDIR)/sample_player-strategy.Tpo $(DEPDIR)/sample_player-strategy.Po
-#	source='strategy.cpp' object='sample_player-strategy.o' libtool=no \
+coisados_player-strategy.o: strategy.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-strategy.o -MD -MP -MF $(DEPDIR)/coisados_player-strategy.Tpo -c -o coisados_player-strategy.o `test -f 'strategy.cpp' || echo '$(srcdir)/'`strategy.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-strategy.Tpo $(DEPDIR)/coisados_player-strategy.Po
+#	source='strategy.cpp' object='coisados_player-strategy.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-strategy.o `test -f 'strategy.cpp' || echo '$(srcdir)/'`strategy.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-strategy.o `test -f 'strategy.cpp' || echo '$(srcdir)/'`strategy.cpp
 
-sample_player-strategy.obj: strategy.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-strategy.obj -MD -MP -MF $(DEPDIR)/sample_player-strategy.Tpo -c -o sample_player-strategy.obj `if test -f 'strategy.cpp'; then $(CYGPATH_W) 'strategy.cpp'; else $(CYGPATH_W) '$(srcdir)/strategy.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-strategy.Tpo $(DEPDIR)/sample_player-strategy.Po
-#	source='strategy.cpp' object='sample_player-strategy.obj' libtool=no \
+coisados_player-strategy.obj: strategy.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-strategy.obj -MD -MP -MF $(DEPDIR)/coisados_player-strategy.Tpo -c -o coisados_player-strategy.obj `if test -f 'strategy.cpp'; then $(CYGPATH_W) 'strategy.cpp'; else $(CYGPATH_W) '$(srcdir)/strategy.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-strategy.Tpo $(DEPDIR)/coisados_player-strategy.Po
+#	source='strategy.cpp' object='coisados_player-strategy.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-strategy.obj `if test -f 'strategy.cpp'; then $(CYGPATH_W) 'strategy.cpp'; else $(CYGPATH_W) '$(srcdir)/strategy.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-strategy.obj `if test -f 'strategy.cpp'; then $(CYGPATH_W) 'strategy.cpp'; else $(CYGPATH_W) '$(srcdir)/strategy.cpp'; fi`
 
-sample_player-main_player.o: main_player.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-main_player.o -MD -MP -MF $(DEPDIR)/sample_player-main_player.Tpo -c -o sample_player-main_player.o `test -f 'main_player.cpp' || echo '$(srcdir)/'`main_player.cpp
-	$(am__mv) $(DEPDIR)/sample_player-main_player.Tpo $(DEPDIR)/sample_player-main_player.Po
-#	source='main_player.cpp' object='sample_player-main_player.o' libtool=no \
+coisados_player-main_player.o: main_player.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-main_player.o -MD -MP -MF $(DEPDIR)/coisados_player-main_player.Tpo -c -o coisados_player-main_player.o `test -f 'main_player.cpp' || echo '$(srcdir)/'`main_player.cpp
+	$(am__mv) $(DEPDIR)/coisados_player-main_player.Tpo $(DEPDIR)/coisados_player-main_player.Po
+#	source='main_player.cpp' object='coisados_player-main_player.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-main_player.o `test -f 'main_player.cpp' || echo '$(srcdir)/'`main_player.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-main_player.o `test -f 'main_player.cpp' || echo '$(srcdir)/'`main_player.cpp
 
-sample_player-main_player.obj: main_player.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -MT sample_player-main_player.obj -MD -MP -MF $(DEPDIR)/sample_player-main_player.Tpo -c -o sample_player-main_player.obj `if test -f 'main_player.cpp'; then $(CYGPATH_W) 'main_player.cpp'; else $(CYGPATH_W) '$(srcdir)/main_player.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_player-main_player.Tpo $(DEPDIR)/sample_player-main_player.Po
-#	source='main_player.cpp' object='sample_player-main_player.obj' libtool=no \
+coisados_player-main_player.obj: main_player.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -MT coisados_player-main_player.obj -MD -MP -MF $(DEPDIR)/coisados_player-main_player.Tpo -c -o coisados_player-main_player.obj `if test -f 'main_player.cpp'; then $(CYGPATH_W) 'main_player.cpp'; else $(CYGPATH_W) '$(srcdir)/main_player.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_player-main_player.Tpo $(DEPDIR)/coisados_player-main_player.Po
+#	source='main_player.cpp' object='coisados_player-main_player.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_player_CXXFLAGS) $(CXXFLAGS) -c -o sample_player-main_player.obj `if test -f 'main_player.cpp'; then $(CYGPATH_W) 'main_player.cpp'; else $(CYGPATH_W) '$(srcdir)/main_player.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_player_CXXFLAGS) $(CXXFLAGS) -c -o coisados_player-main_player.obj `if test -f 'main_player.cpp'; then $(CYGPATH_W) 'main_player.cpp'; else $(CYGPATH_W) '$(srcdir)/main_player.cpp'; fi`
 
-sample_trainer-sample_trainer.o: sample_trainer.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_trainer_CXXFLAGS) $(CXXFLAGS) -MT sample_trainer-sample_trainer.o -MD -MP -MF $(DEPDIR)/sample_trainer-sample_trainer.Tpo -c -o sample_trainer-sample_trainer.o `test -f 'sample_trainer.cpp' || echo '$(srcdir)/'`sample_trainer.cpp
-	$(am__mv) $(DEPDIR)/sample_trainer-sample_trainer.Tpo $(DEPDIR)/sample_trainer-sample_trainer.Po
-#	source='sample_trainer.cpp' object='sample_trainer-sample_trainer.o' libtool=no \
+coisados_trainer-coisados_trainer.o: coisados_trainer.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_trainer_CXXFLAGS) $(CXXFLAGS) -MT coisados_trainer-coisados_trainer.o -MD -MP -MF $(DEPDIR)/coisados_trainer-coisados_trainer.Tpo -c -o coisados_trainer-coisados_trainer.o `test -f 'coisados_trainer.cpp' || echo '$(srcdir)/'`coisados_trainer.cpp
+	$(am__mv) $(DEPDIR)/coisados_trainer-coisados_trainer.Tpo $(DEPDIR)/coisados_trainer-coisados_trainer.Po
+#	source='coisados_trainer.cpp' object='coisados_trainer-coisados_trainer.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_trainer_CXXFLAGS) $(CXXFLAGS) -c -o sample_trainer-sample_trainer.o `test -f 'sample_trainer.cpp' || echo '$(srcdir)/'`sample_trainer.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_trainer_CXXFLAGS) $(CXXFLAGS) -c -o coisados_trainer-coisados_trainer.o `test -f 'coisados_trainer.cpp' || echo '$(srcdir)/'`coisados_trainer.cpp
 
-sample_trainer-sample_trainer.obj: sample_trainer.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_trainer_CXXFLAGS) $(CXXFLAGS) -MT sample_trainer-sample_trainer.obj -MD -MP -MF $(DEPDIR)/sample_trainer-sample_trainer.Tpo -c -o sample_trainer-sample_trainer.obj `if test -f 'sample_trainer.cpp'; then $(CYGPATH_W) 'sample_trainer.cpp'; else $(CYGPATH_W) '$(srcdir)/sample_trainer.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_trainer-sample_trainer.Tpo $(DEPDIR)/sample_trainer-sample_trainer.Po
-#	source='sample_trainer.cpp' object='sample_trainer-sample_trainer.obj' libtool=no \
+coisados_trainer-coisados_trainer.obj: coisados_trainer.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_trainer_CXXFLAGS) $(CXXFLAGS) -MT coisados_trainer-coisados_trainer.obj -MD -MP -MF $(DEPDIR)/coisados_trainer-coisados_trainer.Tpo -c -o coisados_trainer-coisados_trainer.obj `if test -f 'coisados_trainer.cpp'; then $(CYGPATH_W) 'coisados_trainer.cpp'; else $(CYGPATH_W) '$(srcdir)/coisados_trainer.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_trainer-coisados_trainer.Tpo $(DEPDIR)/coisados_trainer-coisados_trainer.Po
+#	source='coisados_trainer.cpp' object='coisados_trainer-coisados_trainer.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_trainer_CXXFLAGS) $(CXXFLAGS) -c -o sample_trainer-sample_trainer.obj `if test -f 'sample_trainer.cpp'; then $(CYGPATH_W) 'sample_trainer.cpp'; else $(CYGPATH_W) '$(srcdir)/sample_trainer.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_trainer_CXXFLAGS) $(CXXFLAGS) -c -o coisados_trainer-coisados_trainer.obj `if test -f 'coisados_trainer.cpp'; then $(CYGPATH_W) 'coisados_trainer.cpp'; else $(CYGPATH_W) '$(srcdir)/coisados_trainer.cpp'; fi`
 
-sample_trainer-main_trainer.o: main_trainer.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_trainer_CXXFLAGS) $(CXXFLAGS) -MT sample_trainer-main_trainer.o -MD -MP -MF $(DEPDIR)/sample_trainer-main_trainer.Tpo -c -o sample_trainer-main_trainer.o `test -f 'main_trainer.cpp' || echo '$(srcdir)/'`main_trainer.cpp
-	$(am__mv) $(DEPDIR)/sample_trainer-main_trainer.Tpo $(DEPDIR)/sample_trainer-main_trainer.Po
-#	source='main_trainer.cpp' object='sample_trainer-main_trainer.o' libtool=no \
+coisados_trainer-main_trainer.o: main_trainer.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_trainer_CXXFLAGS) $(CXXFLAGS) -MT coisados_trainer-main_trainer.o -MD -MP -MF $(DEPDIR)/coisados_trainer-main_trainer.Tpo -c -o coisados_trainer-main_trainer.o `test -f 'main_trainer.cpp' || echo '$(srcdir)/'`main_trainer.cpp
+	$(am__mv) $(DEPDIR)/coisados_trainer-main_trainer.Tpo $(DEPDIR)/coisados_trainer-main_trainer.Po
+#	source='main_trainer.cpp' object='coisados_trainer-main_trainer.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_trainer_CXXFLAGS) $(CXXFLAGS) -c -o sample_trainer-main_trainer.o `test -f 'main_trainer.cpp' || echo '$(srcdir)/'`main_trainer.cpp
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_trainer_CXXFLAGS) $(CXXFLAGS) -c -o coisados_trainer-main_trainer.o `test -f 'main_trainer.cpp' || echo '$(srcdir)/'`main_trainer.cpp
 
-sample_trainer-main_trainer.obj: main_trainer.cpp
-	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_trainer_CXXFLAGS) $(CXXFLAGS) -MT sample_trainer-main_trainer.obj -MD -MP -MF $(DEPDIR)/sample_trainer-main_trainer.Tpo -c -o sample_trainer-main_trainer.obj `if test -f 'main_trainer.cpp'; then $(CYGPATH_W) 'main_trainer.cpp'; else $(CYGPATH_W) '$(srcdir)/main_trainer.cpp'; fi`
-	$(am__mv) $(DEPDIR)/sample_trainer-main_trainer.Tpo $(DEPDIR)/sample_trainer-main_trainer.Po
-#	source='main_trainer.cpp' object='sample_trainer-main_trainer.obj' libtool=no \
+coisados_trainer-main_trainer.obj: main_trainer.cpp
+	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_trainer_CXXFLAGS) $(CXXFLAGS) -MT coisados_trainer-main_trainer.obj -MD -MP -MF $(DEPDIR)/coisados_trainer-main_trainer.Tpo -c -o coisados_trainer-main_trainer.obj `if test -f 'main_trainer.cpp'; then $(CYGPATH_W) 'main_trainer.cpp'; else $(CYGPATH_W) '$(srcdir)/main_trainer.cpp'; fi`
+	$(am__mv) $(DEPDIR)/coisados_trainer-main_trainer.Tpo $(DEPDIR)/coisados_trainer-main_trainer.Po
+#	source='main_trainer.cpp' object='coisados_trainer-main_trainer.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(sample_trainer_CXXFLAGS) $(CXXFLAGS) -c -o sample_trainer-main_trainer.obj `if test -f 'main_trainer.cpp'; then $(CYGPATH_W) 'main_trainer.cpp'; else $(CYGPATH_W) '$(srcdir)/main_trainer.cpp'; fi`
+#	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(coisados_trainer_CXXFLAGS) $(CXXFLAGS) -c -o coisados_trainer-main_trainer.obj `if test -f 'main_trainer.cpp'; then $(CYGPATH_W) 'main_trainer.cpp'; else $(CYGPATH_W) '$(srcdir)/main_trainer.cpp'; fi`
 
 ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
 	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \

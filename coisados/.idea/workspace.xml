@@ -11,13 +11,25 @@
   <component name="ChangeListManager">
     <list default="true" id="946c89db-5a9b-448b-9e45-5cbb6df50fc8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.log" beforeDir="false" afterPath="$PROJECT_DIR$/config.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.status" beforeDir="false" afterPath="$PROJECT_DIR$/config.status" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.deps/sample_player-sample_player.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/sample_player-sample_player.Po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Makefile.am" beforeDir="false" afterPath="$PROJECT_DIR$/src/Makefile.am" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Makefile.in" beforeDir="false" afterPath="$PROJECT_DIR$/src/Makefile.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coisados_player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/coisados_player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_coach.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_coach.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_trainer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_trainer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role_sample.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/role_coisados.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/role_sample.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/role_coisados.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample_coach.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/coisados_coach.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample_coach.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/coisados_coach.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample_communication.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/coisados_communication.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample_communication.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/coisados_communication.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample_field_evaluator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/coisados_field_evaluator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample_field_evaluator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/coisados_field_evaluator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample_trainer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/coisados_trainer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample_trainer.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/coisados_trainer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/src/start.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/strategy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/strategy.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +78,7 @@
     <session id="1223373209">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -73,40 +86,90 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Makefile" value="1" />
-          <entry key="Po" value="2" />
-          <entry key="cpp" value="1" />
+          <entry key="Po" value="4" />
+          <entry key="am" value="3" />
+          <entry key="cpp" value="2" />
           <entry key="h" value="3" />
+          <entry key="in" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="4" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="ObjectiveC" value="5" />
+          <entry key="PLAIN_TEXT" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Po" value="83" />
+          <entry key="am" value="8" />
           <entry key="h" value="6" />
+          <entry key="in" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="ObjectiveC" value="6" />
-          <entry key="PLAIN_TEXT" value="83" />
+          <entry key="PLAIN_TEXT" value="99" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/.deps/sample_player-sample_player.Po">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="923" column="6" selection-start-line="923" selection-start-column="6" selection-end-line="923" selection-end-column="6" />
+            <state relative-caret-position="255">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile.am">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Makefile.in">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2179">
+              <caret line="1865" selection-start-line="1865" selection-end-line="1865" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Makefile.am">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main_player.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/.deps/sample_player-sample_field_evaluator.Po">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/.deps/sample_player-role_sample.Po">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -147,6 +210,8 @@
         <option value="$PROJECT_DIR$/src/.deps/coisados_player-coisados_player.Po" />
         <option value="$PROJECT_DIR$/src/intention_wait_after_set_play_kick.h" />
         <option value="$PROJECT_DIR$/src/.deps/sample_player-sample_player.Po" />
+        <option value="$PROJECT_DIR$/src/Makefile.am" />
+        <option value="$PROJECT_DIR$/src/Makefile.in" />
       </list>
     </option>
   </component>
@@ -158,7 +223,7 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="-1333" />
+    <option name="x" value="33" />
     <option name="y" value="24" />
     <option name="width" value="1331" />
     <option name="height" value="744" />
@@ -220,12 +285,12 @@
       <workItem from="1540400391915" duration="3277000" />
       <workItem from="1540558798094" duration="22537000" />
       <workItem from="1540842693686" duration="3379000" />
-      <workItem from="1541513216462" duration="4659000" />
+      <workItem from="1541513216462" duration="7190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33852000" />
+    <option name="totallyTimeSpent" value="36383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -237,9 +302,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1333" y="24" width="1331" height="744" extended-state="4" />
+    <frame x="33" y="24" width="1331" height="744" extended-state="4" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22645915" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.50272375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -270,30 +335,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/bhv_set_play_kick_off.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bhv_their_goal_kick_move.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/intention_receive.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/intention_wait_after_set_play_kick.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/keepaway_communication.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main_coach.cpp">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main_player.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main_trainer.cpp">
       <provider selected="true" editor-type-id="text-editor" />
@@ -325,7 +368,7 @@
     <entry file="file://$PROJECT_DIR$/src/role_keepaway_taker.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/role_sample.cpp">
+    <entry file="file://$PROJECT_DIR$/src/role_coisados.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/role_side_back.cpp">
@@ -337,23 +380,23 @@
     <entry file="file://$PROJECT_DIR$/src/role_side_forward.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample_trainer.cpp">
+    <entry file="file://$PROJECT_DIR$/src/coisados_trainer.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/soccer_role.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample_communication.cpp">
+    <entry file="file://$PROJECT_DIR$/src/coisados_communication.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample_coach.cpp">
+    <entry file="file://$PROJECT_DIR$/src/coisados_coach.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4860">
           <caret line="75" column="2" selection-start-line="75" selection-start-column="2" selection-end-line="75" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample_field_evaluator.cpp">
+    <entry file="file://$PROJECT_DIR$/src/coisados_field_evaluator.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-315" />
       </provider>
@@ -525,10 +568,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main_player.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/.deps/sample_player-sample_field_evaluator.Po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/.deps/sample_player-role_sample.Po">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/.deps/sample_player-sample_player.Po">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="923" column="6" selection-start-line="923" selection-start-column="6" selection-end-line="923" selection-end-column="6" />
+        <state relative-caret-position="255">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile.am">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Makefile.am">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Makefile.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2179">
+          <caret line="1865" selection-start-line="1865" selection-end-line="1865" />
         </state>
       </provider>
     </entry>

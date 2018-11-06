@@ -39,7 +39,7 @@
 
 
 #ifndef USE_GENERIC_FACTORY
-#include "role_sample.h"
+#include "role_coisados.h"
 
 #include "role_center_back.h"
 #include "role_center_forward.h"

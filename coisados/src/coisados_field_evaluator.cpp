@@ -26,7 +26,7 @@
 #include <config.h>
 #endif
 
-#include "sample_field_evaluator.h"
+#include "coisados_field_evaluator.h"
 
 #include "field_analyzer.h"
 #include "simple_pass_checker.h"

@@ -28,7 +28,7 @@
 #include <config.h>
 #endif
 
-#include "role_sample.h"
+#include "role_coisados.h"
 
 #include "strategy.h"
 

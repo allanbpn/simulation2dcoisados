@@ -30,15 +30,15 @@ PLAYERSOURCES = \
 	role_defensive_half.cpp \
 	role_goalie.cpp \
 	role_offensive_half.cpp \
-	role_sample.cpp \
+	role_coisados.cpp \
 	role_side_back.cpp \
 	role_side_forward.cpp \
 	role_side_half.cpp \
 	role_keepaway_keeper.cpp \
 	role_keepaway_taker.cpp \
-	sample_communication.cpp \
+	coisados_communication.cpp \
 	keepaway_communication.cpp \
-	sample_field_evaluator.cpp \
+	coisados_field_evaluator.cpp \
 	coisados_player.cpp \
 	strategy.cpp \
 	main_player.cpp
@@ -73,16 +73,16 @@ PLAYERHEADERS = \
 	role_defensive_half.h \
 	role_goalie.h \
 	role_offensive_half.h \
-	role_sample.h \
+	role_coisados.h \
 	role_side_back.h \
 	role_side_forward.h \
 	role_side_half.h \
 	role_keepaway_keeper.h \
 	role_keepaway_taker.h \
 	communication.h \
-	sample_communication.h \
+	coisados_communication.h \
 	keepaway_communication.h \
-	sample_field_evaluator.h \
+	coisados_field_evaluator.h \
 	coisados_player.h \
 	strategy.h
 
@@ -158,21 +158,21 @@ CHAINACTIONSOURCES = \
 	chain_action/tackle_generator.h
 
 COACHSOURCES = \
-	sample_coach.cpp \
-	main_coach.cpp
+	coisados_coach.cpp \
+	coisados_coach.cpp
 
 COACHHEADERS = \
-	sample_coach.h
+	coisados_coach.h
 
 TRAINERSOURCES = \
-	sample_trainer.cpp \
+	coisados_trainer.cpp \
 	main_trainer.cpp
 
 TRAINERHEADERS = \
-	sample_trainer.h
+	coisados_trainer.h
 
 
-noinst_PROGRAMS = coisados_player sample_coach sample_trainer
+noinst_PROGRAMS = coisados_player coisados_coach coisados_trainer
 
 noinst_DATA = \
 	start.sh.in \
@@ -224,24 +224,24 @@ noinst_DATA = \
 	formations-taker/setplay-opp-formation.conf \
 	formations-taker/setplay-our-formation.conf
 
-sample_player_SOURCES = \
+coisados_player_SOURCES = \
 	$(CHAINACTIONSOURCES) \
 	$(PLAYERSOURCES)
-sample_player_CXXFLAGS = -W -Wall
-sample_player_LDFLAGS =
-sample_player_LDADD =
+coisados_player_CXXFLAGS = -W -Wall
+coisados_player_LDFLAGS =
+coisados_player_LDADD =
 
-sample_coach_SOURCES = \
+coisados_coach_SOURCES = \
 	$(COACHSOURCES)
-sample_coach_CXXFLAGS = -W -Wall
-sample_coach_LDFLAGS =
-sample_coach_LDADD =
+coisados_coach_CXXFLAGS = -W -Wall
+coisados_coach_LDFLAGS =
+coisados_coach_LDADD =
 
-sample_trainer_SOURCES = \
+coisados_trainer_SOURCES = \
 	$(TRAINERSOURCES)
-sample_trainer_CXXFLAGS = -W -Wall
-sample_trainer_LDFLAGS =
-sample_trainer_LDADD =
+coisados_trainer_CXXFLAGS = -W -Wall
+coisados_trainer_LDFLAGS =
+coisados_trainer_LDADD =
 
 noinst_HEADERS = \
 	$(PLAYERHEADERS) \
