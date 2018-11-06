@@ -9,7 +9,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="946c89db-5a9b-448b-9e45-5cbb6df50fc8" name="Default Changelist" comment="" />
+    <list default="true" id="946c89db-5a9b-448b-9e45-5cbb6df50fc8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.log" beforeDir="false" afterPath="$PROJECT_DIR$/config.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.status" beforeDir="false" afterPath="$PROJECT_DIR$/config.status" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.deps/sample_player-sample_player.Po" beforeDir="false" afterPath="$PROJECT_DIR$/src/.deps/sample_player-sample_player.Po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Makefile.am" beforeDir="false" afterPath="$PROJECT_DIR$/src/Makefile.am" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main_player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main_player.cpp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,38 +63,48 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1223373209">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Makefile" value="1" />
+          <entry key="Po" value="2" />
+          <entry key="cpp" value="1" />
+          <entry key="h" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ObjectiveC" value="4" />
+          <entry key="PLAIN_TEXT" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Po" value="83" />
+          <entry key="h" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="ObjectiveC" value="6" />
+          <entry key="PLAIN_TEXT" value="83" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/chain_action/tackle_generator.cpp">
+        <entry file="file://$PROJECT_DIR$/src/.deps/sample_player-sample_player.Po">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#7139#7366#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bhv_basic_tackle.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="252" />
-              <folding>
-                <element signature="e#842#861#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bhv_basic_move.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+            <state relative-caret-position="184">
+              <caret line="923" column="6" selection-start-line="923" selection-start-column="6" selection-end-line="923" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -107,7 +126,12 @@
       <find>formation</find>
       <find>OFFENSE_FORMATION_CONF</find>
       <find>execute</find>
+      <find>sample_player</find>
+      <find>coisados_player</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -120,6 +144,9 @@
         <option value="$PROJECT_DIR$/src/view_tactical.cpp" />
         <option value="$PROJECT_DIR$/src/formations-dt/defense-formation.conf" />
         <option value="$PROJECT_DIR$/src/formations-dt/offense-formation.conf" />
+        <option value="$PROJECT_DIR$/src/.deps/coisados_player-coisados_player.Po" />
+        <option value="$PROJECT_DIR$/src/intention_wait_after_set_play_kick.h" />
+        <option value="$PROJECT_DIR$/src/.deps/sample_player-sample_player.Po" />
       </list>
     </option>
   </component>
@@ -131,11 +158,12 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="699" />
+    <option name="x" value="-1333" />
     <option name="y" value="24" />
-    <option name="width" value="667" />
+    <option name="width" value="1331" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -146,19 +174,13 @@
         <subPane>
           <expand>
             <path>
-              <item name="agent2d-3.1.1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agent2d-3.1.1" type="462c0819:PsiDirectoryNode" />
+              <item name="coisados" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coisados" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="agent2d-3.1.1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agent2d-3.1.1" type="462c0819:PsiDirectoryNode" />
+              <item name="coisados" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coisados" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agent2d-3.1.1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agent2d-3.1.1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="chain_action" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -198,11 +220,12 @@
       <workItem from="1540400391915" duration="3277000" />
       <workItem from="1540558798094" duration="22537000" />
       <workItem from="1540842693686" duration="3379000" />
+      <workItem from="1541513216462" duration="4659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29193000" />
+    <option name="totallyTimeSpent" value="33852000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -214,9 +237,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="699" y="24" width="667" height="744" extended-state="4" />
+    <frame x="-1333" y="24" width="1331" height="744" extended-state="4" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.5056361" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22645915" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -247,21 +270,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/bhv_set_play.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bhv_set_play_free_kick.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bhv_set_play_goal_kick.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bhv_set_play_indirect_free_kick.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bhv_set_play_kick_in.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bhv_set_play_kick_off.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -349,9 +357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-315" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample_player.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view_tactical.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -461,30 +466,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bhv_basic_move.cpp">
+    <entry file="file://$PROJECT_DIR$/src/chain_action/tackle_generator.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="75" column="10" lean-forward="true" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="241" column="38" selection-start-line="241" selection-start-column="38" selection-end-line="241" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/coisados_player.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="117" column="6" lean-forward="true" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/intention_wait_after_set_play_kick.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/coisados_player.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bhv_basic_tackle.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="252" />
+        <state relative-caret-position="504">
+          <caret line="252" selection-start-line="252" selection-end-line="252" />
           <folding>
             <element signature="e#842#861#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chain_action/tackle_generator.cpp">
+    <entry file="file://$PROJECT_DIR$/src/bhv_basic_move.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#7139#7366#0" expanded="true" />
-          </folding>
+          <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/.deps/sample_player-sample_player.Po">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="923" column="6" selection-start-line="923" selection-start-column="6" selection-end-line="923" selection-end-column="6" />
         </state>
       </provider>
     </entry>

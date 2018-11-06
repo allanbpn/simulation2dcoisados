@@ -28,7 +28,7 @@
 #include <config.h>
 #endif
 
-#include "sample_player.h"
+#include "coisados_player.h"
 
 #include <rcsc/common/basic_client.h>
 

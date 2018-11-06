@@ -39,7 +39,7 @@ PLAYERSOURCES = \
 	sample_communication.cpp \
 	keepaway_communication.cpp \
 	sample_field_evaluator.cpp \
-	sample_player.cpp \
+	coisados_player.cpp \
 	strategy.cpp \
 	main_player.cpp
 
@@ -83,7 +83,7 @@ PLAYERHEADERS = \
 	sample_communication.h \
 	keepaway_communication.h \
 	sample_field_evaluator.h \
-	sample_player.h \
+	coisados_player.h \
 	strategy.h
 
 CHAINACTIONSOURCES = \
@@ -172,7 +172,7 @@ TRAINERHEADERS = \
 	sample_trainer.h
 
 
-noinst_PROGRAMS = sample_player sample_coach sample_trainer
+noinst_PROGRAMS = coisados_player sample_coach sample_trainer
 
 noinst_DATA = \
 	start.sh.in \
